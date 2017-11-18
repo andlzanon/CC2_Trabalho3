@@ -2,6 +2,8 @@ grammar Grafos;
 
 @members{
     String grupo = "<619922_619795_619841_552437>";
+    private final int ERRO_COMENT = 11;
+    private final int ERRO_TOKEN = 10;
 }
 
 algoritmo :	'declaracoes' declaracao 'inicio' codigo 'fim' ;
