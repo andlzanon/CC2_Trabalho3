@@ -6,7 +6,7 @@ inicio
 	aresta(g, v2, v3, 1)
 	aresta(g, v1, v3, 1)
 
-	{imprime todas os vertices
+	{imprime todas os vertices}
 	para v em vertices(g) faca
 	    imprime(v)
 	fim_para

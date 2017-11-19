@@ -1,2 +1,2 @@
-Linha 10: comentario nao fechado ou comando incompleto
+Linha 12: erro sintatico proximo a fim_para
 Fim da compilacao

@@ -13,5 +13,4 @@ inicio
 	se valor < get_peso(g, v1, v2) entao
 	    imprime(v)
 
-
 fim
