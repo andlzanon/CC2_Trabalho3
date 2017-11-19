@@ -43,10 +43,10 @@ public class GrafosParser extends Parser {
 
 	private static final String[] _LITERAL_NAMES = {
 		null, "'declaracoes'", "'inicio'", "'fim'", "','", "'grafo'", "'vertice'", 
-		"'int'", "'vetor'", "'aresta'", "'('", "')'", "'remove_vert'", "'get_peso'", 
-		"'set_peso'", "'set_custo_para_vertice'", "'imprime'", "'se'", "'entao'", 
-		"'fim_se'", "'para'", "'em'", "'faca'", "'fim_para'", "'enquanto'", "'fim_enquanto'", 
-		"'<-'", "'dijkstra'", "'prim'", "'dfs'", "'bfs'", "'get_custo_para_vertice'", 
+		"'int'", "'vetor'", "'aresta'", "'('", "')'", "'remove_vert'", "'set_peso'", 
+		"'set_custo_para_vertice'", "'imprime'", "'se'", "'entao'", "'fim_se'", 
+		"'para'", "'em'", "'faca'", "'fim_para'", "'enquanto'", "'fim_enquanto'", 
+		"'<-'", "'dijkstra'", "'prim'", "'dfs'", "'bfs'", "'get_peso'", "'get_custo_para_vertice'", 
 		"'qtde_vert'", "'vizinhos'", "'vertices'", "'senao'", "'%'", "'='", "'<>'", 
 		"'>='", "'<='", "'>'", "'<'", "'*'", "'/'", "'+'", "'-'"
 	};
@@ -130,6 +130,11 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitAlgoritmo(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitAlgoritmo(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final AlgoritmoContext algoritmo() throws RecognitionException {
@@ -179,6 +184,11 @@ public class GrafosParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitDeclaracao(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitDeclaracao(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -241,6 +251,11 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitVariavel(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitVariavel(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final VariavelContext variavel() throws RecognitionException {
@@ -284,6 +299,11 @@ public class GrafosParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitMais_variavel(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitMais_variavel(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -336,6 +356,11 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitTipo(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitTipo(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TipoContext tipo() throws RecognitionException {
@@ -387,6 +412,11 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitCodigo(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitCodigo(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final CodigoContext codigo() throws RecognitionException {
@@ -399,7 +429,7 @@ public class GrafosParser extends Parser {
 			setState(76);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__8) | (1L << T__11) | (1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__19) | (1L << T__23) | (1L << T__26) | (1L << T__27) | (1L << T__28) | (1L << T__29) | (1L << T__30) | (1L << T__31) | (1L << T__32) | (1L << T__33) | (1L << IDENT))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__8) | (1L << T__11) | (1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__18) | (1L << T__22) | (1L << T__25) | (1L << T__26) | (1L << T__27) | (1L << T__28) | (1L << T__29) | (1L << T__30) | (1L << T__31) | (1L << T__32) | (1L << T__33) | (1L << IDENT))) != 0)) {
 				{
 				{
 				setState(73);
@@ -462,16 +492,21 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitInstrucoes(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitInstrucoes(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final InstrucoesContext instrucoes() throws RecognitionException {
 		InstrucoesContext _localctx = new InstrucoesContext(_ctx, getState());
 		enterRule(_localctx, 12, RULE_instrucoes);
 		try {
-			setState(174);
+			setState(166);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,3,_ctx) ) {
-			case 1:
+			switch (_input.LA(1)) {
+			case T__8:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(79);
@@ -496,7 +531,7 @@ public class GrafosParser extends Parser {
 				match(T__10);
 				}
 				break;
-			case 2:
+			case T__11:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(89);
@@ -513,7 +548,7 @@ public class GrafosParser extends Parser {
 				match(T__10);
 				}
 				break;
-			case 3:
+			case T__12:
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(95);
@@ -534,7 +569,7 @@ public class GrafosParser extends Parser {
 				match(T__10);
 				}
 				break;
-			case 4:
+			case T__13:
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(103);
@@ -550,12 +585,12 @@ public class GrafosParser extends Parser {
 				setState(108);
 				match(T__3);
 				setState(109);
-				match(IDENT);
+				match(INTEIRO);
 				setState(110);
 				match(T__10);
 				}
 				break;
-			case 5:
+			case T__14:
 				enterOuterAlt(_localctx, 5);
 				{
 				setState(111);
@@ -563,176 +598,160 @@ public class GrafosParser extends Parser {
 				setState(112);
 				match(T__9);
 				setState(113);
-				match(IDENT);
+				var_ou_cadeia();
 				setState(114);
-				match(T__3);
-				setState(115);
-				match(IDENT);
-				setState(116);
-				match(T__3);
-				setState(117);
-				match(INTEIRO);
-				setState(118);
 				match(T__10);
 				}
 				break;
-			case 6:
+			case T__15:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(119);
+				setState(116);
 				match(T__15);
+				setState(117);
+				expressao();
+				setState(118);
+				match(T__16);
+				setState(119);
+				codigo();
 				setState(120);
-				match(T__9);
+				senao_opcional();
 				setState(121);
-				var_ou_cadeia();
-				setState(122);
-				match(T__10);
+				match(T__17);
 				}
 				break;
-			case 7:
+			case T__18:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(124);
-				match(T__16);
-				setState(125);
-				expressao();
-				setState(126);
-				match(T__17);
-				setState(127);
-				codigo();
-				setState(128);
-				senao_opcional();
-				setState(129);
+				setState(123);
 				match(T__18);
+				setState(124);
+				match(IDENT);
+				setState(125);
+				match(T__19);
+				setState(126);
+				vetores_para();
+				setState(127);
+				match(T__20);
+				setState(128);
+				codigo();
+				setState(129);
+				match(T__21);
 				}
 				break;
-			case 8:
+			case T__22:
 				enterOuterAlt(_localctx, 8);
 				{
 				setState(131);
-				match(T__19);
+				match(T__22);
 				setState(132);
-				match(IDENT);
+				expressao();
 				setState(133);
 				match(T__20);
 				setState(134);
-				vetores_para();
-				setState(135);
-				match(T__21);
-				setState(136);
 				codigo();
-				setState(137);
-				match(T__22);
+				setState(135);
+				match(T__23);
 				}
 				break;
-			case 9:
+			case IDENT:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(139);
-				match(T__23);
-				setState(140);
-				expressao();
-				setState(141);
-				match(T__21);
-				setState(142);
-				codigo();
-				setState(143);
+				setState(137);
+				match(IDENT);
+				setState(138);
 				match(T__24);
+				setState(139);
+				expressao();
 				}
 				break;
-			case 10:
+			case T__25:
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(145);
-				match(IDENT);
-				setState(146);
+				setState(140);
 				match(T__25);
-				setState(147);
-				expressao();
+				setState(141);
+				match(T__9);
+				setState(142);
+				match(IDENT);
+				setState(143);
+				match(T__3);
+				setState(144);
+				match(IDENT);
+				setState(145);
+				match(T__10);
 				}
 				break;
-			case 11:
+			case T__26:
 				enterOuterAlt(_localctx, 11);
 				{
-				setState(148);
+				setState(146);
 				match(T__26);
-				setState(149);
+				setState(147);
 				match(T__9);
+				setState(148);
+				match(IDENT);
+				setState(149);
+				match(T__3);
 				setState(150);
 				match(IDENT);
 				setState(151);
-				match(T__3);
-				setState(152);
-				match(IDENT);
-				setState(153);
 				match(T__10);
 				}
 				break;
-			case 12:
+			case T__27:
 				enterOuterAlt(_localctx, 12);
 				{
-				setState(154);
+				setState(152);
 				match(T__27);
-				setState(155);
+				setState(153);
 				match(T__9);
+				setState(154);
+				match(IDENT);
+				setState(155);
+				match(T__3);
 				setState(156);
 				match(IDENT);
 				setState(157);
-				match(T__3);
-				setState(158);
-				match(IDENT);
-				setState(159);
 				match(T__10);
 				}
 				break;
-			case 13:
+			case T__28:
 				enterOuterAlt(_localctx, 13);
 				{
-				setState(160);
+				setState(158);
 				match(T__28);
-				setState(161);
+				setState(159);
 				match(T__9);
+				setState(160);
+				match(IDENT);
+				setState(161);
+				match(T__3);
 				setState(162);
 				match(IDENT);
 				setState(163);
-				match(T__3);
-				setState(164);
-				match(IDENT);
-				setState(165);
 				match(T__10);
 				}
 				break;
-			case 14:
+			case T__29:
+			case T__30:
+			case T__31:
 				enterOuterAlt(_localctx, 14);
 				{
-				setState(166);
-				match(T__29);
-				setState(167);
-				match(T__9);
-				setState(168);
-				match(IDENT);
-				setState(169);
-				match(T__3);
-				setState(170);
-				match(IDENT);
-				setState(171);
-				match(T__10);
-				}
-				break;
-			case 15:
-				enterOuterAlt(_localctx, 15);
-				{
-				setState(172);
+				setState(164);
 				instrucoes_com_retorno();
 				}
 				break;
-			case 16:
-				enterOuterAlt(_localctx, 16);
+			case T__32:
+			case T__33:
+				enterOuterAlt(_localctx, 15);
 				{
-				setState(173);
+				setState(165);
 				instrucoes_de_vetores();
 				}
 				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -751,7 +770,6 @@ public class GrafosParser extends Parser {
 		public TerminalNode IDENT(int i) {
 			return getToken(GrafosParser.IDENT, i);
 		}
-		public TerminalNode INTEIRO() { return getToken(GrafosParser.INTEIRO, 0); }
 		public Instrucoes_com_retornoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -764,20 +782,46 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitInstrucoes_com_retorno(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitInstrucoes_com_retorno(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Instrucoes_com_retornoContext instrucoes_com_retorno() throws RecognitionException {
 		Instrucoes_com_retornoContext _localctx = new Instrucoes_com_retornoContext(_ctx, getState());
 		enterRule(_localctx, 14, RULE_instrucoes_com_retorno);
 		try {
-			setState(196);
+			setState(186);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case T__12:
+			case T__29:
 				enterOuterAlt(_localctx, 1);
 				{
+				setState(168);
+				match(T__29);
+				setState(169);
+				match(T__9);
+				setState(170);
+				match(IDENT);
+				setState(171);
+				match(T__3);
+				setState(172);
+				match(IDENT);
+				setState(173);
+				match(T__3);
+				setState(174);
+				match(IDENT);
+				setState(175);
+				match(T__10);
+				}
+				break;
+			case T__30:
+				enterOuterAlt(_localctx, 2);
+				{
 				setState(176);
-				match(T__12);
+				match(T__30);
 				setState(177);
 				match(T__9);
 				setState(178);
@@ -787,44 +831,19 @@ public class GrafosParser extends Parser {
 				setState(180);
 				match(IDENT);
 				setState(181);
-				match(T__3);
-				setState(182);
-				match(IDENT);
-				setState(183);
-				match(T__10);
-				}
-				break;
-			case T__30:
-				enterOuterAlt(_localctx, 2);
-				{
-				setState(184);
-				match(T__30);
-				setState(185);
-				match(T__9);
-				setState(186);
-				match(IDENT);
-				setState(187);
-				match(T__3);
-				setState(188);
-				match(IDENT);
-				setState(189);
-				match(T__3);
-				setState(190);
-				match(INTEIRO);
-				setState(191);
 				match(T__10);
 				}
 				break;
 			case T__31:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(192);
+				setState(182);
 				match(T__31);
-				setState(193);
+				setState(183);
 				match(T__9);
-				setState(194);
+				setState(184);
 				match(IDENT);
-				setState(195);
+				setState(185);
 				match(T__10);
 				}
 				break;
@@ -860,42 +879,47 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitInstrucoes_de_vetores(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitInstrucoes_de_vetores(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Instrucoes_de_vetoresContext instrucoes_de_vetores() throws RecognitionException {
 		Instrucoes_de_vetoresContext _localctx = new Instrucoes_de_vetoresContext(_ctx, getState());
 		enterRule(_localctx, 16, RULE_instrucoes_de_vetores);
 		try {
-			setState(208);
+			setState(198);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__32:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(198);
+				setState(188);
 				match(T__32);
-				setState(199);
+				setState(189);
 				match(T__9);
-				setState(200);
+				setState(190);
 				match(IDENT);
-				setState(201);
+				setState(191);
 				match(T__3);
-				setState(202);
+				setState(192);
 				match(IDENT);
-				setState(203);
+				setState(193);
 				match(T__10);
 				}
 				break;
 			case T__33:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(204);
+				setState(194);
 				match(T__33);
-				setState(205);
+				setState(195);
 				match(T__9);
-				setState(206);
+				setState(196);
 				match(IDENT);
-				setState(207);
+				setState(197);
 				match(T__10);
 				}
 				break;
@@ -931,27 +955,32 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitVetores_para(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitVetores_para(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Vetores_paraContext vetores_para() throws RecognitionException {
 		Vetores_paraContext _localctx = new Vetores_paraContext(_ctx, getState());
 		enterRule(_localctx, 18, RULE_vetores_para);
 		try {
-			setState(212);
+			setState(202);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__32:
 			case T__33:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(210);
+				setState(200);
 				instrucoes_de_vetores();
 				}
 				break;
 			case IDENT:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(211);
+				setState(201);
 				match(IDENT);
 				}
 				break;
@@ -985,6 +1014,11 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitVar_ou_cadeia(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitVar_ou_cadeia(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Var_ou_cadeiaContext var_ou_cadeia() throws RecognitionException {
@@ -994,7 +1028,7 @@ public class GrafosParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(214);
+			setState(204);
 			_la = _input.LA(1);
 			if ( !(_la==IDENT || _la==CADEIA) ) {
 			_errHandler.recoverInline(this);
@@ -1033,25 +1067,30 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitSenao_opcional(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitSenao_opcional(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Senao_opcionalContext senao_opcional() throws RecognitionException {
 		Senao_opcionalContext _localctx = new Senao_opcionalContext(_ctx, getState());
 		enterRule(_localctx, 22, RULE_senao_opcional);
 		try {
-			setState(219);
+			setState(209);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__34:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(216);
+				setState(206);
 				match(T__34);
-				setState(217);
+				setState(207);
 				codigo();
 				}
 				break;
-			case T__18:
+			case T__17:
 				enterOuterAlt(_localctx, 2);
 				{
 				}
@@ -1090,6 +1129,11 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitExpressao(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitExpressao(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ExpressaoContext expressao() throws RecognitionException {
@@ -1098,9 +1142,9 @@ public class GrafosParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(221);
+			setState(211);
 			exp_aritmetica();
-			setState(222);
+			setState(212);
 			op_opcional();
 			}
 		}
@@ -1134,6 +1178,11 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitExp_aritmetica(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitExp_aritmetica(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Exp_aritmeticaContext exp_aritmetica() throws RecognitionException {
@@ -1142,9 +1191,9 @@ public class GrafosParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(224);
+			setState(214);
 			termo();
-			setState(225);
+			setState(215);
 			outros_termos();
 			}
 		}
@@ -1181,29 +1230,35 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitOutros_termos(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitOutros_termos(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Outros_termosContext outros_termos() throws RecognitionException {
 		Outros_termosContext _localctx = new Outros_termosContext(_ctx, getState());
 		enterRule(_localctx, 28, RULE_outros_termos);
 		try {
-			setState(232);
+			setState(222);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__44:
 			case T__45:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(227);
+				setState(217);
 				op_adicao();
-				setState(228);
+				setState(218);
 				termo();
-				setState(229);
+				setState(219);
 				outros_termos();
 				}
 				break;
 			case T__2:
 			case T__8:
+			case T__10:
 			case T__11:
 			case T__12:
 			case T__13:
@@ -1212,11 +1267,11 @@ public class GrafosParser extends Parser {
 			case T__16:
 			case T__17:
 			case T__18:
-			case T__19:
+			case T__20:
 			case T__21:
 			case T__22:
 			case T__23:
-			case T__24:
+			case T__25:
 			case T__26:
 			case T__27:
 			case T__28:
@@ -1271,6 +1326,11 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitTermo(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitTermo(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TermoContext termo() throws RecognitionException {
@@ -1279,9 +1339,9 @@ public class GrafosParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(234);
+			setState(224);
 			fator();
-			setState(235);
+			setState(225);
 			outros_fatores();
 			}
 		}
@@ -1318,29 +1378,35 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitOutros_fatores(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitOutros_fatores(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Outros_fatoresContext outros_fatores() throws RecognitionException {
 		Outros_fatoresContext _localctx = new Outros_fatoresContext(_ctx, getState());
 		enterRule(_localctx, 32, RULE_outros_fatores);
 		try {
-			setState(242);
+			setState(232);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__42:
 			case T__43:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(237);
+				setState(227);
 				op_multiplicacao();
-				setState(238);
+				setState(228);
 				fator();
-				setState(239);
+				setState(229);
 				outros_fatores();
 				}
 				break;
 			case T__2:
 			case T__8:
+			case T__10:
 			case T__11:
 			case T__12:
 			case T__13:
@@ -1349,11 +1415,11 @@ public class GrafosParser extends Parser {
 			case T__16:
 			case T__17:
 			case T__18:
-			case T__19:
+			case T__20:
 			case T__21:
 			case T__22:
 			case T__23:
-			case T__24:
+			case T__25:
 			case T__26:
 			case T__27:
 			case T__28:
@@ -1410,6 +1476,11 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitFator(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitFator(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final FatorContext fator() throws RecognitionException {
@@ -1418,9 +1489,9 @@ public class GrafosParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(244);
+			setState(234);
 			parcela();
-			setState(245);
+			setState(235);
 			outras_parcelas();
 			}
 		}
@@ -1454,20 +1525,73 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitOutras_parcelas(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitOutras_parcelas(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Outras_parcelasContext outras_parcelas() throws RecognitionException {
 		Outras_parcelasContext _localctx = new Outras_parcelasContext(_ctx, getState());
 		enterRule(_localctx, 36, RULE_outras_parcelas);
 		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(247);
-			match(T__35);
-			setState(248);
-			parcela();
-			setState(249);
-			outras_parcelas();
+			setState(242);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case T__35:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(237);
+				match(T__35);
+				setState(238);
+				parcela();
+				setState(239);
+				outras_parcelas();
+				}
+				break;
+			case T__2:
+			case T__8:
+			case T__10:
+			case T__11:
+			case T__12:
+			case T__13:
+			case T__14:
+			case T__15:
+			case T__16:
+			case T__17:
+			case T__18:
+			case T__20:
+			case T__21:
+			case T__22:
+			case T__23:
+			case T__25:
+			case T__26:
+			case T__27:
+			case T__28:
+			case T__29:
+			case T__30:
+			case T__31:
+			case T__32:
+			case T__33:
+			case T__34:
+			case T__36:
+			case T__37:
+			case T__38:
+			case T__39:
+			case T__40:
+			case T__41:
+			case T__42:
+			case T__43:
+			case T__44:
+			case T__45:
+			case IDENT:
+				enterOuterAlt(_localctx, 2);
+				{
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1487,6 +1611,9 @@ public class GrafosParser extends Parser {
 		public Instrucoes_com_retornoContext instrucoes_com_retorno() {
 			return getRuleContext(Instrucoes_com_retornoContext.class,0);
 		}
+		public ExpressaoContext expressao() {
+			return getRuleContext(ExpressaoContext.class,0);
+		}
 		public ParcelaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1499,36 +1626,52 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitParcela(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitParcela(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ParcelaContext parcela() throws RecognitionException {
 		ParcelaContext _localctx = new ParcelaContext(_ctx, getState());
 		enterRule(_localctx, 38, RULE_parcela);
 		try {
-			setState(254);
+			setState(251);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case IDENT:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(251);
+				setState(244);
 				match(IDENT);
 				}
 				break;
 			case INTEIRO:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(252);
+				setState(245);
 				match(INTEIRO);
 				}
 				break;
-			case T__12:
+			case T__29:
 			case T__30:
 			case T__31:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(253);
+				setState(246);
 				instrucoes_com_retorno();
+				}
+				break;
+			case T__9:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(247);
+				match(T__9);
+				setState(248);
+				expressao();
+				setState(249);
+				match(T__10);
 				}
 				break;
 			default:
@@ -1565,13 +1708,18 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitOp_opcional(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitOp_opcional(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Op_opcionalContext op_opcional() throws RecognitionException {
 		Op_opcionalContext _localctx = new Op_opcionalContext(_ctx, getState());
 		enterRule(_localctx, 40, RULE_op_opcional);
 		try {
-			setState(260);
+			setState(257);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__36:
@@ -1582,14 +1730,15 @@ public class GrafosParser extends Parser {
 			case T__41:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(256);
+				setState(253);
 				op_relacional();
-				setState(257);
+				setState(254);
 				exp_aritmetica();
 				}
 				break;
 			case T__2:
 			case T__8:
+			case T__10:
 			case T__11:
 			case T__12:
 			case T__13:
@@ -1598,11 +1747,11 @@ public class GrafosParser extends Parser {
 			case T__16:
 			case T__17:
 			case T__18:
-			case T__19:
+			case T__20:
 			case T__21:
 			case T__22:
 			case T__23:
-			case T__24:
+			case T__25:
 			case T__26:
 			case T__27:
 			case T__28:
@@ -1645,6 +1794,11 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitOp_relacional(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitOp_relacional(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Op_relacionalContext op_relacional() throws RecognitionException {
@@ -1654,7 +1808,7 @@ public class GrafosParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(262);
+			setState(259);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__36) | (1L << T__37) | (1L << T__38) | (1L << T__39) | (1L << T__40) | (1L << T__41))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -1690,6 +1844,11 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitOp_multiplicacao(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitOp_multiplicacao(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Op_multiplicacaoContext op_multiplicacao() throws RecognitionException {
@@ -1699,7 +1858,7 @@ public class GrafosParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(264);
+			setState(261);
 			_la = _input.LA(1);
 			if ( !(_la==T__42 || _la==T__43) ) {
 			_errHandler.recoverInline(this);
@@ -1735,6 +1894,11 @@ public class GrafosParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof GrafosListener ) ((GrafosListener)listener).exitOp_adicao(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof GrafosVisitor ) return ((GrafosVisitor<? extends T>)visitor).visitOp_adicao(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final Op_adicaoContext op_adicao() throws RecognitionException {
@@ -1744,7 +1908,7 @@ public class GrafosParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(266);
+			setState(263);
 			_la = _input.LA(1);
 			if ( !(_la==T__44 || _la==T__45) ) {
 			_errHandler.recoverInline(this);
@@ -1768,7 +1932,7 @@ public class GrafosParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\67\u010f\4\2\t\2"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\67\u010c\4\2\t\2"+
 		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
 		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -1778,82 +1942,81 @@ public class GrafosParser extends Parser {
 		"\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3"+
 		"\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b"+
 		"\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3"+
-		"\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b"+
-		"\3\b\3\b\3\b\3\b\3\b\3\b\5\b\u00b1\n\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t"+
-		"\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\5\t\u00c7\n\t\3\n\3\n"+
-		"\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\5\n\u00d3\n\n\3\13\3\13\5\13\u00d7\n"+
-		"\13\3\f\3\f\3\r\3\r\3\r\5\r\u00de\n\r\3\16\3\16\3\16\3\17\3\17\3\17\3"+
-		"\20\3\20\3\20\3\20\3\20\5\20\u00eb\n\20\3\21\3\21\3\21\3\22\3\22\3\22"+
-		"\3\22\3\22\5\22\u00f5\n\22\3\23\3\23\3\23\3\24\3\24\3\24\3\24\3\25\3\25"+
-		"\3\25\5\25\u0101\n\25\3\26\3\26\3\26\3\26\5\26\u0107\n\26\3\27\3\27\3"+
-		"\30\3\30\3\31\3\31\3\31\2\2\32\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36"+
-		" \"$&(*,.\60\2\7\3\2\7\n\4\2\61\61\63\63\3\2\',\3\2-.\3\2/\60\2\u0112"+
-		"\2\62\3\2\2\2\4<\3\2\2\2\6>\3\2\2\2\bF\3\2\2\2\nI\3\2\2\2\fN\3\2\2\2\16"+
-		"\u00b0\3\2\2\2\20\u00c6\3\2\2\2\22\u00d2\3\2\2\2\24\u00d6\3\2\2\2\26\u00d8"+
-		"\3\2\2\2\30\u00dd\3\2\2\2\32\u00df\3\2\2\2\34\u00e2\3\2\2\2\36\u00ea\3"+
-		"\2\2\2 \u00ec\3\2\2\2\"\u00f4\3\2\2\2$\u00f6\3\2\2\2&\u00f9\3\2\2\2(\u0100"+
-		"\3\2\2\2*\u0106\3\2\2\2,\u0108\3\2\2\2.\u010a\3\2\2\2\60\u010c\3\2\2\2"+
+		"\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\5\b\u00a9"+
+		"\n\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3"+
+		"\t\3\t\5\t\u00bd\n\t\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\3\n\5\n\u00c9"+
+		"\n\n\3\13\3\13\5\13\u00cd\n\13\3\f\3\f\3\r\3\r\3\r\5\r\u00d4\n\r\3\16"+
+		"\3\16\3\16\3\17\3\17\3\17\3\20\3\20\3\20\3\20\3\20\5\20\u00e1\n\20\3\21"+
+		"\3\21\3\21\3\22\3\22\3\22\3\22\3\22\5\22\u00eb\n\22\3\23\3\23\3\23\3\24"+
+		"\3\24\3\24\3\24\3\24\5\24\u00f5\n\24\3\25\3\25\3\25\3\25\3\25\3\25\3\25"+
+		"\5\25\u00fe\n\25\3\26\3\26\3\26\3\26\5\26\u0104\n\26\3\27\3\27\3\30\3"+
+		"\30\3\31\3\31\3\31\2\2\32\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&"+
+		"(*,.\60\2\7\3\2\7\n\4\2\61\61\63\63\3\2\',\3\2-.\3\2/\60\2\u0110\2\62"+
+		"\3\2\2\2\4<\3\2\2\2\6>\3\2\2\2\bF\3\2\2\2\nI\3\2\2\2\fN\3\2\2\2\16\u00a8"+
+		"\3\2\2\2\20\u00bc\3\2\2\2\22\u00c8\3\2\2\2\24\u00cc\3\2\2\2\26\u00ce\3"+
+		"\2\2\2\30\u00d3\3\2\2\2\32\u00d5\3\2\2\2\34\u00d8\3\2\2\2\36\u00e0\3\2"+
+		"\2\2 \u00e2\3\2\2\2\"\u00ea\3\2\2\2$\u00ec\3\2\2\2&\u00f4\3\2\2\2(\u00fd"+
+		"\3\2\2\2*\u0103\3\2\2\2,\u0105\3\2\2\2.\u0107\3\2\2\2\60\u0109\3\2\2\2"+
 		"\62\63\7\3\2\2\63\64\5\4\3\2\64\65\7\4\2\2\65\66\5\f\7\2\66\67\7\5\2\2"+
 		"\67\3\3\2\2\289\5\6\4\29:\5\4\3\2:=\3\2\2\2;=\3\2\2\2<8\3\2\2\2<;\3\2"+
 		"\2\2=\5\3\2\2\2>?\5\n\6\2?@\7\61\2\2@A\5\b\5\2A\7\3\2\2\2BC\7\6\2\2CE"+
 		"\7\61\2\2DB\3\2\2\2EH\3\2\2\2FD\3\2\2\2FG\3\2\2\2G\t\3\2\2\2HF\3\2\2\2"+
 		"IJ\t\2\2\2J\13\3\2\2\2KM\5\16\b\2LK\3\2\2\2MP\3\2\2\2NL\3\2\2\2NO\3\2"+
 		"\2\2O\r\3\2\2\2PN\3\2\2\2QR\7\13\2\2RS\7\f\2\2ST\7\61\2\2TU\7\6\2\2UV"+
-		"\7\61\2\2VW\7\6\2\2WX\7\61\2\2XY\7\6\2\2YZ\7\62\2\2Z\u00b1\7\r\2\2[\\"+
-		"\7\16\2\2\\]\7\f\2\2]^\7\61\2\2^_\7\6\2\2_`\7\61\2\2`\u00b1\7\r\2\2ab"+
+		"\7\61\2\2VW\7\6\2\2WX\7\61\2\2XY\7\6\2\2YZ\7\62\2\2Z\u00a9\7\r\2\2[\\"+
+		"\7\16\2\2\\]\7\f\2\2]^\7\61\2\2^_\7\6\2\2_`\7\61\2\2`\u00a9\7\r\2\2ab"+
 		"\7\17\2\2bc\7\f\2\2cd\7\61\2\2de\7\6\2\2ef\7\61\2\2fg\7\6\2\2gh\7\61\2"+
-		"\2h\u00b1\7\r\2\2ij\7\20\2\2jk\7\f\2\2kl\7\61\2\2lm\7\6\2\2mn\7\61\2\2"+
-		"no\7\6\2\2op\7\61\2\2p\u00b1\7\r\2\2qr\7\21\2\2rs\7\f\2\2st\7\61\2\2t"+
-		"u\7\6\2\2uv\7\61\2\2vw\7\6\2\2wx\7\62\2\2x\u00b1\7\r\2\2yz\7\22\2\2z{"+
-		"\7\f\2\2{|\5\26\f\2|}\7\r\2\2}\u00b1\3\2\2\2~\177\7\23\2\2\177\u0080\5"+
-		"\32\16\2\u0080\u0081\7\24\2\2\u0081\u0082\5\f\7\2\u0082\u0083\5\30\r\2"+
-		"\u0083\u0084\7\25\2\2\u0084\u00b1\3\2\2\2\u0085\u0086\7\26\2\2\u0086\u0087"+
-		"\7\61\2\2\u0087\u0088\7\27\2\2\u0088\u0089\5\24\13\2\u0089\u008a\7\30"+
-		"\2\2\u008a\u008b\5\f\7\2\u008b\u008c\7\31\2\2\u008c\u00b1\3\2\2\2\u008d"+
-		"\u008e\7\32\2\2\u008e\u008f\5\32\16\2\u008f\u0090\7\30\2\2\u0090\u0091"+
-		"\5\f\7\2\u0091\u0092\7\33\2\2\u0092\u00b1\3\2\2\2\u0093\u0094\7\61\2\2"+
-		"\u0094\u0095\7\34\2\2\u0095\u00b1\5\32\16\2\u0096\u0097\7\35\2\2\u0097"+
-		"\u0098\7\f\2\2\u0098\u0099\7\61\2\2\u0099\u009a\7\6\2\2\u009a\u009b\7"+
-		"\61\2\2\u009b\u00b1\7\r\2\2\u009c\u009d\7\36\2\2\u009d\u009e\7\f\2\2\u009e"+
-		"\u009f\7\61\2\2\u009f\u00a0\7\6\2\2\u00a0\u00a1\7\61\2\2\u00a1\u00b1\7"+
-		"\r\2\2\u00a2\u00a3\7\37\2\2\u00a3\u00a4\7\f\2\2\u00a4\u00a5\7\61\2\2\u00a5"+
-		"\u00a6\7\6\2\2\u00a6\u00a7\7\61\2\2\u00a7\u00b1\7\r\2\2\u00a8\u00a9\7"+
-		" \2\2\u00a9\u00aa\7\f\2\2\u00aa\u00ab\7\61\2\2\u00ab\u00ac\7\6\2\2\u00ac"+
-		"\u00ad\7\61\2\2\u00ad\u00b1\7\r\2\2\u00ae\u00b1\5\20\t\2\u00af\u00b1\5"+
-		"\22\n\2\u00b0Q\3\2\2\2\u00b0[\3\2\2\2\u00b0a\3\2\2\2\u00b0i\3\2\2\2\u00b0"+
-		"q\3\2\2\2\u00b0y\3\2\2\2\u00b0~\3\2\2\2\u00b0\u0085\3\2\2\2\u00b0\u008d"+
-		"\3\2\2\2\u00b0\u0093\3\2\2\2\u00b0\u0096\3\2\2\2\u00b0\u009c\3\2\2\2\u00b0"+
-		"\u00a2\3\2\2\2\u00b0\u00a8\3\2\2\2\u00b0\u00ae\3\2\2\2\u00b0\u00af\3\2"+
-		"\2\2\u00b1\17\3\2\2\2\u00b2\u00b3\7\17\2\2\u00b3\u00b4\7\f\2\2\u00b4\u00b5"+
-		"\7\61\2\2\u00b5\u00b6\7\6\2\2\u00b6\u00b7\7\61\2\2\u00b7\u00b8\7\6\2\2"+
-		"\u00b8\u00b9\7\61\2\2\u00b9\u00c7\7\r\2\2\u00ba\u00bb\7!\2\2\u00bb\u00bc"+
-		"\7\f\2\2\u00bc\u00bd\7\61\2\2\u00bd\u00be\7\6\2\2\u00be\u00bf\7\61\2\2"+
-		"\u00bf\u00c0\7\6\2\2\u00c0\u00c1\7\62\2\2\u00c1\u00c7\7\r\2\2\u00c2\u00c3"+
-		"\7\"\2\2\u00c3\u00c4\7\f\2\2\u00c4\u00c5\7\61\2\2\u00c5\u00c7\7\r\2\2"+
-		"\u00c6\u00b2\3\2\2\2\u00c6\u00ba\3\2\2\2\u00c6\u00c2\3\2\2\2\u00c7\21"+
-		"\3\2\2\2\u00c8\u00c9\7#\2\2\u00c9\u00ca\7\f\2\2\u00ca\u00cb\7\61\2\2\u00cb"+
-		"\u00cc\7\6\2\2\u00cc\u00cd\7\61\2\2\u00cd\u00d3\7\r\2\2\u00ce\u00cf\7"+
-		"$\2\2\u00cf\u00d0\7\f\2\2\u00d0\u00d1\7\61\2\2\u00d1\u00d3\7\r\2\2\u00d2"+
-		"\u00c8\3\2\2\2\u00d2\u00ce\3\2\2\2\u00d3\23\3\2\2\2\u00d4\u00d7\5\22\n"+
-		"\2\u00d5\u00d7\7\61\2\2\u00d6\u00d4\3\2\2\2\u00d6\u00d5\3\2\2\2\u00d7"+
-		"\25\3\2\2\2\u00d8\u00d9\t\3\2\2\u00d9\27\3\2\2\2\u00da\u00db\7%\2\2\u00db"+
-		"\u00de\5\f\7\2\u00dc\u00de\3\2\2\2\u00dd\u00da\3\2\2\2\u00dd\u00dc\3\2"+
-		"\2\2\u00de\31\3\2\2\2\u00df\u00e0\5\34\17\2\u00e0\u00e1\5*\26\2\u00e1"+
-		"\33\3\2\2\2\u00e2\u00e3\5 \21\2\u00e3\u00e4\5\36\20\2\u00e4\35\3\2\2\2"+
-		"\u00e5\u00e6\5\60\31\2\u00e6\u00e7\5 \21\2\u00e7\u00e8\5\36\20\2\u00e8"+
-		"\u00eb\3\2\2\2\u00e9\u00eb\3\2\2\2\u00ea\u00e5\3\2\2\2\u00ea\u00e9\3\2"+
-		"\2\2\u00eb\37\3\2\2\2\u00ec\u00ed\5$\23\2\u00ed\u00ee\5\"\22\2\u00ee!"+
-		"\3\2\2\2\u00ef\u00f0\5.\30\2\u00f0\u00f1\5$\23\2\u00f1\u00f2\5\"\22\2"+
-		"\u00f2\u00f5\3\2\2\2\u00f3\u00f5\3\2\2\2\u00f4\u00ef\3\2\2\2\u00f4\u00f3"+
-		"\3\2\2\2\u00f5#\3\2\2\2\u00f6\u00f7\5(\25\2\u00f7\u00f8\5&\24\2\u00f8"+
-		"%\3\2\2\2\u00f9\u00fa\7&\2\2\u00fa\u00fb\5(\25\2\u00fb\u00fc\5&\24\2\u00fc"+
-		"\'\3\2\2\2\u00fd\u0101\7\61\2\2\u00fe\u0101\7\62\2\2\u00ff\u0101\5\20"+
-		"\t\2\u0100\u00fd\3\2\2\2\u0100\u00fe\3\2\2\2\u0100\u00ff\3\2\2\2\u0101"+
-		")\3\2\2\2\u0102\u0103\5,\27\2\u0103\u0104\5\34\17\2\u0104\u0107\3\2\2"+
-		"\2\u0105\u0107\3\2\2\2\u0106\u0102\3\2\2\2\u0106\u0105\3\2\2\2\u0107+"+
-		"\3\2\2\2\u0108\u0109\t\4\2\2\u0109-\3\2\2\2\u010a\u010b\t\5\2\2\u010b"+
-		"/\3\2\2\2\u010c\u010d\t\6\2\2\u010d\61\3\2\2\2\16<FN\u00b0\u00c6\u00d2"+
-		"\u00d6\u00dd\u00ea\u00f4\u0100\u0106";
+		"\2h\u00a9\7\r\2\2ij\7\20\2\2jk\7\f\2\2kl\7\61\2\2lm\7\6\2\2mn\7\61\2\2"+
+		"no\7\6\2\2op\7\62\2\2p\u00a9\7\r\2\2qr\7\21\2\2rs\7\f\2\2st\5\26\f\2t"+
+		"u\7\r\2\2u\u00a9\3\2\2\2vw\7\22\2\2wx\5\32\16\2xy\7\23\2\2yz\5\f\7\2z"+
+		"{\5\30\r\2{|\7\24\2\2|\u00a9\3\2\2\2}~\7\25\2\2~\177\7\61\2\2\177\u0080"+
+		"\7\26\2\2\u0080\u0081\5\24\13\2\u0081\u0082\7\27\2\2\u0082\u0083\5\f\7"+
+		"\2\u0083\u0084\7\30\2\2\u0084\u00a9\3\2\2\2\u0085\u0086\7\31\2\2\u0086"+
+		"\u0087\5\32\16\2\u0087\u0088\7\27\2\2\u0088\u0089\5\f\7\2\u0089\u008a"+
+		"\7\32\2\2\u008a\u00a9\3\2\2\2\u008b\u008c\7\61\2\2\u008c\u008d\7\33\2"+
+		"\2\u008d\u00a9\5\32\16\2\u008e\u008f\7\34\2\2\u008f\u0090\7\f\2\2\u0090"+
+		"\u0091\7\61\2\2\u0091\u0092\7\6\2\2\u0092\u0093\7\61\2\2\u0093\u00a9\7"+
+		"\r\2\2\u0094\u0095\7\35\2\2\u0095\u0096\7\f\2\2\u0096\u0097\7\61\2\2\u0097"+
+		"\u0098\7\6\2\2\u0098\u0099\7\61\2\2\u0099\u00a9\7\r\2\2\u009a\u009b\7"+
+		"\36\2\2\u009b\u009c\7\f\2\2\u009c\u009d\7\61\2\2\u009d\u009e\7\6\2\2\u009e"+
+		"\u009f\7\61\2\2\u009f\u00a9\7\r\2\2\u00a0\u00a1\7\37\2\2\u00a1\u00a2\7"+
+		"\f\2\2\u00a2\u00a3\7\61\2\2\u00a3\u00a4\7\6\2\2\u00a4\u00a5\7\61\2\2\u00a5"+
+		"\u00a9\7\r\2\2\u00a6\u00a9\5\20\t\2\u00a7\u00a9\5\22\n\2\u00a8Q\3\2\2"+
+		"\2\u00a8[\3\2\2\2\u00a8a\3\2\2\2\u00a8i\3\2\2\2\u00a8q\3\2\2\2\u00a8v"+
+		"\3\2\2\2\u00a8}\3\2\2\2\u00a8\u0085\3\2\2\2\u00a8\u008b\3\2\2\2\u00a8"+
+		"\u008e\3\2\2\2\u00a8\u0094\3\2\2\2\u00a8\u009a\3\2\2\2\u00a8\u00a0\3\2"+
+		"\2\2\u00a8\u00a6\3\2\2\2\u00a8\u00a7\3\2\2\2\u00a9\17\3\2\2\2\u00aa\u00ab"+
+		"\7 \2\2\u00ab\u00ac\7\f\2\2\u00ac\u00ad\7\61\2\2\u00ad\u00ae\7\6\2\2\u00ae"+
+		"\u00af\7\61\2\2\u00af\u00b0\7\6\2\2\u00b0\u00b1\7\61\2\2\u00b1\u00bd\7"+
+		"\r\2\2\u00b2\u00b3\7!\2\2\u00b3\u00b4\7\f\2\2\u00b4\u00b5\7\61\2\2\u00b5"+
+		"\u00b6\7\6\2\2\u00b6\u00b7\7\61\2\2\u00b7\u00bd\7\r\2\2\u00b8\u00b9\7"+
+		"\"\2\2\u00b9\u00ba\7\f\2\2\u00ba\u00bb\7\61\2\2\u00bb\u00bd\7\r\2\2\u00bc"+
+		"\u00aa\3\2\2\2\u00bc\u00b2\3\2\2\2\u00bc\u00b8\3\2\2\2\u00bd\21\3\2\2"+
+		"\2\u00be\u00bf\7#\2\2\u00bf\u00c0\7\f\2\2\u00c0\u00c1\7\61\2\2\u00c1\u00c2"+
+		"\7\6\2\2\u00c2\u00c3\7\61\2\2\u00c3\u00c9\7\r\2\2\u00c4\u00c5\7$\2\2\u00c5"+
+		"\u00c6\7\f\2\2\u00c6\u00c7\7\61\2\2\u00c7\u00c9\7\r\2\2\u00c8\u00be\3"+
+		"\2\2\2\u00c8\u00c4\3\2\2\2\u00c9\23\3\2\2\2\u00ca\u00cd\5\22\n\2\u00cb"+
+		"\u00cd\7\61\2\2\u00cc\u00ca\3\2\2\2\u00cc\u00cb\3\2\2\2\u00cd\25\3\2\2"+
+		"\2\u00ce\u00cf\t\3\2\2\u00cf\27\3\2\2\2\u00d0\u00d1\7%\2\2\u00d1\u00d4"+
+		"\5\f\7\2\u00d2\u00d4\3\2\2\2\u00d3\u00d0\3\2\2\2\u00d3\u00d2\3\2\2\2\u00d4"+
+		"\31\3\2\2\2\u00d5\u00d6\5\34\17\2\u00d6\u00d7\5*\26\2\u00d7\33\3\2\2\2"+
+		"\u00d8\u00d9\5 \21\2\u00d9\u00da\5\36\20\2\u00da\35\3\2\2\2\u00db\u00dc"+
+		"\5\60\31\2\u00dc\u00dd\5 \21\2\u00dd\u00de\5\36\20\2\u00de\u00e1\3\2\2"+
+		"\2\u00df\u00e1\3\2\2\2\u00e0\u00db\3\2\2\2\u00e0\u00df\3\2\2\2\u00e1\37"+
+		"\3\2\2\2\u00e2\u00e3\5$\23\2\u00e3\u00e4\5\"\22\2\u00e4!\3\2\2\2\u00e5"+
+		"\u00e6\5.\30\2\u00e6\u00e7\5$\23\2\u00e7\u00e8\5\"\22\2\u00e8\u00eb\3"+
+		"\2\2\2\u00e9\u00eb\3\2\2\2\u00ea\u00e5\3\2\2\2\u00ea\u00e9\3\2\2\2\u00eb"+
+		"#\3\2\2\2\u00ec\u00ed\5(\25\2\u00ed\u00ee\5&\24\2\u00ee%\3\2\2\2\u00ef"+
+		"\u00f0\7&\2\2\u00f0\u00f1\5(\25\2\u00f1\u00f2\5&\24\2\u00f2\u00f5\3\2"+
+		"\2\2\u00f3\u00f5\3\2\2\2\u00f4\u00ef\3\2\2\2\u00f4\u00f3\3\2\2\2\u00f5"+
+		"\'\3\2\2\2\u00f6\u00fe\7\61\2\2\u00f7\u00fe\7\62\2\2\u00f8\u00fe\5\20"+
+		"\t\2\u00f9\u00fa\7\f\2\2\u00fa\u00fb\5\32\16\2\u00fb\u00fc\7\r\2\2\u00fc"+
+		"\u00fe\3\2\2\2\u00fd\u00f6\3\2\2\2\u00fd\u00f7\3\2\2\2\u00fd\u00f8\3\2"+
+		"\2\2\u00fd\u00f9\3\2\2\2\u00fe)\3\2\2\2\u00ff\u0100\5,\27\2\u0100\u0101"+
+		"\5\34\17\2\u0101\u0104\3\2\2\2\u0102\u0104\3\2\2\2\u0103\u00ff\3\2\2\2"+
+		"\u0103\u0102\3\2\2\2\u0104+\3\2\2\2\u0105\u0106\t\4\2\2\u0106-\3\2\2\2"+
+		"\u0107\u0108\t\5\2\2\u0108/\3\2\2\2\u0109\u010a\t\6\2\2\u010a\61\3\2\2"+
+		"\2\17<FN\u00a8\u00bc\u00c8\u00cc\u00d3\u00e0\u00ea\u00f4\u00fd\u0103";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

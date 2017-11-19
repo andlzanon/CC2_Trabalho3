@@ -1,0 +1,16 @@
+declaracoes:
+	grafo g
+	vertice v1, v2, v3
+	int valor
+inicio
+	aresta(g, v1, v2, 1)
+	aresta(g, v2, v3, 1)
+	aresta(g, v1, v3, 1)
+
+	valor <- infinito
+
+	enquanto valor < get_peso(g, v1, v2)
+	    valor <- valor - get_peso(g, v1, v2)
+	fim_enquanto
+
+fim

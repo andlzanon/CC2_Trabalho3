@@ -1,0 +1,2 @@
+Linha 6: simbolo ou comando proximo a ( nao identificado
+Fim da compilacao

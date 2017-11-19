@@ -14,7 +14,7 @@ public class Main{
 
     public static void main(String[] args) throws IOException, RecognitionException {
         /*caminho do arquivo*/
-        final String CAMINHO_CASOS_TESTE = "C:\\CC2_Trabalho3\\src\\CasosDeTeste";
+        final String CAMINHO_CASOS_TESTE = "C:\\CC2_Trabalho3\\CasosDeTeste";
         //diretorio de entrada dos casos de teste sintaticos
         File diretorioCasosTeste = new File(CAMINHO_CASOS_TESTE + "\\entrada\\entrada_sintatico");
         //vetor com a lista de arquivos sintaticos

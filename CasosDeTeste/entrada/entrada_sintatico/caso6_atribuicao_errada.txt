@@ -1,0 +1,16 @@
+declaracoes:
+	grafo g
+	vertice v1, v2, v3
+	int valor
+
+inicio
+	aresta(g, v1, v2, 1)
+	aresta(g, v2, v3, 1)
+	aresta(g, v1, v3, 1)
+
+	para v em vertices(g) faca
+	    valor < get_custo_para_vertice(g, v)
+	    imprime(valor)
+	fim_para
+
+fim

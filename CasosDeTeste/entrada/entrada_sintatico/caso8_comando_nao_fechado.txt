@@ -1,0 +1,14 @@
+declaracoes:
+	grafo g
+	vertice v1, v2, v3
+inicio
+	aresta(g, v1, v2, 1)
+	aresta(g, v2, v3, 1)
+	aresta(g, v1, v3, 1)
+
+	{imprime todas os vertices
+	para v em vertices(g) faca
+	    imprime(v
+	fim_para
+
+fim

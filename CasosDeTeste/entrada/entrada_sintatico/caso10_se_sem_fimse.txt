@@ -1,0 +1,17 @@
+declaracoes:
+	grafo g
+	vertice v1, v2, v3
+	int valor
+inicio
+	aresta(g, v1, v2, 1)
+	aresta(g, v2, v3, 1)
+	aresta(g, v1, v3, 1)
+
+	valor <- infinito
+
+	{compara valor com peso da aresta}
+	se valor < get_peso(g, v1, v2) entao
+	    imprime(v)
+
+
+fim
