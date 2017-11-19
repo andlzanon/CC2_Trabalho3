@@ -25,7 +25,6 @@ codigo : (instrucoes)* ;
 instrucoes :	'aresta' '(' IDENT ',' IDENT ',' IDENT ',' INTEIRO ')'	        //grafo,vertice,vertice,peso
                 // remove de um grafo o vertice
 				| 'remove_vert' '(' IDENT ',' IDENT ')'					        //grafo,vertice
-				| 'get_peso' '(' IDENT ',' IDENT ',' IDENT ')'
 				//define em um grafo o peso de uma aresta
 				| 'set_peso' '(' IDENT ',' IDENT ',' IDENT ')'			        //grafo,vertice,vertice
                 //define-se em um grafo, o custo para chegar no vertice
@@ -54,7 +53,7 @@ instrucoes_com_retorno :
                 //retorna em um grafo o peso de uma aresta
                 'get_peso' '(' IDENT ',' IDENT ',' IDENT ')' //grafo,vertice,vertice
                 //retorna o custo para chegar em um vertice
-                | 'get_custo_para_vertice' '(' IDENT ',' IDENT ',' INTEIRO ')' //grafo, vertice
+                | 'get_custo_para_vertice' '(' IDENT ',' IDENT')' //grafo, vertice
                 //retorna a quantidade de vertices em um grafo
                 | 'qtde_vert' '(' IDENT ')' //grafo (retorna numero de vertices)
                 ;
@@ -84,9 +83,9 @@ outros_fatores: op_multiplicacao fator outros_fatores | ;
 
 fator : parcela outras_parcelas;
 
-outras_parcelas : '%' parcela outras_parcelas;
+outras_parcelas : '%' parcela outras_parcelas | ;
 
-parcela : IDENT | INTEIRO | instrucoes_com_retorno;
+parcela : IDENT | INTEIRO | instrucoes_com_retorno | '(' expressao ')';
 
 op_opcional : op_relacional exp_aritmetica | ;
 

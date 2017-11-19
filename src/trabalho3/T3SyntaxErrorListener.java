@@ -35,12 +35,12 @@ public class T3SyntaxErrorListener implements ANTLRErrorListener {
             }
             //se o tipo for 10 entao o token e nao declarado e precisa de uma saida diferente
             else if(token.getType() == 10){
-                erro = "Linha " + i + ": " + tokenText + " - simbolo nao identificado";
+                erro = "Linha " + i + ": simbolo ou comando proximo a " +tokenText+ " nao identificado";
                 sp.println(erro);
             }
             //se o tipo for 11 entao o token e comentario nao fechado e precisa de uma saida diferente
             else if(token.getType() == 11){
-                erro = "Linha " + (i+1) + ": comentario nao fechado";
+                erro = "Linha " + (i+1) + ": comentario nao fechado ou comando incompleto";
                 sp.println(erro);
             }
         }
