@@ -1,6 +1,6 @@
 declaracoes:
 	graf g
-	vertices v1, v2, v3
+	vertice v1, v2, v3
 inicio
 	aresta(g, v1, v2, 1)
 	aresta(g, v2, v3, 1)
