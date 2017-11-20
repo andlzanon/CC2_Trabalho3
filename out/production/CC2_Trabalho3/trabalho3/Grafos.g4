@@ -12,7 +12,7 @@ declaracao : variavel declaracao | ;
 
 variavel : tipo IDENT mais_variavel ;
 
-mais_variavel : (',' IDENT)* ;
+mais_variavel : ',' IDENT mais_variavel | ;
 
 tipo :	'grafo'     |
 		'vertice'   |
