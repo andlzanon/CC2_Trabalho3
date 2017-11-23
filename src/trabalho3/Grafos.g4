@@ -22,15 +22,15 @@ tipo :	'grafo'     |
 codigo : (instrucoes)* ;
 
                 //cria aresta em um grafo, delimitado por dois veritices e um peso
-instrucoes :	'aresta' '(' IDENT ',' IDENT ',' IDENT ',' INTEIRO ')'	        //grafo,vertice,vertice,peso
+instrucoes :	'aresta' '(' IDENT ',' IDENT ',' IDENT ',' int_ou_ident')'	        //grafo,vertice,vertice,peso
                 // remove de um grafo o vertice
-				| 'remove_vert' '(' IDENT ',' IDENT ')'					        //grafo,vertice
-				//define em um grafo o peso de uma aresta
-				| 'set_peso' '(' IDENT ',' IDENT ',' IDENT ')'			        //grafo,vertice,vertice
+				| 'remove_vert' '(' IDENT ',' IDENT ')'					            //grafo,vertice
                 //define-se em um grafo, o custo para chegar no vertice
-				| 'set_custo_para_vertice' '(' IDENT ',' IDENT ',' INTEIRO ')'  //grafo, vertice, valor
+				| 'set_custo_para_vertice' '(' IDENT ',' IDENT ',' int_ou_ident ')' //grafo, vertice, valor
 	            //imprime uma variavel ou cadeia
-				| 'imprime' '(' var_ou_cadeia ')'						        //grafo, vertice, lista, etc
+				| 'imprime' '(' var_ou_cadeia ')'						            //grafo, vertice, lista, etc
+				| 'empilha' '(' IDENT ',' int_ou_ident ')'                          //vetor, vertice grafo ou inteiro
+				| 'enfileira' '(' IDENT ',' int_ou_ident ')'                        //vetor, vertice grafo ou inteiro
 				//lacos e comandos condicionais
 				| 'se' expressao 'entao' codigo senao_opcional 'fim_se'
 				| 'para' IDENT 'em' vetores_para 'faca' codigo 'fim_para'
@@ -38,16 +38,18 @@ instrucoes :	'aresta' '(' IDENT ',' IDENT ',' IDENT ',' INTEIRO ')'	        //gr
 				//chamada de atribuicao
 				| IDENT '<-' expressao
 				//funcao dijktra pre-implementada, retorna um grafo
-				| 'dijkstra' '(' IDENT ',' IDENT ')'                            //grafo, verice inicia
+				| 'dijkstra' '(' IDENT ',' IDENT ')'                                //grafo, verice inicial
 				//funcao prim pre-implementada, retorna um grafo
-				| 'prim' '(' IDENT ',' IDENT ')'                                //grafo, verice inicial
+				| 'prim' '(' IDENT ',' IDENT ')'                                    //grafo, verice inicial
 				//funcao dfs pre-implementada, retorna um grafo
-				| 'dfs' '(' IDENT ',' IDENT ')'							        //grafo, verice inicial
+				| 'dfs' '(' IDENT ',' IDENT ')'							            //grafo, verice inicial
 				//funcao bfs pre-implementada, retorna um grafo
-				| 'bfs' '(' IDENT ',' IDENT ')'						            //grafo, verice inicial
+				| 'bfs' '(' IDENT ',' IDENT ')'						                //grafo, verice inicial
                 | instrucoes_com_retorno
                 | instrucoes_de_vetores
                 ;
+
+int_ou_ident : INTEIRO | IDENT;
 
 instrucoes_com_retorno :
                 //retorna em um grafo o peso de uma aresta
@@ -55,7 +57,11 @@ instrucoes_com_retorno :
                 //retorna o custo para chegar em um vertice
                 | 'get_custo_para_vertice' '(' IDENT ',' IDENT')' //grafo, vertice
                 //retorna a quantidade de vertices em um grafo
-                | 'qtde_vert' '(' IDENT ')' //grafo (retorna numero de vertices)
+                | 'qtde_vert' '(' IDENT ')' //grafo
+                //retorna o vertice desempilhado
+                | 'desempilha''(' IDENT ')' //vetor
+                //retorna o vertice desenfileirado
+                | 'desenfila' '(' IDENT ')' //vetor
                 ;
 
 instrucoes_de_vetores :

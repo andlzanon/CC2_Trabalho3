@@ -78,6 +78,16 @@ public interface GrafosListener extends ParseTreeListener {
 	 */
 	void exitInstrucoes(GrafosParser.InstrucoesContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link GrafosParser#int_ou_ident}.
+	 * @param ctx the parse tree
+	 */
+	void enterInt_ou_ident(GrafosParser.Int_ou_identContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GrafosParser#int_ou_ident}.
+	 * @param ctx the parse tree
+	 */
+	void exitInt_ou_ident(GrafosParser.Int_ou_identContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link GrafosParser#instrucoes_com_retorno}.
 	 * @param ctx the parse tree
 	 */

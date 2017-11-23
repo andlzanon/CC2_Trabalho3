@@ -66,6 +66,13 @@ public class GrafosBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitInt_ou_ident(GrafosParser.Int_ou_identContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitInstrucoes_com_retorno(GrafosParser.Instrucoes_com_retornoContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}

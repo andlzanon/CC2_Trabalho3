@@ -53,6 +53,12 @@ public interface GrafosVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitInstrucoes(GrafosParser.InstrucoesContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link GrafosParser#int_ou_ident}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInt_ou_ident(GrafosParser.Int_ou_identContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link GrafosParser#instrucoes_com_retorno}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

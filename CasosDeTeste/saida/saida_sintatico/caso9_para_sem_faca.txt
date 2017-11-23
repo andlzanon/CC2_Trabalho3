@@ -1,2 +1,2 @@
-Linha 11: erro sintatico proximo a imprime
+Linha 10: erro sintatico proximo a entao
 Fim da compilacao

@@ -96,7 +96,7 @@ public class GrafosSemantico extends GrafosBaseVisitor {
     @Override
     public Object visitInstrucoes(GrafosParser.InstrucoesContext ctx) {
         if(ctx.getText().startsWith("aresta")){
-
+            visitInt_ou_ident(ctx.int_ou_ident());
         }
         else if(ctx.getText().startsWith("remove_vert")){
 
@@ -105,10 +105,16 @@ public class GrafosSemantico extends GrafosBaseVisitor {
 
         }
         else if(ctx.getText().startsWith("set_custo_para_vertice")){
-
+            visitInt_ou_ident(ctx.int_ou_ident());
         }
         else if(ctx.getText().startsWith("imprime")){
             visitVar_ou_cadeia(ctx.var_ou_cadeia());
+        }
+        else if(ctx.getText().startsWith("empilha")){
+            visitInt_ou_ident(ctx.int_ou_ident());
+        }
+        else if(ctx.getText().startsWith("enfileira")){
+            visitInt_ou_ident(ctx.int_ou_ident());
         }
         else if(ctx.getText().startsWith("se")){
             visitExpressao(ctx.expressao());
@@ -148,13 +154,23 @@ public class GrafosSemantico extends GrafosBaseVisitor {
         return null;
     }
 
+    //int_ou_ident : INTEIRO | IDENT;
+    @Override
+    public Object visitInt_ou_ident(GrafosParser.Int_ou_identContext ctx) {
+        if(ctx.INTEIRO() != null)
+            return ctx.INTEIRO().getText();
+        else{
+            return ctx.IDENT().getText();
+        }
+    }
+
     /*
-    instrucoes_com_retorno :
-                'get_peso' '(' IDENT ',' IDENT ',' IDENT ')' //grafo,vertice,vertice
-                | 'get_custo_para_vertice' '(' IDENT ',' IDENT')' //grafo, vertice
-                | 'qtde_vert' '(' IDENT ')' //grafo (retorna numero de vertices)
-                ;
-     */
+        instrucoes_com_retorno :
+                    'get_peso' '(' IDENT ',' IDENT ',' IDENT ')' //grafo,vertice,vertice
+                    | 'get_custo_para_vertice' '(' IDENT ',' IDENT')' //grafo, vertice
+                    | 'qtde_vert' '(' IDENT ')' //grafo (retorna numero de vertices)
+                    ;
+    */
     @Override
     public Object visitInstrucoes_com_retorno(GrafosParser.Instrucoes_com_retornoContext ctx) {
         if(ctx.getText().startsWith("get_peso")){

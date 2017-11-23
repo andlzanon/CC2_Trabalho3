@@ -100,6 +100,18 @@ public class GrafosBaseListener implements GrafosListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterInt_ou_ident(GrafosParser.Int_ou_identContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInt_ou_ident(GrafosParser.Int_ou_identContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterInstrucoes_com_retorno(GrafosParser.Instrucoes_com_retornoContext ctx) { }
 	/**
 	 * {@inheritDoc}

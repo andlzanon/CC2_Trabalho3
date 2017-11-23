@@ -1,2 +1,2 @@
-Linha 7: erro sintatico proximo a 2
+Linha 9: erro sintatico proximo a 2
 Fim da compilacao

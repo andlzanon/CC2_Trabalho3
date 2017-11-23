@@ -1,2 +1,2 @@
-Linha 10: comentario nao fechado ou comando incompleto
+Linha 14: comentario nao fechado ou comando incompleto
 Fim da compilacao
