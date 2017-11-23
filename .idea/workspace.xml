@@ -2,57 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="522f7edb-0556-433c-bae4-54c6a315d46f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosBaseListener.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosBaseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosBaseVisitor.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosBaseVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosLexer.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosLexer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosListener.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$AlgoritmoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$AlgoritmoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$CodigoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$CodigoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$DeclaracaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$DeclaracaoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Exp_aritmeticaContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Exp_aritmeticaContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ExpressaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ExpressaoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$FatorContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$FatorContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$InstrucoesContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$InstrucoesContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_com_retornoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_com_retornoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_de_vetoresContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_de_vetoresContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Mais_variavelContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Mais_variavelContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_adicaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_adicaoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_multiplicacaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_multiplicacaoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_opcionalContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_opcionalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_relacionalContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_relacionalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outras_parcelasContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outras_parcelasContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_fatoresContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_fatoresContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_termosContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_termosContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ParcelaContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ParcelaContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Senao_opcionalContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Senao_opcionalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$TermoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$TermoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$TipoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$TipoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Var_ou_cadeiaContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Var_ou_cadeiaContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$VariavelContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$VariavelContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Vetores_paraContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Vetores_paraContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosVisitor.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosSemantico.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosSemantico.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso12_real_nao_suportado.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso12_real_nao_suportado.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso1_tipo_nao_identificado.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso1_tipo_nao_identificado.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso5_comentario_nao_fechado.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso5_comentario_nao_fechado.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso9_para_sem_faca.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso9_para_sem_faca.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso12_real_nao_suportado.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso12_real_nao_suportado.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso5_comentario_nao_fechado.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso5_comentario_nao_fechado.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso9_para_sem_faca.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso9_para_sem_faca.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Grafos.g4" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Grafos.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Grafos.tokens" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Grafos.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosLexer.tokens" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/Grafos.g4" afterPath="$PROJECT_DIR$/src/trabalho3/Grafos.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/Grafos.tokens" afterPath="$PROJECT_DIR$/src/trabalho3/Grafos.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosBaseListener.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosBaseListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosBaseVisitor.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosBaseVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosLexer.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosLexer.tokens" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosListener.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosParser.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosVisitor.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosVisitor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Grafos.g4" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Grafos.g4" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/trabalho3/Grafos.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="31" />
+            <state relative-caret-position="263">
+              <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
               <folding>
                 <element signature="e#17#159#1" expanded="true" />
               </folding>
@@ -77,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GrafosSemantico.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GrafosSemantico.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
-              <caret line="132" column="44" lean-forward="false" selection-start-line="132" selection-start-column="44" selection-end-line="132" selection-end-column="44" />
+            <state relative-caret-position="934">
+              <caret line="197" column="0" lean-forward="true" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -478,6 +430,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -489,7 +442,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -982,21 +935,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/Grafos.g4">
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="31" />
-          <folding>
-            <element signature="e#17#159#1" expanded="true" />
-          </folding>
+        <state relative-caret-position="934">
+          <caret line="197" column="0" lean-forward="true" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java">
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/Grafos.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="132" column="44" lean-forward="false" selection-start-line="132" selection-start-column="44" selection-end-line="132" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="263">
+          <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding>
+            <element signature="e#17#159#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

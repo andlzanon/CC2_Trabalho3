@@ -166,9 +166,16 @@ public class GrafosSemantico extends GrafosBaseVisitor {
 
     /*
         instrucoes_com_retorno :
+                     //retorna em um grafo o peso de uma aresta
                     'get_peso' '(' IDENT ',' IDENT ',' IDENT ')' //grafo,vertice,vertice
+                    //retorna o custo para chegar em um vertice
                     | 'get_custo_para_vertice' '(' IDENT ',' IDENT')' //grafo, vertice
-                    | 'qtde_vert' '(' IDENT ')' //grafo (retorna numero de vertices)
+                    //retorna a quantidade de vertices em um grafo
+                    | 'qtde_vert' '(' IDENT ')' //grafo
+                    //retorna o vertice desempilhado
+                    | 'desempilha''(' IDENT ')' //vetor
+                    //retorna o vertice desenfileirado
+                    | 'desenfila' '(' IDENT ')' //vetor
                     ;
     */
     @Override
@@ -180,6 +187,12 @@ public class GrafosSemantico extends GrafosBaseVisitor {
 
         }
         else if(ctx.getText().startsWith("qtde_vert")){
+
+        }
+        else if(ctx.getText().startsWith("desempilha")){
+
+        }
+        else if(ctx.getText().startsWith("desenfila")){
 
         }
 
