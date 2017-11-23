@@ -22,29 +22,29 @@ tipo :	'grafo'     |
 codigo : (instrucoes)* ;
 
                 //cria aresta em um grafo, delimitado por dois veritices e um peso
-instrucoes :	'aresta' '(' IDENT ',' IDENT ',' IDENT ',' int_ou_ident')'	        //grafo,vertice,vertice,peso
+instrucoes :	'aresta' '(' pa_grafo=IDENT ',' pa_vertice1=IDENT ',' pa_vertice2=IDENT ',' int_ou_ident')'	        //grafo,vertice,vertice,peso
                 // remove de um grafo o vertice
-				| 'remove_vert' '(' IDENT ',' IDENT ')'					            //grafo,vertice
+				| 'remove_vert' '(' pr_grafo=IDENT ',' pr_vertice= IDENT ')'					                    //grafo,vertice
                 //define-se em um grafo, o custo para chegar no vertice
-				| 'set_custo_para_vertice' '(' IDENT ',' IDENT ',' int_ou_ident ')' //grafo, vertice, valor
+				| 'set_custo_para_vertice' '(' ps_grafo=IDENT ',' ps_vertice=IDENT ',' int_ou_ident ')'             //grafo, vertice, valor
 	            //imprime uma variavel ou cadeia
-				| 'imprime' '(' var_ou_cadeia ')'						            //grafo, vertice, lista, etc
-				| 'empilha' '(' IDENT ',' int_ou_ident ')'                          //vetor, vertice grafo ou inteiro
-				| 'enfileira' '(' IDENT ',' int_ou_ident ')'                        //vetor, vertice grafo ou inteiro
+				| 'imprime' '(' var_ou_cadeia ')'						                                            //grafo, vertice, lista, etc
+				| 'empilha' '(' pem_grafo=IDENT ',' int_ou_ident ')'                                                          //vetor, vertice grafo ou inteiro
+				| 'enfileira' '(' pen_grafo=IDENT ',' int_ou_ident ')'                                                        //vetor, vertice grafo ou inteiro
 				//lacos e comandos condicionais
 				| 'se' expressao 'entao' codigo senao_opcional 'fim_se'
-				| 'para' IDENT 'em' vetores_para 'faca' codigo 'fim_para'
+				| 'para' para=IDENT 'em' vetores_para 'faca' codigo 'fim_para'
 				| 'enquanto' expressao 'faca' codigo 'fim_enquanto'
 				//chamada de atribuicao
-				| IDENT '<-' expressao
+				| atribuicao=IDENT '<-' expressao
 				//funcao dijktra pre-implementada, retorna um grafo
-				| 'dijkstra' '(' IDENT ',' IDENT ')'                                //grafo, verice inicial
+				| 'dijkstra' '(' pd_grafo=IDENT ',' pd_vertice=IDENT ')'                                            //grafo, verice inicial
 				//funcao prim pre-implementada, retorna um grafo
-				| 'prim' '(' IDENT ',' IDENT ')'                                    //grafo, verice inicial
+				| 'prim' '(' pp_grafo=IDENT ',' pp_vertice=IDENT ')'                                                //grafo, verice inicial
 				//funcao dfs pre-implementada, retorna um grafo
-				| 'dfs' '(' IDENT ',' IDENT ')'							            //grafo, verice inicial
+				| 'dfs' '(' pdfs_grafo=IDENT ',' pdfs_vertice=IDENT ')'							                    //grafo, verice inicial
 				//funcao bfs pre-implementada, retorna um grafo
-				| 'bfs' '(' IDENT ',' IDENT ')'						                //grafo, verice inicial
+				| 'bfs' '(' pbfs_grafo=IDENT ',' pbfs_vertice=IDENT ')'						                        //grafo, verice inicial
                 | instrucoes_com_retorno
                 | instrucoes_de_vetores
                 ;
@@ -53,22 +53,22 @@ int_ou_ident : INTEIRO | IDENT;
 
 instrucoes_com_retorno :
                 //retorna em um grafo o peso de uma aresta
-                'get_peso' '(' IDENT ',' IDENT ',' IDENT ')' //grafo,vertice,vertice
+                'get_peso' '(' pgp_grafo=IDENT ',' pgp_vertice1=IDENT ',' pgp_vertice2=IDENT ')'        //grafo,vertice,vertice
                 //retorna o custo para chegar em um vertice
-                | 'get_custo_para_vertice' '(' IDENT ',' IDENT')' //grafo, vertice
+                | 'get_custo_para_vertice' '(' pgc_grafo=IDENT ',' pgc_vertice=IDENT')'                 //grafo, vertice
                 //retorna a quantidade de vertices em um grafo
-                | 'qtde_vert' '(' IDENT ')' //grafo
+                | 'qtde_vert' '(' pqv_grafo=IDENT ')' //grafo
                 //retorna o vertice desempilhado
-                | 'desempilha''(' IDENT ')' //vetor
+                | 'desempilha''(' pdem_vetor=IDENT ')' //vetor
                 //retorna o vertice desenfileirado
-                | 'desenfila' '(' IDENT ')' //vetor
+                | 'desenfila' '(' pden_vetor=IDENT ')' //vetor
                 ;
 
 instrucoes_de_vetores :
                 //retorna um vetor de vizinhos a partir de um grafo e um vertice
-                'vizinhos' '(' IDENT ',' IDENT ')'  //grafo,vertice
+                'vizinhos' '(' pv_grafo=IDENT ',' pv_vertice=IDENT ')'  //grafo,vertice
                 //retorna um vetor de todos os vertices do grafo
-                | 'vertices' '(' IDENT ')' //grafo (retorna lista com vertices)
+                | 'vertices' '(' pver_grafo=IDENT ')' //grafo (retorna lista com vertices)
                 ;
 
 vetores_para : instrucoes_de_vetores | IDENT ;
@@ -91,7 +91,7 @@ fator : parcela outras_parcelas;
 
 outras_parcelas : '%' parcela outras_parcelas | ;
 
-parcela : IDENT | INTEIRO | instrucoes_com_retorno | '(' expressao ')';
+parcela : IDENT | INTEIRO | instrucoes_com_retorno | instrucoes_de_vetores |'(' expressao ')';
 
 op_opcional : op_relacional exp_aritmetica | ;
 

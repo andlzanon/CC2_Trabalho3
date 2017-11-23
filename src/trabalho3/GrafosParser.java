@@ -462,12 +462,31 @@ public class GrafosParser extends Parser {
 	}
 
 	public static class InstrucoesContext extends ParserRuleContext {
+		public Token pa_grafo;
+		public Token pa_vertice1;
+		public Token pa_vertice2;
+		public Token pr_grafo;
+		public Token pr_vertice;
+		public Token ps_grafo;
+		public Token ps_vertice;
+		public Token pem_grafo;
+		public Token pen_grafo;
+		public Token para;
+		public Token atribuicao;
+		public Token pd_grafo;
+		public Token pd_vertice;
+		public Token pp_grafo;
+		public Token pp_vertice;
+		public Token pdfs_grafo;
+		public Token pdfs_vertice;
+		public Token pbfs_grafo;
+		public Token pbfs_vertice;
+		public Int_ou_identContext int_ou_ident() {
+			return getRuleContext(Int_ou_identContext.class,0);
+		}
 		public List<TerminalNode> IDENT() { return getTokens(GrafosParser.IDENT); }
 		public TerminalNode IDENT(int i) {
 			return getToken(GrafosParser.IDENT, i);
-		}
-		public Int_ou_identContext int_ou_ident() {
-			return getRuleContext(Int_ou_identContext.class,0);
 		}
 		public Var_ou_cadeiaContext var_ou_cadeia() {
 			return getRuleContext(Var_ou_cadeiaContext.class,0);
@@ -524,15 +543,15 @@ public class GrafosParser extends Parser {
 				setState(81);
 				match(T__9);
 				setState(82);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pa_grafo = match(IDENT);
 				setState(83);
 				match(T__3);
 				setState(84);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pa_vertice1 = match(IDENT);
 				setState(85);
 				match(T__3);
 				setState(86);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pa_vertice2 = match(IDENT);
 				setState(87);
 				match(T__3);
 				setState(88);
@@ -549,11 +568,11 @@ public class GrafosParser extends Parser {
 				setState(92);
 				match(T__9);
 				setState(93);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pr_grafo = match(IDENT);
 				setState(94);
 				match(T__3);
 				setState(95);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pr_vertice = match(IDENT);
 				setState(96);
 				match(T__10);
 				}
@@ -566,11 +585,11 @@ public class GrafosParser extends Parser {
 				setState(98);
 				match(T__9);
 				setState(99);
-				match(IDENT);
+				((InstrucoesContext)_localctx).ps_grafo = match(IDENT);
 				setState(100);
 				match(T__3);
 				setState(101);
-				match(IDENT);
+				((InstrucoesContext)_localctx).ps_vertice = match(IDENT);
 				setState(102);
 				match(T__3);
 				setState(103);
@@ -600,7 +619,7 @@ public class GrafosParser extends Parser {
 				setState(112);
 				match(T__9);
 				setState(113);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pem_grafo = match(IDENT);
 				setState(114);
 				match(T__3);
 				setState(115);
@@ -617,7 +636,7 @@ public class GrafosParser extends Parser {
 				setState(119);
 				match(T__9);
 				setState(120);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pen_grafo = match(IDENT);
 				setState(121);
 				match(T__3);
 				setState(122);
@@ -649,7 +668,7 @@ public class GrafosParser extends Parser {
 				setState(132);
 				match(T__19);
 				setState(133);
-				match(IDENT);
+				((InstrucoesContext)_localctx).para = match(IDENT);
 				setState(134);
 				match(T__20);
 				setState(135);
@@ -681,7 +700,7 @@ public class GrafosParser extends Parser {
 				enterOuterAlt(_localctx, 10);
 				{
 				setState(146);
-				match(IDENT);
+				((InstrucoesContext)_localctx).atribuicao = match(IDENT);
 				setState(147);
 				match(T__25);
 				setState(148);
@@ -696,11 +715,11 @@ public class GrafosParser extends Parser {
 				setState(150);
 				match(T__9);
 				setState(151);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pd_grafo = match(IDENT);
 				setState(152);
 				match(T__3);
 				setState(153);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pd_vertice = match(IDENT);
 				setState(154);
 				match(T__10);
 				}
@@ -713,11 +732,11 @@ public class GrafosParser extends Parser {
 				setState(156);
 				match(T__9);
 				setState(157);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pp_grafo = match(IDENT);
 				setState(158);
 				match(T__3);
 				setState(159);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pp_vertice = match(IDENT);
 				setState(160);
 				match(T__10);
 				}
@@ -730,11 +749,11 @@ public class GrafosParser extends Parser {
 				setState(162);
 				match(T__9);
 				setState(163);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pdfs_grafo = match(IDENT);
 				setState(164);
 				match(T__3);
 				setState(165);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pdfs_vertice = match(IDENT);
 				setState(166);
 				match(T__10);
 				}
@@ -747,11 +766,11 @@ public class GrafosParser extends Parser {
 				setState(168);
 				match(T__9);
 				setState(169);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pbfs_grafo = match(IDENT);
 				setState(170);
 				match(T__3);
 				setState(171);
-				match(IDENT);
+				((InstrucoesContext)_localctx).pbfs_vertice = match(IDENT);
 				setState(172);
 				match(T__10);
 				}
@@ -843,6 +862,14 @@ public class GrafosParser extends Parser {
 	}
 
 	public static class Instrucoes_com_retornoContext extends ParserRuleContext {
+		public Token pgp_grafo;
+		public Token pgp_vertice1;
+		public Token pgp_vertice2;
+		public Token pgc_grafo;
+		public Token pgc_vertice;
+		public Token pqv_grafo;
+		public Token pdem_vetor;
+		public Token pden_vetor;
 		public List<TerminalNode> IDENT() { return getTokens(GrafosParser.IDENT); }
 		public TerminalNode IDENT(int i) {
 			return getToken(GrafosParser.IDENT, i);
@@ -881,15 +908,15 @@ public class GrafosParser extends Parser {
 				setState(180);
 				match(T__9);
 				setState(181);
-				match(IDENT);
+				((Instrucoes_com_retornoContext)_localctx).pgp_grafo = match(IDENT);
 				setState(182);
 				match(T__3);
 				setState(183);
-				match(IDENT);
+				((Instrucoes_com_retornoContext)_localctx).pgp_vertice1 = match(IDENT);
 				setState(184);
 				match(T__3);
 				setState(185);
-				match(IDENT);
+				((Instrucoes_com_retornoContext)_localctx).pgp_vertice2 = match(IDENT);
 				setState(186);
 				match(T__10);
 				}
@@ -902,11 +929,11 @@ public class GrafosParser extends Parser {
 				setState(188);
 				match(T__9);
 				setState(189);
-				match(IDENT);
+				((Instrucoes_com_retornoContext)_localctx).pgc_grafo = match(IDENT);
 				setState(190);
 				match(T__3);
 				setState(191);
-				match(IDENT);
+				((Instrucoes_com_retornoContext)_localctx).pgc_vertice = match(IDENT);
 				setState(192);
 				match(T__10);
 				}
@@ -919,7 +946,7 @@ public class GrafosParser extends Parser {
 				setState(194);
 				match(T__9);
 				setState(195);
-				match(IDENT);
+				((Instrucoes_com_retornoContext)_localctx).pqv_grafo = match(IDENT);
 				setState(196);
 				match(T__10);
 				}
@@ -932,7 +959,7 @@ public class GrafosParser extends Parser {
 				setState(198);
 				match(T__9);
 				setState(199);
-				match(IDENT);
+				((Instrucoes_com_retornoContext)_localctx).pdem_vetor = match(IDENT);
 				setState(200);
 				match(T__10);
 				}
@@ -945,7 +972,7 @@ public class GrafosParser extends Parser {
 				setState(202);
 				match(T__9);
 				setState(203);
-				match(IDENT);
+				((Instrucoes_com_retornoContext)_localctx).pden_vetor = match(IDENT);
 				setState(204);
 				match(T__10);
 				}
@@ -966,6 +993,9 @@ public class GrafosParser extends Parser {
 	}
 
 	public static class Instrucoes_de_vetoresContext extends ParserRuleContext {
+		public Token pv_grafo;
+		public Token pv_vertice;
+		public Token pver_grafo;
 		public List<TerminalNode> IDENT() { return getTokens(GrafosParser.IDENT); }
 		public TerminalNode IDENT(int i) {
 			return getToken(GrafosParser.IDENT, i);
@@ -1004,11 +1034,11 @@ public class GrafosParser extends Parser {
 				setState(208);
 				match(T__9);
 				setState(209);
-				match(IDENT);
+				((Instrucoes_de_vetoresContext)_localctx).pv_grafo = match(IDENT);
 				setState(210);
 				match(T__3);
 				setState(211);
-				match(IDENT);
+				((Instrucoes_de_vetoresContext)_localctx).pv_vertice = match(IDENT);
 				setState(212);
 				match(T__10);
 				}
@@ -1021,7 +1051,7 @@ public class GrafosParser extends Parser {
 				setState(214);
 				match(T__9);
 				setState(215);
-				match(IDENT);
+				((Instrucoes_de_vetoresContext)_localctx).pver_grafo = match(IDENT);
 				setState(216);
 				match(T__10);
 				}
@@ -1723,6 +1753,9 @@ public class GrafosParser extends Parser {
 		public Instrucoes_com_retornoContext instrucoes_com_retorno() {
 			return getRuleContext(Instrucoes_com_retornoContext.class,0);
 		}
+		public Instrucoes_de_vetoresContext instrucoes_de_vetores() {
+			return getRuleContext(Instrucoes_de_vetoresContext.class,0);
+		}
 		public ExpressaoContext expressao() {
 			return getRuleContext(ExpressaoContext.class,0);
 		}
@@ -1749,7 +1782,7 @@ public class GrafosParser extends Parser {
 		ParcelaContext _localctx = new ParcelaContext(_ctx, getState());
 		enterRule(_localctx, 40, RULE_parcela);
 		try {
-			setState(270);
+			setState(271);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case IDENT:
@@ -1777,14 +1810,22 @@ public class GrafosParser extends Parser {
 				instrucoes_com_retorno();
 				}
 				break;
-			case T__9:
+			case T__35:
+			case T__36:
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(266);
-				match(T__9);
+				instrucoes_de_vetores();
+				}
+				break;
+			case T__9:
+				enterOuterAlt(_localctx, 5);
+				{
 				setState(267);
-				expressao();
+				match(T__9);
 				setState(268);
+				expressao();
+				setState(269);
 				match(T__10);
 				}
 				break;
@@ -1833,7 +1874,7 @@ public class GrafosParser extends Parser {
 		Op_opcionalContext _localctx = new Op_opcionalContext(_ctx, getState());
 		enterRule(_localctx, 42, RULE_op_opcional);
 		try {
-			setState(276);
+			setState(277);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__39:
@@ -1844,9 +1885,9 @@ public class GrafosParser extends Parser {
 			case T__44:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(272);
-				op_relacional();
 				setState(273);
+				op_relacional();
+				setState(274);
 				exp_aritmetica();
 				}
 				break;
@@ -1925,7 +1966,7 @@ public class GrafosParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(278);
+			setState(279);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__39) | (1L << T__40) | (1L << T__41) | (1L << T__42) | (1L << T__43) | (1L << T__44))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -1975,7 +2016,7 @@ public class GrafosParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(280);
+			setState(281);
 			_la = _input.LA(1);
 			if ( !(_la==T__45 || _la==T__46) ) {
 			_errHandler.recoverInline(this);
@@ -2025,7 +2066,7 @@ public class GrafosParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(282);
+			setState(283);
 			_la = _input.LA(1);
 			if ( !(_la==T__47 || _la==T__48) ) {
 			_errHandler.recoverInline(this);
@@ -2049,7 +2090,7 @@ public class GrafosParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3:\u011f\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3:\u0120\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -2067,24 +2108,24 @@ public class GrafosParser extends Parser {
 		"\5\16\u00e7\n\16\3\17\3\17\3\17\3\20\3\20\3\20\3\21\3\21\3\21\3\21\3\21"+
 		"\5\21\u00f4\n\21\3\22\3\22\3\22\3\23\3\23\3\23\3\23\3\23\5\23\u00fe\n"+
 		"\23\3\24\3\24\3\24\3\25\3\25\3\25\3\25\3\25\5\25\u0108\n\25\3\26\3\26"+
-		"\3\26\3\26\3\26\3\26\3\26\5\26\u0111\n\26\3\27\3\27\3\27\3\27\5\27\u0117"+
-		"\n\27\3\30\3\30\3\31\3\31\3\32\3\32\3\32\2\2\33\2\4\6\b\n\f\16\20\22\24"+
-		"\26\30\32\34\36 \"$&(*,.\60\62\2\b\3\2\7\n\3\2\64\65\4\2\64\64\66\66\3"+
-		"\2*/\3\2\60\61\3\2\62\63\2\u0125\2\64\3\2\2\2\4>\3\2\2\2\6@\3\2\2\2\b"+
-		"H\3\2\2\2\nJ\3\2\2\2\fO\3\2\2\2\16\u00b1\3\2\2\2\20\u00b3\3\2\2\2\22\u00cf"+
-		"\3\2\2\2\24\u00db\3\2\2\2\26\u00df\3\2\2\2\30\u00e1\3\2\2\2\32\u00e6\3"+
-		"\2\2\2\34\u00e8\3\2\2\2\36\u00eb\3\2\2\2 \u00f3\3\2\2\2\"\u00f5\3\2\2"+
-		"\2$\u00fd\3\2\2\2&\u00ff\3\2\2\2(\u0107\3\2\2\2*\u0110\3\2\2\2,\u0116"+
-		"\3\2\2\2.\u0118\3\2\2\2\60\u011a\3\2\2\2\62\u011c\3\2\2\2\64\65\7\3\2"+
-		"\2\65\66\5\4\3\2\66\67\7\4\2\2\678\5\f\7\289\7\5\2\29\3\3\2\2\2:;\5\6"+
-		"\4\2;<\5\4\3\2<?\3\2\2\2=?\3\2\2\2>:\3\2\2\2>=\3\2\2\2?\5\3\2\2\2@A\5"+
-		"\n\6\2AB\7\64\2\2BC\5\b\5\2C\7\3\2\2\2DE\7\6\2\2EF\7\64\2\2FI\5\b\5\2"+
-		"GI\3\2\2\2HD\3\2\2\2HG\3\2\2\2I\t\3\2\2\2JK\t\2\2\2K\13\3\2\2\2LN\5\16"+
-		"\b\2ML\3\2\2\2NQ\3\2\2\2OM\3\2\2\2OP\3\2\2\2P\r\3\2\2\2QO\3\2\2\2RS\7"+
-		"\13\2\2ST\7\f\2\2TU\7\64\2\2UV\7\6\2\2VW\7\64\2\2WX\7\6\2\2XY\7\64\2\2"+
-		"YZ\7\6\2\2Z[\5\20\t\2[\\\7\r\2\2\\\u00b2\3\2\2\2]^\7\16\2\2^_\7\f\2\2"+
-		"_`\7\64\2\2`a\7\6\2\2ab\7\64\2\2b\u00b2\7\r\2\2cd\7\17\2\2de\7\f\2\2e"+
-		"f\7\64\2\2fg\7\6\2\2gh\7\64\2\2hi\7\6\2\2ij\5\20\t\2jk\7\r\2\2k\u00b2"+
+		"\3\26\3\26\3\26\3\26\3\26\3\26\5\26\u0112\n\26\3\27\3\27\3\27\3\27\5\27"+
+		"\u0118\n\27\3\30\3\30\3\31\3\31\3\32\3\32\3\32\2\2\33\2\4\6\b\n\f\16\20"+
+		"\22\24\26\30\32\34\36 \"$&(*,.\60\62\2\b\3\2\7\n\3\2\64\65\4\2\64\64\66"+
+		"\66\3\2*/\3\2\60\61\3\2\62\63\2\u0127\2\64\3\2\2\2\4>\3\2\2\2\6@\3\2\2"+
+		"\2\bH\3\2\2\2\nJ\3\2\2\2\fO\3\2\2\2\16\u00b1\3\2\2\2\20\u00b3\3\2\2\2"+
+		"\22\u00cf\3\2\2\2\24\u00db\3\2\2\2\26\u00df\3\2\2\2\30\u00e1\3\2\2\2\32"+
+		"\u00e6\3\2\2\2\34\u00e8\3\2\2\2\36\u00eb\3\2\2\2 \u00f3\3\2\2\2\"\u00f5"+
+		"\3\2\2\2$\u00fd\3\2\2\2&\u00ff\3\2\2\2(\u0107\3\2\2\2*\u0111\3\2\2\2,"+
+		"\u0117\3\2\2\2.\u0119\3\2\2\2\60\u011b\3\2\2\2\62\u011d\3\2\2\2\64\65"+
+		"\7\3\2\2\65\66\5\4\3\2\66\67\7\4\2\2\678\5\f\7\289\7\5\2\29\3\3\2\2\2"+
+		":;\5\6\4\2;<\5\4\3\2<?\3\2\2\2=?\3\2\2\2>:\3\2\2\2>=\3\2\2\2?\5\3\2\2"+
+		"\2@A\5\n\6\2AB\7\64\2\2BC\5\b\5\2C\7\3\2\2\2DE\7\6\2\2EF\7\64\2\2FI\5"+
+		"\b\5\2GI\3\2\2\2HD\3\2\2\2HG\3\2\2\2I\t\3\2\2\2JK\t\2\2\2K\13\3\2\2\2"+
+		"LN\5\16\b\2ML\3\2\2\2NQ\3\2\2\2OM\3\2\2\2OP\3\2\2\2P\r\3\2\2\2QO\3\2\2"+
+		"\2RS\7\13\2\2ST\7\f\2\2TU\7\64\2\2UV\7\6\2\2VW\7\64\2\2WX\7\6\2\2XY\7"+
+		"\64\2\2YZ\7\6\2\2Z[\5\20\t\2[\\\7\r\2\2\\\u00b2\3\2\2\2]^\7\16\2\2^_\7"+
+		"\f\2\2_`\7\64\2\2`a\7\6\2\2ab\7\64\2\2b\u00b2\7\r\2\2cd\7\17\2\2de\7\f"+
+		"\2\2ef\7\64\2\2fg\7\6\2\2gh\7\64\2\2hi\7\6\2\2ij\5\20\t\2jk\7\r\2\2k\u00b2"+
 		"\3\2\2\2lm\7\20\2\2mn\7\f\2\2no\5\30\r\2op\7\r\2\2p\u00b2\3\2\2\2qr\7"+
 		"\21\2\2rs\7\f\2\2st\7\64\2\2tu\7\6\2\2uv\5\20\t\2vw\7\r\2\2w\u00b2\3\2"+
 		"\2\2xy\7\22\2\2yz\7\f\2\2z{\7\64\2\2{|\7\6\2\2|}\5\20\t\2}~\7\r\2\2~\u00b2"+
@@ -2133,15 +2174,16 @@ public class GrafosParser extends Parser {
 		"\u00f8\3\2\2\2\u00fd\u00fc\3\2\2\2\u00fe%\3\2\2\2\u00ff\u0100\5*\26\2"+
 		"\u0100\u0101\5(\25\2\u0101\'\3\2\2\2\u0102\u0103\7)\2\2\u0103\u0104\5"+
 		"*\26\2\u0104\u0105\5(\25\2\u0105\u0108\3\2\2\2\u0106\u0108\3\2\2\2\u0107"+
-		"\u0102\3\2\2\2\u0107\u0106\3\2\2\2\u0108)\3\2\2\2\u0109\u0111\7\64\2\2"+
-		"\u010a\u0111\7\65\2\2\u010b\u0111\5\22\n\2\u010c\u010d\7\f\2\2\u010d\u010e"+
-		"\5\34\17\2\u010e\u010f\7\r\2\2\u010f\u0111\3\2\2\2\u0110\u0109\3\2\2\2"+
-		"\u0110\u010a\3\2\2\2\u0110\u010b\3\2\2\2\u0110\u010c\3\2\2\2\u0111+\3"+
-		"\2\2\2\u0112\u0113\5.\30\2\u0113\u0114\5\36\20\2\u0114\u0117\3\2\2\2\u0115"+
-		"\u0117\3\2\2\2\u0116\u0112\3\2\2\2\u0116\u0115\3\2\2\2\u0117-\3\2\2\2"+
-		"\u0118\u0119\t\5\2\2\u0119/\3\2\2\2\u011a\u011b\t\6\2\2\u011b\61\3\2\2"+
-		"\2\u011c\u011d\t\7\2\2\u011d\63\3\2\2\2\17>HO\u00b1\u00cf\u00db\u00df"+
-		"\u00e6\u00f3\u00fd\u0107\u0110\u0116";
+		"\u0102\3\2\2\2\u0107\u0106\3\2\2\2\u0108)\3\2\2\2\u0109\u0112\7\64\2\2"+
+		"\u010a\u0112\7\65\2\2\u010b\u0112\5\22\n\2\u010c\u0112\5\24\13\2\u010d"+
+		"\u010e\7\f\2\2\u010e\u010f\5\34\17\2\u010f\u0110\7\r\2\2\u0110\u0112\3"+
+		"\2\2\2\u0111\u0109\3\2\2\2\u0111\u010a\3\2\2\2\u0111\u010b\3\2\2\2\u0111"+
+		"\u010c\3\2\2\2\u0111\u010d\3\2\2\2\u0112+\3\2\2\2\u0113\u0114\5.\30\2"+
+		"\u0114\u0115\5\36\20\2\u0115\u0118\3\2\2\2\u0116\u0118\3\2\2\2\u0117\u0113"+
+		"\3\2\2\2\u0117\u0116\3\2\2\2\u0118-\3\2\2\2\u0119\u011a\t\5\2\2\u011a"+
+		"/\3\2\2\2\u011b\u011c\t\6\2\2\u011c\61\3\2\2\2\u011d\u011e\t\7\2\2\u011e"+
+		"\63\3\2\2\2\17>HO\u00b1\u00cf\u00db\u00df\u00e6\u00f3\u00fd\u0107\u0111"+
+		"\u0117";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

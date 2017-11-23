@@ -1,0 +1,2 @@
+Linha 4: identificador g ja declarado anteriormente
+Fim da compilacao

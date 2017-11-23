@@ -16,13 +16,14 @@ public class Main{
         /*caminho do arquivo*/
         final String CAMINHO_CASOS_TESTE = "C:\\CC2_Trabalho3\\CasosDeTeste";
         //diretorio de entrada dos casos de teste sintaticos
-        File diretorioCasosTeste = new File(CAMINHO_CASOS_TESTE + "\\entrada\\entrada_sintatico");
+        File diretorioCasosTesteSintatico = new File(CAMINHO_CASOS_TESTE + "\\entrada\\entrada_sintatico");
         //vetor com a lista de arquivos sintaticos
-        File[] casosTeste = diretorioCasosTeste.listFiles();
+        File[] casosTesteSintatico = diretorioCasosTesteSintatico.listFiles();
 
+        //inicio da compilacao dos casos de teste sintaticos
+        System.out.println("------------ Casos de Teste Sintaticos ------------\n");
         //para todos os arquivos
-        for(File file : casosTeste){
-            //analise sintatica
+        for(File file : casosTesteSintatico){
             SaidaParser saida = new SaidaParser();
             ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(file));
 
@@ -34,6 +35,7 @@ public class Main{
             parser.addErrorListener(new T3SyntaxErrorListener(saida));
             parser.algoritmo();
 
+            /** analisador sintatico **/
             //cria um arquivo de saida
             File saidaCasoTeste = new File(CAMINHO_CASOS_TESTE + "\\saida\\saida_sintatico\\" + file.getName());
             saidaCasoTeste.createNewFile();
@@ -43,6 +45,41 @@ public class Main{
             pw.println("Fim da compilacao");
             pw.close();
             pw.flush();
+
+            //mostra tambem no console para verificacao
+            System.out.println(file.getName());
+            System.out.println(saida);
+            System.out.println("Fim da compilacao\n");
+        }
+
+
+        System.out.println("------------ Casos de Teste Semanticos ------------\n");
+        //diretorio de entrada dos casos de teste sintaticos
+        File diretorioCasosTesteSemantico = new File(CAMINHO_CASOS_TESTE + "\\entrada\\entrada_semantico");
+        //vetor com a lista de arquivos sintaticos
+        File[] casosTesteSemantico = diretorioCasosTesteSemantico.listFiles();
+
+        for(File file : casosTesteSemantico){
+
+            SaidaParser saida = new SaidaParser();
+            ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(file));
+
+            GrafosLexer lexer = new GrafosLexer(input);
+            lexer.removeErrorListeners();
+            CommonTokenStream tokens = new CommonTokenStream(lexer);
+            GrafosParser parser = new GrafosParser(tokens);
+            parser.removeErrorListeners();
+            parser.addErrorListener(new T3SyntaxErrorListener(saida));
+            GrafosParser.AlgoritmoContext arvore = parser.algoritmo();
+
+             /*analisador semantico */
+            GrafosSemantico grafosSemantico = new GrafosSemantico(saida);
+            grafosSemantico.visitAlgoritmo(arvore);
+            PrintWriter pws = new PrintWriter(CAMINHO_CASOS_TESTE + "\\saida\\saida_semantico\\" + file.getName());
+            pws.println(saida);
+            pws.println("Fim da compilacao");
+            pws.close();
+            pws.flush();
 
             //mostra tambem no console para verificacao
             System.out.println(file.getName());
