@@ -38,6 +38,15 @@ public class PilhaDeTabelas {
         return false;
     }
 
+    public String getTipo(String nome){
+        for (TabelaDeSimbolos ts : pilha) {
+            if (ts.existeTipoVar(nome)) {
+                return ts.getTipo(nome);
+            }
+        }
+        return null;
+    }
+
     public void desempilhar() {
         TabelaDeSimbolos ret = pilha.pop();
     }

@@ -59,6 +59,24 @@ public class TabelaDeSimbolos {
         return null;
     }
 
+    public void setTipo(String nome, String novoValor){
+        for(EntradaTabelaDeSimbolos etds:simbolos) {
+            if(etds.getNome().equals(nome)) {
+                etds.setTipo(novoValor);
+            }
+        }
+    }
+
+    public String getTipo(String nome){
+        for(EntradaTabelaDeSimbolos etds:simbolos) {
+            if(etds.getNome().equals(nome)) {
+                return etds.getTipo();
+            }
+        }
+
+        return null;
+    }
+
     public String getEscopo(){
         return this.escopo;
     }

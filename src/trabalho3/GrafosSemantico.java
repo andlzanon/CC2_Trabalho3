@@ -51,8 +51,25 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             //verifica se variavel esta na tabela de simbolos. se nao esta adiciona na tabela
             if(pilhaDeTabelas.existeSimbolo(ctx.IDENT().getText()))
                 errosSemanticos.erroVariavelJaDeclarada(ctx.start.getLine(), ctx.IDENT().getText());
-            else
-                pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, tipo);
+            else{
+                switch(tipo){
+                    case "grafo" :
+                        pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "");
+                        break;
+                    case "vetor" :
+                        pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "");
+                        break;
+                    case "vertice" :
+                        pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "");
+                        break;
+                    case "int" :
+                        pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "false");
+                        break;
+
+                }
+
+            }
+
 
             visitMais_variavel(ctx.mais_variavel());
         }
@@ -270,6 +287,12 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             //verifica se os parametros foram declarados
             if(!pilhaDeTabelas.existeSimbolo(ctx.atribuicao.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.atribuicao.getText());
+            //pesquisa o tipo da varivavel da atribuicao e se for inteiro, troca a variavel para inicializada
+            else if(pilhaDeTabelas.topo().gettipoVar(ctx.atribuicao.getText()).equals("int")){
+                //inteiro setado como incializado
+                pilhaDeTabelas.topo().setTipo(ctx.atribuicao.getText(), "true");
+            }
+
 
             visitExpressao(ctx.expressao());
         }
@@ -340,6 +363,13 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
         else{
             if(!pilhaDeTabelas.existeSimbolo(ctx.IDENT().getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.IDENT().getText());
+            else{
+                if(pilhaDeTabelas.existeSimbolo(ctx.IDENT().getText()) &&
+                        pilhaDeTabelas.topo().gettipoVar(ctx.IDENT().getText()).equals("int") &&
+                            pilhaDeTabelas.topo().getTipo(ctx.IDENT().getText()).equals("false")) {
+                    errosSemanticos.intNaoAtribuido(ctx.start.getLine(), ctx.IDENT().getText());
+                }
+            }
 
             return ctx.IDENT().getText();
         }

@@ -69,4 +69,15 @@ public class Mensagens {
 
         sp.println(erro);
     }
+
+    public void intNaoAtribuido(int numLinha, String variavel) {
+        String erro = "Linha " +numLinha + ": variavel " +variavel + " inteira nao inicializada";
+
+        if (!primeiro){
+            erro = "\n" + erro;
+        }
+        primeiro = false;
+
+        sp.println(erro);
+    }
 }

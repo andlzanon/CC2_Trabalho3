@@ -18,7 +18,19 @@ public class EntradaTabelaDeSimbolos {
     }
 
     public String getTipoVar() {return tipoVar; }
-    
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setTipoVar(String tipoVar) {
+        this.tipoVar = tipoVar;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
     @Override
     public String toString() { return tipoVar + " " + nome+"("+tipo+")"; }
 }
