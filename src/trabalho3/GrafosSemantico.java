@@ -248,6 +248,36 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             if(pilhaDeTabelas.existeSimbolo(ctx.pem_vetor.getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.pem_vetor.getText()).equals("vetor"))
                 errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.pem_vetor.getText(), "vetor");
 
+            //esse trecho de codigo verifica o tipo da primeira insercao no vetor e define o mesmo como
+            //o tipo principal do vetor como o tipo da instancia do segundo parametro
+            //verifica se o tipo da varivel e uma string vazia
+            if(pilhaDeTabelas.topo().getTipo(ctx.pem_vetor.getText()).equals("")) {
+                //se sim verifica se o tipo vem do ident
+                if(ctx.int_ou_ident().IDENT()!=null &&
+                        pilhaDeTabelas.existeSimbolo(ctx.int_ou_ident().IDENT().getText()))
+                    //seta o tipo do vetor como o tipo do IDENT
+                    pilhaDeTabelas.topo().setTipo(ctx.pem_vetor.getText(), pilhaDeTabelas.topo().gettipoVar(ctx.int_ou_ident().IDENT().getText()));
+                //senao e inteiro
+                else
+                    pilhaDeTabelas.topo().setTipo(ctx.pem_vetor.getText(), "int");
+            }
+            //senao o tipo ja foi setado
+            else{
+                //verifica o tipo do IDENT colocado e igual ao tipo do primeiro IDENT
+                if(ctx.int_ou_ident().IDENT()!= null &&
+                pilhaDeTabelas.existeSimbolo(ctx.int_ou_ident().IDENT().getText()) &&
+                !pilhaDeTabelas.topo().getTipo(ctx.pem_vetor.getText()).equals(pilhaDeTabelas.topo().gettipoVar(ctx.int_ou_ident().IDENT().getText()))){
+                    //se nao e coloca erro
+                    errosSemanticos.vetorComTiposDiferentes(ctx.start.getLine(), ctx.int_ou_ident().IDENT().getText());
+                }
+                //senao compara com inteiro e verifica se primeiro foi int
+                else if(ctx.int_ou_ident().INTEIRO()!= null &&
+                        !pilhaDeTabelas.topo().getTipo(ctx.pem_vetor.getText()).equals("int")){
+                    //se nao coloca erro
+                    errosSemanticos.vetorComTiposDiferentes(ctx.start.getLine(), ctx.int_ou_ident().INTEIRO().getText());
+                }
+            }
+
             visitInt_ou_ident(ctx.int_ou_ident());
         }
         else if(ctx.getText().startsWith("enfileira")){
@@ -259,6 +289,36 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             //verifica 1 param
             if(pilhaDeTabelas.existeSimbolo(ctx.pen_vetor.getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.pen_vetor.getText()).equals("vetor"))
                 errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.pen_vetor.getText(), "vetor");
+
+            //esse trecho de codigo verifica o tipo da primeira insercao no vetor e define o mesmo como
+            //o tipo principal do vetor como o tipo da instancia do segundo parametro
+            //verifica se o tipo da varivel e uma string vazia
+            if(pilhaDeTabelas.topo().getTipo(ctx.pen_vetor.getText()).equals("")) {
+                //se sim verifica se o tipo vem do ident
+                if(ctx.int_ou_ident().IDENT()!=null &&
+                        pilhaDeTabelas.existeSimbolo(ctx.int_ou_ident().IDENT().getText()))
+                    //seta o tipo do vetor como o tipo do IDENT
+                    pilhaDeTabelas.topo().setTipo(ctx.pen_vetor.getText(), pilhaDeTabelas.topo().gettipoVar(ctx.int_ou_ident().IDENT().getText()));
+                    //senao e inteiro
+                else
+                    pilhaDeTabelas.topo().setTipo(ctx.pen_vetor.getText(), "int");
+            }
+            //senao o tipo ja foi setado
+            else{
+                //verifica o tipo do IDENT colocado e igual ao tipo do primeiro IDENT
+                if(ctx.int_ou_ident().IDENT()!= null &&
+                        pilhaDeTabelas.existeSimbolo(ctx.int_ou_ident().IDENT().getText()) &&
+                        !pilhaDeTabelas.topo().getTipo(ctx.pen_vetor.getText()).equals(pilhaDeTabelas.topo().gettipoVar(ctx.int_ou_ident().IDENT().getText()))){
+                    //se nao e coloca erro
+                    errosSemanticos.vetorComTiposDiferentes(ctx.start.getLine(), ctx.int_ou_ident().IDENT().getText());
+                }
+                //senao compara com inteiro e verifica se primeiro foi int
+                else if(ctx.int_ou_ident().INTEIRO()!= null &&
+                        !pilhaDeTabelas.topo().getTipo(ctx.pen_vetor.getText()).equals("int")){
+                    //se nao coloca erro
+                    errosSemanticos.vetorComTiposDiferentes(ctx.start.getLine(), ctx.int_ou_ident().INTEIRO().getText());
+                }
+            }
 
             visitInt_ou_ident(ctx.int_ou_ident());
         }
@@ -364,6 +424,8 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             if(!pilhaDeTabelas.existeSimbolo(ctx.IDENT().getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.IDENT().getText());
             else{
+                //se o simbolo existe na pilha e seu tipo e int e nao foi inicializado, ou seja tipo = false
+                //entao acusa erro
                 if(pilhaDeTabelas.existeSimbolo(ctx.IDENT().getText()) &&
                         pilhaDeTabelas.topo().gettipoVar(ctx.IDENT().getText()).equals("int") &&
                             pilhaDeTabelas.topo().getTipo(ctx.IDENT().getText()).equals("false")) {

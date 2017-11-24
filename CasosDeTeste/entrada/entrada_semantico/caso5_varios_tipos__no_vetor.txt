@@ -1,0 +1,26 @@
+declaracoes:
+	grafo g
+	vertice v1, v2, v3
+    int valor
+    vetor vetor1
+
+inicio
+
+    valor <- 1
+	aresta(g, v1, v2, valor)
+	aresta(g, v2, v3, 1)
+	aresta(g, v1, v3, 1)
+
+    empilha(vetor1, v1)
+    empilha(vetor1, v2)
+    {erro variavel nao comparivel com vetor ja que o primeiro colocado foi do tipo vertice}
+    empilha(vetor1, 1)
+    empilha(vetor1, valor)
+
+    enfileira(vetor1, v1)
+    enfileira(vetor1, v2)
+    {erro variavel nao comparivel com vetor ja que o primeiro colocado foi do tipo vertice}
+    enfileira(vetor1, 1)
+    enfileira(vetor1, valor)
+
+fim

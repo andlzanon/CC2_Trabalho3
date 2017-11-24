@@ -80,4 +80,16 @@ public class Mensagens {
 
         sp.println(erro);
     }
+
+    public void vetorComTiposDiferentes(int numLinha, String variavel) {
+        String erro = "Linha " +numLinha + ": variavel " +variavel + " nao compativel com tipo do vetor";
+
+        if (!primeiro){
+            erro = "\n" + erro;
+        }
+        primeiro = false;
+
+        sp.println(erro);
+    }
+
 }
