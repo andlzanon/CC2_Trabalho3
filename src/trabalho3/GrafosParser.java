@@ -469,8 +469,8 @@ public class GrafosParser extends Parser {
 		public Token pr_vertice;
 		public Token ps_grafo;
 		public Token ps_vertice;
-		public Token pem_grafo;
-		public Token pen_grafo;
+		public Token pem_vetor;
+		public Token pen_vetor;
 		public Token para;
 		public Token atribuicao;
 		public Token pd_grafo;
@@ -619,7 +619,7 @@ public class GrafosParser extends Parser {
 				setState(112);
 				match(T__9);
 				setState(113);
-				((InstrucoesContext)_localctx).pem_grafo = match(IDENT);
+				((InstrucoesContext)_localctx).pem_vetor = match(IDENT);
 				setState(114);
 				match(T__3);
 				setState(115);
@@ -636,7 +636,7 @@ public class GrafosParser extends Parser {
 				setState(119);
 				match(T__9);
 				setState(120);
-				((InstrucoesContext)_localctx).pen_grafo = match(IDENT);
+				((InstrucoesContext)_localctx).pen_vetor = match(IDENT);
 				setState(121);
 				match(T__3);
 				setState(122);

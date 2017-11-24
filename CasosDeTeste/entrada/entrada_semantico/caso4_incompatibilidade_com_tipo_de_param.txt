@@ -1,0 +1,12 @@
+declaracoes:
+	grafo g
+	vertice v1, v2, v3
+    int valor
+
+inicio
+
+    valor <- 1
+	aresta(g, v1, v4, valor)
+	aresta(g, valor, v3, 1)
+	aresta(g, v1, v3, 1)
+fim

@@ -13,6 +13,7 @@ Este trabalho consiste na implementação de um compilador para a linguagem de man
  * Digitação de comandos e de seus respectivos parâmetros;
  * Instanciação de comandos com retorno void em atribuição;
  * Impossibilidade de utilização de números reais;
+ * Em for (para) somente é possível iterar sobre vetores
  * Comentário não fechado;
  * Tokens não permitidos;
 
@@ -31,19 +32,10 @@ Para instalar o ANTLR, basta fazer o download do mesmo no site: http://www.antlr
 
 # Instruções de uso
 
-Antes de rodar o comando para compilar são necessarias duas acões:
-
-1- Da maneira que o nosso programa foi desenvolvido, só é possível rodar os testes de casos sintáticos e casos semânticos, para isso o compilador vem por padrão preparado para rodar os casos sintáticos a partir do comando java para correção sintática. Caso deseje rodar os casos de teste semânticos descomente os comandos de análise semântica e adicione como comentários os comandos para análise sintática. 
-
-2- Abrir o projeto no IntelliJ e entrar na barra superior em Build >> Build Artifacts... >> Rebuild.
-
-Então usar o comando: java -jar local do corretor do ava.jar "java -jar local do LAT1.jar" gcc (necessario colocar o MINGW como variavel de ambiente) local_da_pasta_temp local_dos_casos_de_teste "RA's" correcao<sintatico, semantico ou tudo>
-
-ex: java -jar C:\Users\André\Documents\BCC\017.2\CC2\T1\CorretorTrabalho1\CorretorTrabalho1.jar "java -jar C:\Users\André\Documents\GitHub\CC2_Trabalho1\out\artifacts\LAT1_jar\LAT1.jar" gcc C:\Users\André\Documents\GitHub\CC2_Trabalho1\temp C:\Users\André\Documents\GitHub\CC2_Trabalho1\src\trabalho1\casosDeTesteT1\casosDeTesteT1 "619922" sintatico
-Caso o contribuidor tenha feito modificacoes no LA.g4 usar o comando na pasta src do projeto: java -jar antlr-4.7-complete.jar -package trabalho1 LA.g4
+Para compilar, somente é necessário clicar em Run no IntelliJ.
 
 Caso o contribuidor tenha feito modificacoes no LA.g4 usar o seguinte comando dentro da pasta src do projeto:
-java -jar antlr-4.7-complete.jar -package trabalho1 LA.g4
+java -jar antlr-4.7-complete.jar -package trabalho3 -visitor Grafos.g4
 
 # Alunos e Professores
 Autores: 

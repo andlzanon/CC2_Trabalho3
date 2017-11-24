@@ -26,11 +26,11 @@ instrucoes :	'aresta' '(' pa_grafo=IDENT ',' pa_vertice1=IDENT ',' pa_vertice2=I
                 // remove de um grafo o vertice
 				| 'remove_vert' '(' pr_grafo=IDENT ',' pr_vertice= IDENT ')'					                    //grafo,vertice
                 //define-se em um grafo, o custo para chegar no vertice
-				| 'set_custo_para_vertice' '(' ps_grafo=IDENT ',' ps_vertice=IDENT ',' int_ou_ident ')'             //grafo, vertice, valor
+				| 'set_custo_para_vertice' '(' ps_grafo=IDENT ',' ps_vertice=IDENT ',' int_ou_ident ')'             //grafo, vertice, int
 	            //imprime uma variavel ou cadeia
 				| 'imprime' '(' var_ou_cadeia ')'						                                            //grafo, vertice, lista, etc
-				| 'empilha' '(' pem_grafo=IDENT ',' int_ou_ident ')'                                                          //vetor, vertice grafo ou inteiro
-				| 'enfileira' '(' pen_grafo=IDENT ',' int_ou_ident ')'                                                        //vetor, vertice grafo ou inteiro
+				| 'empilha' '(' pem_vetor=IDENT ',' int_ou_ident ')'                                                          //vetor, vertice grafo ou inteiro
+				| 'enfileira' '(' pen_vetor=IDENT ',' int_ou_ident ')'                                                        //vetor, vertice grafo ou inteiro
 				//lacos e comandos condicionais
 				| 'se' expressao 'entao' codigo senao_opcional 'fim_se'
 				| 'para' para=IDENT 'em' vetores_para 'faca' codigo 'fim_para'

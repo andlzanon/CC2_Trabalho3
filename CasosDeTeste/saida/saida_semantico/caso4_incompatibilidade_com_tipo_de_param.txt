@@ -1,0 +1,3 @@
+Linha 9: identificador v4 nao declarado
+Linha 10: tipo da variavel valor nao corresponde com o parâmetro respectivo de tipo vertice
+Fim da compilacao

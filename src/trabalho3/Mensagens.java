@@ -35,6 +35,29 @@ public class Mensagens {
         sp.println(erro);
     }
 
+    public void incompatibilidadeDeParametros(int numLinha, String variavel, String tipoEsperado){
+        String erro = "Linha " +numLinha + ": tipo da variavel " +variavel +  " nao corresponde com o parâmetro respectivo de tipo " +
+                tipoEsperado;
+
+        if (!primeiro){
+            erro = "\n" + erro;
+        }
+        primeiro = false;
+
+        sp.println(erro);
+    }
+
+    public void pesoNegativo(int numLinha, String variavel){
+        String erro = "Linha " +numLinha + ": peso nao pode ser negativo do identificador " +variavel;
+
+        if (!primeiro){
+            erro = "\n" + erro;
+        }
+        primeiro = false;
+
+        sp.println(erro);
+    }
+
 
     public void incompatibilidadeDeTipos(int numLinha, String variavel){
         String erro = "Linha " +numLinha + ": atribuicao nao compativel para " +variavel;

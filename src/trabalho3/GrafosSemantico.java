@@ -130,6 +130,39 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             else if(!pilhaDeTabelas.existeSimbolo(ctx.pa_vertice2.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.pa_vertice2.getLine(), ctx.pa_vertice2.getText());
 
+            //verifica se a ordem dos parametros esta correta com os tipos esperados
+            verifica3Paramentros(ctx.start.getLine(), ctx.pa_grafo.getText(), "grafo", ctx.pa_vertice1.getText(), "vertice",
+                    ctx.pa_vertice2.getText(), "vertice");
+
+            //verifica se 4 parametro e int
+            if(ctx.int_ou_ident().IDENT() != null){
+                //IDENT sera quarto parametro, entao e necessario saber se o mesmo e inteiro
+                if(pilhaDeTabelas.existeSimbolo(ctx.int_ou_ident().IDENT().getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.int_ou_ident().IDENT().getText()).equals("int"))
+                    errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.int_ou_ident().IDENT().getText(), "int");
+                // se nao existe erro no IDENT entao e necessario verificar se ele nao e menor do que 0
+                else{
+                    //verifica se peso e menor do que zero
+                    try{
+                        String numero = ctx.int_ou_ident().IDENT().getText();
+                        int valor = Integer.parseInt(numero);
+                        if(valor < 0)
+                            errosSemanticos.pesoNegativo(ctx.start.getLine(), ctx.int_ou_ident().IDENT().getText());
+                    }catch (Exception e){
+
+                    }
+
+                }
+            }
+
+            //verifica se peso, caso for um numero, e menor do que zero
+            if(ctx.int_ou_ident().INTEIRO() != null){
+                String numero = ctx.int_ou_ident().INTEIRO().getText();
+                int valor = Integer.parseInt(numero);
+                if(valor < 0)
+                    errosSemanticos.pesoNegativo(ctx.start.getLine(), ctx.int_ou_ident().INTEIRO().getText());
+
+            }
+
             visitInt_ou_ident(ctx.int_ou_ident());
         }
         else if(ctx.getText().startsWith("remove_vert")){
@@ -139,6 +172,9 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                 errosSemanticos.erroVariavelNaoExiste(ctx.pr_grafo.getLine(), ctx.pr_grafo.getText());
             else if(!pilhaDeTabelas.existeSimbolo(ctx.pr_vertice.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.pr_vertice.getLine(), ctx.pr_vertice.getText());
+
+            //verifica parametros
+            verifica2Paramentros(ctx.start.getLine(), ctx.pr_grafo.getText(), "grafo", ctx.pr_vertice.getText(), "vertice");
         }
         else if(ctx.getText().startsWith("set_custo_para_vertice")){
 
@@ -148,6 +184,38 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             else if(!pilhaDeTabelas.existeSimbolo(ctx.pr_vertice.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.pr_vertice.getLine(), ctx.pr_vertice.getText());
 
+            //verifica parametros
+            verifica2Paramentros(ctx.start.getLine(), ctx.ps_grafo.getText(), "grafo", ctx.ps_vertice.getText(), "vertice");
+
+            //verifica se 3 parametro e int
+            if(ctx.int_ou_ident().IDENT() != null){
+                //IDENT sera terceiro parametro, entao e necessario saber se o mesmo e inteiro
+                if(pilhaDeTabelas.existeSimbolo(ctx.int_ou_ident().IDENT().getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.int_ou_ident().IDENT().getText()).equals("int"))
+                    errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.int_ou_ident().IDENT().getText(), "int");
+                // se nao existe erro no IDENT entao e necessario verificar se ele nao e menor do que 0
+                else{
+                    //verifica se peso e menor do que zero
+                    try{
+                        String numero = ctx.int_ou_ident().IDENT().getText();
+                        int valor = Integer.parseInt(numero);
+                        if(valor < 0)
+                            errosSemanticos.pesoNegativo(ctx.start.getLine(), ctx.int_ou_ident().IDENT().getText());
+                    }catch (Exception e){
+
+                    }
+
+                }
+            }
+
+            //verifica se peso, caso for um numero, e menor do que zero
+            if(ctx.int_ou_ident().INTEIRO() != null){
+                String numero = ctx.int_ou_ident().INTEIRO().getText();
+                int valor = Integer.parseInt(numero);
+                if(valor < 0)
+                    errosSemanticos.pesoNegativo(ctx.start.getLine(), ctx.int_ou_ident().INTEIRO().getText());
+
+            }
+
             visitInt_ou_ident(ctx.int_ou_ident());
         }
         else if(ctx.getText().startsWith("imprime")){
@@ -156,16 +224,24 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
         else if(ctx.getText().startsWith("empilha")){
 
             //verifica se os parametros foram declarados
-            if(!pilhaDeTabelas.existeSimbolo(ctx.pem_grafo.getText()))
-                errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pem_grafo.getText());
+            if(!pilhaDeTabelas.existeSimbolo(ctx.pem_vetor.getText()))
+                errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pem_vetor.getText());
+
+            //verifica 1 param
+            if(pilhaDeTabelas.existeSimbolo(ctx.pem_vetor.getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.pem_vetor.getText()).equals("vetor"))
+                errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.pem_vetor.getText(), "vetor");
 
             visitInt_ou_ident(ctx.int_ou_ident());
         }
         else if(ctx.getText().startsWith("enfileira")){
 
             //verifica se os parametros foram declarados
-            if(!pilhaDeTabelas.existeSimbolo(ctx.pen_grafo.getText()))
-                errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pen_grafo.getText());
+            if(!pilhaDeTabelas.existeSimbolo(ctx.pen_vetor.getText()))
+                errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pen_vetor.getText());
+
+            //verifica 1 param
+            if(pilhaDeTabelas.existeSimbolo(ctx.pen_vetor.getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.pen_vetor.getText()).equals("vetor"))
+                errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.pen_vetor.getText(), "vetor");
 
             visitInt_ou_ident(ctx.int_ou_ident());
         }
@@ -179,6 +255,8 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             //verifica se os parametros foram declarados
             if(!pilhaDeTabelas.existeSimbolo(ctx.para.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.para.getText());
+
+            //TODO tipo da variavel do para deve ser igual a do vetor
 
             visitVetores_para(ctx.vetores_para());
             visitCodigo(ctx.codigo());
@@ -203,6 +281,9 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             else if(!pilhaDeTabelas.existeSimbolo(ctx.pd_vertice.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pd_vertice.getText());
 
+            //verifica parametros
+            verifica2Paramentros(ctx.start.getLine(), ctx.pd_grafo.getText(), "grafo", ctx.pd_vertice.getText(), "vertice");
+
         }
         else if(ctx.getText().startsWith("prim")){
 
@@ -211,6 +292,10 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pp_grafo.getText());
             else if(!pilhaDeTabelas.existeSimbolo(ctx.pp_vertice.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pp_vertice.getText());
+
+            //verifica parametros
+            verifica2Paramentros(ctx.start.getLine(), ctx.pp_grafo.getText(), "grafo", ctx.pp_vertice.getText(), "vertice");
+
         }
         else if(ctx.getText().startsWith("dfs")){
 
@@ -219,6 +304,10 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pdfs_grafo.getText());
             else if(!pilhaDeTabelas.existeSimbolo(ctx.pdfs_vertice.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pdfs_vertice.getText());
+
+            //verifica parametros
+            verifica2Paramentros(ctx.start.getLine(), ctx.pdfs_grafo.getText(), "grafo", ctx.pdfs_vertice.getText(), "vertice");
+
         }
         else if(ctx.getText().startsWith("bfs")){
 
@@ -227,6 +316,10 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pbfs_grafo.getText());
             else if(!pilhaDeTabelas.existeSimbolo(ctx.pbfs_vertice.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pbfs_vertice.getText());
+
+            //verifica parametros
+            verifica2Paramentros(ctx.start.getLine(), ctx.pbfs_grafo.getText(), "grafo", ctx.pbfs_vertice.getText(), "vertice");
+
         }
         else if(ctx.instrucoes_com_retorno() != null){
             visitInstrucoes_com_retorno(ctx.instrucoes_com_retorno());
@@ -243,9 +336,11 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
     public String visitInt_ou_ident(GrafosParser.Int_ou_identContext ctx) {
         if(ctx.INTEIRO() != null)
             return ctx.INTEIRO().getText();
+
         else{
             if(!pilhaDeTabelas.existeSimbolo(ctx.IDENT().getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.IDENT().getText());
+
             return ctx.IDENT().getText();
         }
     }
@@ -275,6 +370,11 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pgp_vertice1.getText());
             else if(!pilhaDeTabelas.existeSimbolo(ctx.pgp_vertice2.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pgp_vertice2.getText());
+
+            //verifica se a ordem dos parametros esta correta com os tipos esperados
+            verifica3Paramentros(ctx.start.getLine(), ctx.pgp_grafo.getText(), "grafo", ctx.pgp_vertice1.getText(), "vertice",
+                    ctx.pgp_vertice2.getText(), "vertice");
+
         }
         else if(ctx.getText().startsWith("get_custo_para_vertice")){
 
@@ -283,6 +383,10 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pgc_grafo.getText());
             else if(!pilhaDeTabelas.existeSimbolo(ctx.pgc_vertice.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pgc_vertice.getText());
+
+            //verifica se a ordem dos parametros esta correta com os tipos esperados
+            verifica2Paramentros(ctx.start.getLine(), ctx.pgc_grafo.getText(), "grafo", ctx.pgc_vertice.getText(), "vertice");
+
         }
         else if(ctx.getText().startsWith("qtde_vert")){
 
@@ -290,18 +394,31 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             if(!pilhaDeTabelas.existeSimbolo(ctx.pqv_grafo.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pqv_grafo.getText());
 
+            //verifica se param de qtade_vert e grafo
+            if(pilhaDeTabelas.existeSimbolo(ctx.pqv_grafo.getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.pqv_grafo.getText()).equals("grafo"))
+                errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.pqv_grafo.getText(), "grafo");
+
         }
         else if(ctx.getText().startsWith("desempilha")){
 
             //verifica se os parametros foram declarados
             if(!pilhaDeTabelas.existeSimbolo(ctx.pdem_vetor.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pdem_vetor.getText());
+
+            //verifica se param de desempilha e vetor
+            if(pilhaDeTabelas.existeSimbolo(ctx.pdem_vetor.getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.pdem_vetor.getText()).equals("vetor"))
+                errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.pdem_vetor.getText(), "vetor");
         }
         else if(ctx.getText().startsWith("desenfila")){
 
             //verifica se os parametros foram declarados
             if(!pilhaDeTabelas.existeSimbolo(ctx.pden_vetor.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pden_vetor.getText());
+
+            //verifica se param de desenfila e vetor
+            //IDENT sempre sera terceiro parametro, entao e necessario saber se o mesmo e inteiro
+            if(pilhaDeTabelas.existeSimbolo(ctx.pden_vetor.getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.pden_vetor.getText()).equals("vetor"))
+                errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.pden_vetor.getText(), "vetor");
         }
 
         return null;
@@ -322,12 +439,20 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pv_grafo.getText());
             else if(!pilhaDeTabelas.existeSimbolo(ctx.pv_vertice.getText()))
                     errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pv_vertice.getText());
+
+            //verifica se a ordem dos parametros esta correta com os tipos esperados
+            verifica2Paramentros(ctx.start.getLine(), ctx.pv_grafo.getText(), "grafo", ctx.pv_vertice.getText(), "vertice");
         }
         else if(ctx.getText().startsWith("vertices")){
 
             //verifica se os parametros foram declarados
             if(!pilhaDeTabelas.existeSimbolo(ctx.pver_grafo.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.pver_grafo.getText());
+
+            //verifica se param de desenfila e vetor
+            //IDENT sempre sera terceiro parametro, entao e necessario saber se o mesmo e inteiro
+            if(pilhaDeTabelas.existeSimbolo(ctx.pver_grafo.getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.pver_grafo.getText()).equals("grafo"))
+                errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.pver_grafo.getText(), "grafo");
         }
         return null;
     }
@@ -503,5 +628,36 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
     @Override
     public String visitOp_adicao(GrafosParser.Op_adicaoContext ctx) {
         return ctx.getText();
+    }
+
+
+    //verifica se os tipos dos parametros estao conforme documentados na gramatica e na documentacao da linguagem
+    //e necessario verificar se existe o simbolo na tabela primeiro para o caso de nao ter sido declarado
+    //logo, nao estara na tabela de simbolos, nao tera tipo e ocorreta um NullPointerException
+
+    /**
+     * Funcao que verifica se os tipos esperados como parametros estao corretos
+     * @param numLinha numero do erro da linha
+     * @param param1 texto do parametro1
+     * @param tipoEsperado1 tipo esperado do parametro1
+     * @param param2 texto do parametro2
+     * @param tipoEsperado2 tipo esperado do parametro2
+     */
+    public void verifica2Paramentros(int numLinha, String param1, String tipoEsperado1, String param2, String tipoEsperado2){
+        if(pilhaDeTabelas.existeSimbolo(param1) && !pilhaDeTabelas.topo().gettipoVar(param1).equals(tipoEsperado1))
+            errosSemanticos.incompatibilidadeDeParametros(numLinha, param1, tipoEsperado1);
+        else if(pilhaDeTabelas.existeSimbolo(param2) && !pilhaDeTabelas.topo().gettipoVar(param2).equals(tipoEsperado2))
+            errosSemanticos.incompatibilidadeDeParametros(numLinha, param2, tipoEsperado2);
+    }
+
+    //funcao analoga a anterior
+    public void verifica3Paramentros(int numLinha, String param1, String tipoEsperado1, String param2, String tipoEsperado2,
+                                     String param3, String tipoEsperado3){
+        if(pilhaDeTabelas.existeSimbolo(param1) && !pilhaDeTabelas.topo().gettipoVar(param1).equals(tipoEsperado1))
+            errosSemanticos.incompatibilidadeDeParametros(numLinha, param1, tipoEsperado1);
+        else if(pilhaDeTabelas.existeSimbolo(param2) && !pilhaDeTabelas.topo().gettipoVar(param2).equals(tipoEsperado2))
+            errosSemanticos.incompatibilidadeDeParametros(numLinha, param2, tipoEsperado2);
+        else if(pilhaDeTabelas.existeSimbolo(param3) && !pilhaDeTabelas.topo().gettipoVar(param3).equals(tipoEsperado3))
+            errosSemanticos.incompatibilidadeDeParametros(numLinha, param3, tipoEsperado3);
     }
 }
