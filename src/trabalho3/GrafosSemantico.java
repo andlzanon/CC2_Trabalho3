@@ -2,6 +2,8 @@ package trabalho3;
 
 import org.antlr.v4.runtime.Token;
 
+import java.util.ArrayList;
+
 /**
  * Created by Andre on 20/11/2017.
  */
@@ -14,12 +16,16 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
     SaidaParser sp;
     Mensagens errosSemanticos;
 
+    ArrayList<GrafosNaTabela> grafosNaTabela;
+
     public GrafosSemantico(SaidaParser sp){
         this.sp = sp;
         grupo = "<619922_619795_619841_552437>";
         errosSemanticos = new Mensagens(sp);
         pilhaDeTabelas = new PilhaDeTabelas();
         pilhaDeTabelas.empilhar(new TabelaDeSimbolos("global"));
+        //lista de grafos na tabela de simbolos. Ira guardar o numero de vertices e arestas
+        grafosNaTabela  = new ArrayList<GrafosNaTabela>();
     }
 
     // algoritmo :	'declaracoes' declaracao 'inicio' codigo 'fim' ;
@@ -28,7 +34,13 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
         if(ctx.children != null){
             visitDeclaracao(ctx.declaracao());
             visitCodigo(ctx.codigo());
-            System.out.println(pilhaDeTabelas.topo().toString());
+            //System.out.println(pilhaDeTabelas.topo().toString());
+
+            //ao final do algoritmo calcula se algum grafo e desconexo e se for, imprime
+            for(int i = 0; i < grafosNaTabela.size(); i++){
+                if(!grafosNaTabela.get(i).eConexo())
+                    errosSemanticos.grafoDesconexo(grafosNaTabela.get(i).getNome());
+            }
         }
         return null;
     }
@@ -171,38 +183,31 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             verifica3Paramentros(ctx.start.getLine(), ctx.pa_grafo.getText(), "grafo", ctx.pa_vertice1.getText(), "vertice",
                     ctx.pa_vertice2.getText(), "vertice");
 
-            //verifica se 4 parametro e int
-            if(ctx.int_ou_ident().IDENT() != null){
-                //IDENT sera quarto parametro, entao e necessario saber se o mesmo e inteiro
-                if(pilhaDeTabelas.existeSimbolo(ctx.int_ou_ident().IDENT().getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.int_ou_ident().IDENT().getText()).equals("int"))
-                    errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.int_ou_ident().IDENT().getText(), "int");
-                // se nao existe erro no IDENT entao e necessario verificar se ele nao e menor do que 0
-                else{
-                    //verifica se peso e menor do que zero
-                    try{
-                        String numero = ctx.int_ou_ident().IDENT().getText();
-                        int valor = Integer.parseInt(numero);
-                        if(valor < 0)
-                            errosSemanticos.pesoNegativo(ctx.start.getLine(), ctx.int_ou_ident().IDENT().getText());
-                    }catch (Exception e){
-
-                    }
-
-                }
-            }
             //ainda verificando se 4 parametro e int
             //verifica se peso, caso for um numero, e menor do que zero
-            if(ctx.int_ou_ident().INTEIRO() != null){
-                String numero = ctx.int_ou_ident().INTEIRO().getText();
+            if(ctx.a_int != null){
+                String numero = ctx.a_int.getText();
                 int valor = Integer.parseInt(numero);
                 if(valor < 0)
-                    errosSemanticos.pesoNegativo(ctx.start.getLine(), ctx.int_ou_ident().INTEIRO().getText());
+                    errosSemanticos.pesoNegativo(ctx.start.getLine(), ctx.a_int.getText());
 
             }
 
-            //verifia se grafo e desconexo
-
-            visitInt_ou_ident(ctx.int_ou_ident());
+            //para verificar se  o grafo e desconexo
+            //se esta nao esta na lista de grafos do programa
+            if(!estaNaListaDeGrafos(ctx.pa_grafo.getText())){
+                //adiciona um novo grafo na tabela
+                grafosNaTabela.add(new GrafosNaTabela(ctx.pa_grafo.getText()));
+                //adiciona a aresta na ultima posicao
+                grafosNaTabela.get(grafosNaTabela.size()-1).adicionaNaListaDeArestas(ctx.pa_vertice1.getText(), ctx.pa_vertice2.getText());
+            }
+            //senao
+            else{
+                //acessa a posicao pelo nome do grafo
+                int posicao = posicaoNoGrafo(ctx.pa_grafo.getText());
+                //adiciona a aresta
+                grafosNaTabela.get(posicao).adicionaNaListaDeArestas(ctx.pa_vertice1.getText(), ctx.pa_vertice2.getText());
+            }
         }
         else if(ctx.getText().startsWith("remove_vert")){
 
@@ -212,16 +217,28 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             else if(!pilhaDeTabelas.existeSimbolo(ctx.pr_vertice.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.pr_vertice.getLine(), ctx.pr_vertice.getText());
 
+
             //verifica parametros
             verifica2Paramentros(ctx.start.getLine(), ctx.pr_grafo.getText(), "grafo", ctx.pr_vertice.getText(), "vertice");
+
+            //para a verificacao de grafo conexo se a posicao e achada, insere na tabela
+            //try catch para caso algum usuario querer trolar o programador que ta aqui suando no
+            //sabado fazendo esse trabalho funciona coloca p tirar o vertice de um grafo que nao possui nada
+            try{
+                int posicao = posicaoNoGrafo(ctx.pr_grafo.getText());
+                grafosNaTabela.get(posicao).removeNaListaDeArestas(ctx.pr_vertice.getText());
+            }catch (Exception e){
+
+            }
+
         }
         else if(ctx.getText().startsWith("set_custo_para_vertice")){
 
             //verifica se os parametros foram declarados
             if(!pilhaDeTabelas.existeSimbolo(ctx.ps_grafo.getText()))
-                errosSemanticos.erroVariavelNaoExiste(ctx.ps_grafo.getLine(), ctx.pr_vertice.getText());
-            else if(!pilhaDeTabelas.existeSimbolo(ctx.pr_vertice.getText()))
-                errosSemanticos.erroVariavelNaoExiste(ctx.pr_vertice.getLine(), ctx.pr_vertice.getText());
+                errosSemanticos.erroVariavelNaoExiste(ctx.ps_grafo.getLine(), ctx.ps_vertice.getText());
+            else if(!pilhaDeTabelas.existeSimbolo(ctx.ps_vertice.getText()))
+                errosSemanticos.erroVariavelNaoExiste(ctx.ps_vertice.getLine(), ctx.ps_vertice.getText());
 
             //verifica parametros
             verifica2Paramentros(ctx.start.getLine(), ctx.ps_grafo.getText(), "grafo", ctx.ps_vertice.getText(), "vertice");
@@ -231,19 +248,6 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                 //IDENT sera terceiro parametro, entao e necessario saber se o mesmo e inteiro
                 if(pilhaDeTabelas.existeSimbolo(ctx.int_ou_ident().IDENT().getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.int_ou_ident().IDENT().getText()).equals("int"))
                     errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.int_ou_ident().IDENT().getText(), "int");
-                // se nao existe erro no IDENT entao e necessario verificar se ele nao e menor do que 0
-                else{
-                    //verifica se peso e menor do que zero
-                    try{
-                        String numero = ctx.int_ou_ident().IDENT().getText();
-                        int valor = Integer.parseInt(numero);
-                        if(valor < 0)
-                            errosSemanticos.pesoNegativo(ctx.start.getLine(), ctx.int_ou_ident().IDENT().getText());
-                    }catch (Exception e){
-
-                    }
-
-                }
             }
 
             //verifica se peso, caso for um numero, e menor do que zero
@@ -802,4 +806,24 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
         else if(pilhaDeTabelas.existeSimbolo(param3) && !pilhaDeTabelas.topo().gettipoVar(param3).equals(tipoEsperado3))
             errosSemanticos.incompatibilidadeDeParametros(numLinha, param3, tipoEsperado3);
     }
+
+    private boolean estaNaListaDeGrafos(String nome_do_grafo) {
+        boolean achou = false;
+        for(int i = 0; i < grafosNaTabela.size(); i++){
+            if(grafosNaTabela.get(i).equals(nome_do_grafo))
+                achou = true;
+        }
+
+        return achou;
+    }
+
+    private int posicaoNoGrafo(String nome_do_grafo) {
+        for(int i = 0; i < grafosNaTabela.size(); i++){
+            if(grafosNaTabela.get(i).equals(nome_do_grafo))
+                return i;
+        }
+
+        return -1;
+    }
+
 }

@@ -5,6 +5,6 @@ declaracoes:
 
 inicio
 	aresta(g, v1, v2, 1)
-	aresta(g, v2, v3, valor)
+	aresta(g, v2, v3, 1)
 	aresta(g, v1, v3, 1.2)
 fim

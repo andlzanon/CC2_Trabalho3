@@ -22,7 +22,7 @@ tipo :	'grafo'     |
 codigo : (instrucoes)* ;
 
                 //cria aresta em um grafo, delimitado por dois veritices e um peso
-instrucoes :	'aresta' '(' pa_grafo=IDENT ',' pa_vertice1=IDENT ',' pa_vertice2=IDENT ',' int_ou_ident')'	        //grafo,vertice,vertice,peso
+instrucoes :	'aresta' '(' pa_grafo=IDENT ',' pa_vertice1=IDENT ',' pa_vertice2=IDENT ',' a_int=INTEIRO')'	     //grafo,vertice,vertice,peso
                 // remove de um grafo o vertice
 				| 'remove_vert' '(' pr_grafo=IDENT ',' pr_vertice= IDENT ')'					                    //grafo,vertice
                 //define-se em um grafo, o custo para chegar no vertice

@@ -7,10 +7,10 @@ declaracoes:
 inicio
 
     empilha(vetor2, v1)
-    enfileira(vetor1, 1)
+    enfileira(vetor1, valor)
     enfileira(vetor3, 1)
 
-    valor <- 1
+    g <- valor
     valor <- valor + v1
     valor <- valor > v1
     valor <- (valor * valor * 5)/2
@@ -19,6 +19,7 @@ inicio
     {como vetor4 e um vetor vazio, na atribuicao ele recebe o tipo dos elementos do vetor1 que e inteiro}
     vetor4 <- vetor1
     vetor1 <- g
+
 
     valor <- desenfila(vetor1)
     valor <- desempilha(vetor2)

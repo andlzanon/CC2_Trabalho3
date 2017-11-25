@@ -1,4 +1,3 @@
-Linha 10: variavel valor inteira nao inicializada
 Linha 17: variavel 1 nao compativel com tipo do vetor
 Linha 18: variavel valor nao compativel com tipo do vetor
 Linha 18: variavel valor inteira nao inicializada

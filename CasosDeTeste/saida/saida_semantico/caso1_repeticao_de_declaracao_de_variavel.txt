@@ -1,3 +1,4 @@
 Linha 4: identificador g ja declarado anteriormente
 Linha 7: peso nao pode ser negativo do identificador -1
+Linha 11: peso nao pode ser negativo do identificador -1
 Fim da compilacao

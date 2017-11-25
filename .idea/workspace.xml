@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="522f7edb-0556-433c-bae4-54c6a315d46f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso5.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Exp_aritmeticaContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Exp_aritmeticaContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ExpressaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ExpressaoContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$FatorContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$FatorContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$InstrucoesContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$InstrucoesContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_com_retornoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_com_retornoContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_de_vetoresContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_de_vetoresContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Int_ou_identContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Int_ou_identContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_adicaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_adicaoContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_multiplicacaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_multiplicacaoContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_opcionalContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_opcionalContext.class" />
@@ -12,20 +17,30 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_fatoresContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_fatoresContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_termosContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_termosContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ParcelaContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ParcelaContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Senao_opcionalContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Senao_opcionalContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$TermoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$TermoContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Var_ou_cadeiaContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Var_ou_cadeiaContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Vetores_paraContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Vetores_paraContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosSemantico.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosSemantico.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Mensagens.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Mensagens.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso3_parametro_imprime_nao_declarado.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso3_parametro_imprime_nao_declarado.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso1_repeticao_de_declaracao_de_variavel.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso1_repeticao_de_declaracao_de_variavel.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso2_variavel_nao_declarada_em_comando.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso2_variavel_nao_declarada_em_comando.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso4_incompatibilidade_com_tipo_de_param.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso4_incompatibilidade_com_tipo_de_param.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso5_varios_tipos__no_vetor.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso5_varios_tipos__no_vetor.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso2_comando_digitado_errado.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso2_comando_digitado_errado.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso3_parametro_imprime_nao_declarado.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso3_parametro_imprime_nao_declarado.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso6_compatibilidade_de_tipos.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso6_compatibilidade_de_tipos.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso12_real_nao_suportado.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso12_real_nao_suportado.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso1_repeticao_de_declaracao_de_variavel.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso1_repeticao_de_declaracao_de_variavel.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso2_variavel_nao_declarada_em_comando.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso2_variavel_nao_declarada_em_comando.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso4_incompatibilidade_com_tipo_de_param.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso4_incompatibilidade_com_tipo_de_param.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso5_varios_tipos__no_vetor.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso5_varios_tipos__no_vetor.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso2_comando_digitado_errado.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso2_comando_digitado_errado.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso6_compatibilidade_de_tipos.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso6_compatibilidade_de_tipos.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Grafos.g4" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Grafos.g4" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/Grafos.g4" afterPath="$PROJECT_DIR$/src/trabalho3/Grafos.g4" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosParser.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/Mensagens.java" afterPath="$PROJECT_DIR$/src/trabalho3/Mensagens.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,45 +59,10 @@
       <file leaf-file-name="Grafos.g4" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trabalho3/Grafos.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="28" />
+            <state relative-caret-position="161">
+              <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="30" />
               <folding>
                 <element signature="e#17#159#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MergeTipos.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/trabalho3/MergeTipos.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="105" column="45" lean-forward="false" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="caso6_compatibilidade_de_tipos.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso6_compatibilidade_de_tipos.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GrafosSemantico.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="202" column="42" lean-forward="false" selection-start-line="202" selection-start-column="42" selection-end-line="202" selection-end-column="42" />
-              <folding>
-                <element signature="e#35394#35395#0" expanded="true" />
-                <element signature="e#35430#35431#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,9 +71,33 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trabalho3/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
+            <state relative-caret-position="118">
               <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GrafosNaTabela.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosNaTabela.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1496">
+              <caret line="90" column="122" lean-forward="false" selection-start-line="90" selection-start-column="122" selection-end-line="90" selection-end-column="122" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GrafosSemantico.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="224" column="48" lean-forward="false" selection-start-line="224" selection-start-column="48" selection-end-line="224" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,9 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/trabalho3/T1SyntaxErrorListener.java" />
-        <option value="$PROJECT_DIR$/src/CasosDeTeste/caso1.txt" />
-        <option value="$PROJECT_DIR$/src/trabalho3/T3SyntaxErrorListener.java" />
         <option value="$PROJECT_DIR$/src/trabalho3/Saida.java" />
         <option value="$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso10_se_sem_fimse.txt" />
         <option value="$PROJECT_DIR$/src/trabalho3/GrafosBaseVisitor.java" />
@@ -141,7 +142,6 @@
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso9_para_sem_faca.txt" />
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso10_se_sem_fimse.txt" />
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso11_enquanto_sem_faca.txt" />
-        <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso12_real_nao_suportado.txt" />
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso13_atribuicao_com_comando_sem_retorno.txt" />
         <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/ParserRuleContext.class" />
         <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/RuleContext.class" />
@@ -150,24 +150,37 @@
         <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/ANTLRInputStream.class" />
         <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/misc/Interval.class" />
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso1.txt" />
-        <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso2_variavel_nao_declarada_em_comando.txt" />
         <option value="$PROJECT_DIR$/src/trabalho3/SaidaParser.java" />
         <option value="$PROJECT_DIR$/src/trabalho3/Main.java" />
-        <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso1_repeticao_de_declaracao_de_variavel.txt" />
         <option value="$PROJECT_DIR$/src/trabalho3/EntradaTabelaDeSimbolos.java" />
         <option value="$PROJECT_DIR$/src/trabalho3/TabelaDeSimbolos.java" />
         <option value="$PROJECT_DIR$/src/trabalho3/PilhaDeTabelas.java" />
-        <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso4_incompatibilidade_com_tipo_de_param.txt" />
-        <option value="$PROJECT_DIR$/src/trabalho3/Mensagens.java" />
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso5.txt" />
-        <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso5_varios_tipos__no_vetor.txt" />
-        <option value="$PROJECT_DIR$/src/trabalho3/Grafos.g4" />
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso3_parametro_imprime_nao_declarado.txt" />
         <option value="$PROJECT_DIR$/src/trabalho3/MergeTipos.java" />
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso2_comando_digitado_errado.txt" />
+        <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso1_repeticao_de_declaracao_de_variavel.txt" />
+        <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso2_variavel_nao_declarada_em_comando.txt" />
+        <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso4_incompatibilidade_com_tipo_de_param.txt" />
+        <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso5_varios_tipos__no_vetor.txt" />
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso1_tipo_nao_identificado.txt" />
-        <option value="$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java" />
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso6_compatibilidade_de_tipos.txt" />
+        <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso12_real_nao_suportado.txt" />
+        <option value="$PROJECT_DIR$/src/trabalho3/Grafos.g4" />
+        <option value="$PROJECT_DIR$/src/trabalho3/Mensagens.java" />
+        <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/Lexer.class" />
+        <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/Recognizer.class" />
+        <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/misc/IntegerStack.class" />
+        <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/misc/IntegerList.class" />
+        <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/misc/Pair.class" />
+        <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/atn/LexerATNSimulator.class" />
+        <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/atn/ATNSimulator.class" />
+        <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/CommonTokenStream.class" />
+        <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/BufferedTokenStream.class" />
+        <option value="$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/Parser.class" />
+        <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso7_grafo_desconexo.txt" />
+        <option value="$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java" />
+        <option value="$PROJECT_DIR$/src/trabalho3/GrafosNaTabela.java" />
       </list>
     </option>
   </component>
@@ -193,8 +206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -238,6 +249,10 @@
               <option name="myItemId" value="CasosDeTeste" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="saida" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -254,10 +269,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="entrada" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entrada_sintatico" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -285,7 +296,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -551,13 +564,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33387887" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29425114" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2980333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -648,7 +661,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -657,115 +670,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/io/FileInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="122" column="11" lean-forward="false" selection-start-line="122" selection-start-column="11" selection-end-line="122" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CasosDeTeste/caso1.txt" />
-    <entry file="file://$PROJECT_DIR$/src/CasosDeTeste/saida/saida_sintaticocaso1_tipo_nao_identificado.txt" />
-    <entry file="file://$PROJECT_DIR$/src/CasosDeTeste/saida/saida_sintaticocaso2_comando_digitado_errado.txt" />
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosLexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosBaseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso1_tipo_nao_identificado.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso10_se_sem_fimse.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso2_comando_digitado_errado.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso4_comando_digitado_faltando_param.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso3_sem_fim_alg.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso6_atribuicao_errada.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso7_declaracao_nao_terminada.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso8_comando_nao_fechado.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso9_para_sem_faca.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso10_se_sem_fimse.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso13_atribuicao_com_comando_sem_retorno.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso12_real_nao_suportado.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso11_enquanto_sem_faca.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -824,24 +728,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/SaidaParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/misc/Interval.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/ANTLRInputStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -859,16 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="484" column="0" lean-forward="false" selection-start-line="484" selection-start-column="0" selection-end-line="484" selection-end-column="0" />
-          <folding>
-            <element signature="e#15710#15711#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso3_parametro_imprime_nao_declarado.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -876,24 +756,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso1_repeticao_de_declaracao_de_variavel.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso2_variavel_nao_declarada_em_comando.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso2_variavel_nao_declarada_em_comando.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -930,26 +796,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/Mensagens.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="84" column="103" lean-forward="false" selection-start-line="84" selection-start-column="103" selection-end-line="84" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso4_incompatibilidade_com_tipo_de_param.txt">
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso2_comando_digitado_errado.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/MergeTipos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="727">
+          <caret line="105" column="45" lean-forward="false" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso1_tipo_nao_identificado.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso5_varios_tipos__no_vetor.txt">
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso13_atribuicao_com_comando_sem_retorno.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="187">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso6_compatibilidade_de_tipos.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso12_real_nao_suportado.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso6_compatibilidade_de_tipos.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso12_real_nao_suportado.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso3_sem_fim_alg.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -962,63 +877,205 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso2_comando_digitado_errado.txt">
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso5_varios_tipos__no_vetor.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="73">
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso1_tipo_nao_identificado.txt">
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso4_incompatibilidade_com_tipo_de_param.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/Mensagens.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="441">
+          <caret line="102" column="25" lean-forward="false" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java">
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/SaidaParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="202" column="42" lean-forward="false" selection-start-line="202" selection-start-column="42" selection-end-line="202" selection-end-column="42" />
+        <state relative-caret-position="155">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#35394#35395#0" expanded="true" />
-            <element signature="e#35430#35431#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso6_compatibilidade_de_tipos.txt">
+    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/ANTLRInputStream.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        <state relative-caret-position="248">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/misc/IntegerList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#480#481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/misc/IntegerStack.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/misc/Pair.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/Lexer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/atn/ATNSimulator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/atn/LexerATNSimulator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/Recognizer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+          <folding>
+            <element signature="e#5022#5023#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/BufferedTokenStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/CommonTokenStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/Parser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="46" column="11" lean-forward="false" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="136" column="47" lean-forward="false" selection-start-line="136" selection-start-column="47" selection-end-line="136" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosLexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso2_variavel_nao_declarada_em_comando.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso1_repeticao_de_declaracao_de_variavel.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/trabalho3/Grafos.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="28" />
+        <state relative-caret-position="161">
+          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="30" />
           <folding>
             <element signature="e#17#159#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/MergeTipos.java">
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="105" column="45" lean-forward="false" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+        <state relative-caret-position="118">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso7_grafo_desconexo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="224" column="48" lean-forward="false" selection-start-line="224" selection-start-column="48" selection-end-line="224" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosNaTabela.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="90" column="122" lean-forward="false" selection-start-line="90" selection-start-column="122" selection-end-line="90" selection-end-column="122" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

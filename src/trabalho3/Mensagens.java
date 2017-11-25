@@ -92,4 +92,15 @@ public class Mensagens {
         sp.println(erro);
     }
 
+    public void grafoDesconexo(String variavel) {
+        String erro = "Grafo " +variavel +" e desconexo";
+
+        if (!primeiro){
+            erro = "\n" + erro;
+        }
+        primeiro = false;
+
+        sp.println(erro);
+    }
+
 }
