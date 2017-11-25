@@ -33,6 +33,7 @@ Este trabalho consiste na implementação de um compilador para a linguagem de man
  * Compatibilidade de tipos(grafo, lista, vertice, int) em atribuições;
  * Variável int nao inicializada; 
  * No tipo de dados vetor somente é possivel adicionar o tipo de dados relativo ao primeiro, mesmo que depois tenha sido limpada a lista;
+ * Um grafo não pode ser desconexo
 
 
 Para o desenvolvimento do trabalho, foi utilizado a IDE IntelliJ IDEA 2017.2.2, linguagem JAVA, e o gerador automático ANTLR (ANother Tool for Language Recognition). Como Sistema Operacional, os testes foram realizados no Windows 10.

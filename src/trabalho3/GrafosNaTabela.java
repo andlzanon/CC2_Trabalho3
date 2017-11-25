@@ -60,16 +60,16 @@ public class GrafosNaTabela {
         int valor = numerador/denominador;
 
         if(arestas >= valor){
-            System.out.println("valor " +valor);
+            /*para debug: System.out.println("valor " +valor);
             System.out.println("aresta " +arestas);
-            System.out.println("vertice " +vertices);
+            System.out.println("vertice " +vertices);*/
             return true;
         }
 
         else{
-            System.out.println("valor " +valor);
+             /*para debug: System.out.println("valor " +valor);
             System.out.println("aresta " +arestas);
-            System.out.println("vertice " +vertices);
+            System.out.println("vertice " +vertices);*/
             return false;
         }
 

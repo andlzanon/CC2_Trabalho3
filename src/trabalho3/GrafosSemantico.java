@@ -65,14 +65,14 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             if(pilhaDeTabelas.existeSimbolo(ctx.IDENT().getText()))
                 errosSemanticos.erroVariavelJaDeclarada(ctx.start.getLine(), ctx.IDENT().getText());
             //o tipo da variavel sera uma caracteristica unica a ela
-            //no caso do grafo, verificara se e um grafo desconexo, logo, comeca como false
+            //no caso do grafo, nao significa nada
             //no vetor sera o tipo do primeiro elemento que tera que ser igual ao resto MESMO QUE SE REMOVA TODOS OS ELEMENTOS
             //no caso do vertice nao significa nada
             //no inteiro significa se a variavel foi inicializada, logo, comeca com 0
             else{
                 switch(tipo){
                     case "grafo" :
-                        pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "false");
+                        pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "");
                         break;
                     case "vetor" :
                         pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "");

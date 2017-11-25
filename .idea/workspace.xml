@@ -2,45 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="522f7edb-0556-433c-bae4-54c6a315d46f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Exp_aritmeticaContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Exp_aritmeticaContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ExpressaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ExpressaoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$FatorContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$FatorContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$InstrucoesContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$InstrucoesContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_com_retornoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_com_retornoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_de_vetoresContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_de_vetoresContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Int_ou_identContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Int_ou_identContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_adicaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_adicaoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_multiplicacaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_multiplicacaoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_opcionalContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_opcionalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_relacionalContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_relacionalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outras_parcelasContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outras_parcelasContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_fatoresContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_fatoresContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_termosContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_termosContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ParcelaContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ParcelaContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Senao_opcionalContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Senao_opcionalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$TermoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$TermoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Var_ou_cadeiaContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Var_ou_cadeiaContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Vetores_paraContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Vetores_paraContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosNaTabela.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosNaTabela.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosSemantico.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosSemantico.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Mensagens.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Mensagens.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso1_repeticao_de_declaracao_de_variavel.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso1_repeticao_de_declaracao_de_variavel.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso2_variavel_nao_declarada_em_comando.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso2_variavel_nao_declarada_em_comando.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso4_incompatibilidade_com_tipo_de_param.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso4_incompatibilidade_com_tipo_de_param.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso5_varios_tipos__no_vetor.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso5_varios_tipos__no_vetor.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso6_compatibilidade_de_tipos.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso6_compatibilidade_de_tipos.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso12_real_nao_suportado.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso12_real_nao_suportado.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso1_repeticao_de_declaracao_de_variavel.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso1_repeticao_de_declaracao_de_variavel.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso2_variavel_nao_declarada_em_comando.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso2_variavel_nao_declarada_em_comando.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso4_incompatibilidade_com_tipo_de_param.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso4_incompatibilidade_com_tipo_de_param.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso5_varios_tipos__no_vetor.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso5_varios_tipos__no_vetor.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso6_compatibilidade_de_tipos.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso6_compatibilidade_de_tipos.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Grafos.g4" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Grafos.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/Grafos.g4" afterPath="$PROJECT_DIR$/src/trabalho3/Grafos.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosParser.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosNaTabela.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosNaTabela.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/Mensagens.java" afterPath="$PROJECT_DIR$/src/trabalho3/Mensagens.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,7 +37,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trabalho3/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
+            <state relative-caret-position="781">
               <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
@@ -81,8 +47,8 @@
       <file leaf-file-name="GrafosNaTabela.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosNaTabela.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="90" column="122" lean-forward="false" selection-start-line="90" selection-start-column="122" selection-end-line="90" selection-end-column="122" />
+            <state relative-caret-position="-68">
+              <caret line="71" column="55" lean-forward="false" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,8 +59,8 @@
       <file leaf-file-name="GrafosSemantico.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="224" column="48" lean-forward="false" selection-start-line="224" selection-start-column="48" selection-end-line="224" selection-end-column="48" />
+            <state relative-caret-position="-4761">
+              <caret line="74" column="93" lean-forward="false" selection-start-line="74" selection-start-column="93" selection-end-line="74" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -551,7 +517,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1046,14 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso7_grafo_desconexo.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1062,10 +1020,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="781">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="224" column="48" lean-forward="false" selection-start-line="224" selection-start-column="48" selection-end-line="224" selection-end-column="48" />
+        <state relative-caret-position="-4761">
+          <caret line="74" column="93" lean-forward="false" selection-start-line="74" selection-start-column="93" selection-end-line="74" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1074,8 +1040,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosNaTabela.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="90" column="122" lean-forward="false" selection-start-line="90" selection-start-column="122" selection-end-line="90" selection-end-column="122" />
+        <state relative-caret-position="-68">
+          <caret line="71" column="55" lean-forward="false" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
