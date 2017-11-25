@@ -28,6 +28,7 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
         if(ctx.children != null){
             visitDeclaracao(ctx.declaracao());
             visitCodigo(ctx.codigo());
+            System.out.println(pilhaDeTabelas.topo().toString());
         }
         return null;
     }
@@ -51,10 +52,15 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             //verifica se variavel esta na tabela de simbolos. se nao esta adiciona na tabela
             if(pilhaDeTabelas.existeSimbolo(ctx.IDENT().getText()))
                 errosSemanticos.erroVariavelJaDeclarada(ctx.start.getLine(), ctx.IDENT().getText());
+            //o tipo da variavel sera uma caracteristica unica a ela
+            //no caso do grafo, verificara se e um grafo desconexo, logo, comeca como false
+            //no vetor sera o tipo do primeiro elemento que tera que ser igual ao resto MESMO QUE SE REMOVA TODOS OS ELEMENTOS
+            //no caso do vertice nao significa nada
+            //no inteiro significa se a variavel foi inicializada, logo, comeca com 0
             else{
                 switch(tipo){
                     case "grafo" :
-                        pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "");
+                        pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "false");
                         break;
                     case "vetor" :
                         pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "");
@@ -89,7 +95,21 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             }
 
             else
-                pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, tipo);
+                switch(tipo){
+                    case "grafo" :
+                        pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "");
+                        break;
+                    case "vetor" :
+                        pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "");
+                        break;
+                    case "vertice" :
+                        pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "");
+                        break;
+                    case "int" :
+                        pilhaDeTabelas.topo().adicionarSimbolo(ctx.IDENT().getText(), tipo, "false");
+                        break;
+
+                }
 
             visitMais_variavel(ctx.mais_variavel());
         }
@@ -170,7 +190,7 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
 
                 }
             }
-
+            //ainda verificando se 4 parametro e int
             //verifica se peso, caso for um numero, e menor do que zero
             if(ctx.int_ou_ident().INTEIRO() != null){
                 String numero = ctx.int_ou_ident().INTEIRO().getText();
@@ -179,6 +199,8 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                     errosSemanticos.pesoNegativo(ctx.start.getLine(), ctx.int_ou_ident().INTEIRO().getText());
 
             }
+
+            //verifia se grafo e desconexo
 
             visitInt_ou_ident(ctx.int_ou_ident());
         }
@@ -254,9 +276,11 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             if(pilhaDeTabelas.topo().getTipo(ctx.pem_vetor.getText()).equals("")) {
                 //se sim verifica se o tipo vem do ident
                 if(ctx.int_ou_ident().IDENT()!=null &&
-                        pilhaDeTabelas.existeSimbolo(ctx.int_ou_ident().IDENT().getText()))
+                        pilhaDeTabelas.existeSimbolo(ctx.int_ou_ident().IDENT().getText())){
                     //seta o tipo do vetor como o tipo do IDENT
                     pilhaDeTabelas.topo().setTipo(ctx.pem_vetor.getText(), pilhaDeTabelas.topo().gettipoVar(ctx.int_ou_ident().IDENT().getText()));
+                }
+
                 //senao e inteiro
                 else
                     pilhaDeTabelas.topo().setTipo(ctx.pem_vetor.getText(), "int");
@@ -277,7 +301,6 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                     errosSemanticos.vetorComTiposDiferentes(ctx.start.getLine(), ctx.int_ou_ident().INTEIRO().getText());
                 }
             }
-
             visitInt_ou_ident(ctx.int_ou_ident());
         }
         else if(ctx.getText().startsWith("enfileira")){
@@ -328,13 +351,6 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             visitSenao_opcional(ctx.senao_opcional());
         }
         else if(ctx.getText().startsWith("para")){
-
-            //verifica se os parametros foram declarados
-            if(!pilhaDeTabelas.existeSimbolo(ctx.para.getText()))
-                errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.para.getText());
-
-            //TODO tipo da variavel do para deve ser igual a do vetor
-
             visitVetores_para(ctx.vetores_para());
             visitCodigo(ctx.codigo());
         }
@@ -348,13 +364,43 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             if(!pilhaDeTabelas.existeSimbolo(ctx.atribuicao.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.atribuicao.getText());
             //pesquisa o tipo da varivavel da atribuicao e se for inteiro, troca a variavel para inicializada
-            else if(pilhaDeTabelas.topo().gettipoVar(ctx.atribuicao.getText()).equals("int")){
+            //para nao permitir que recursoes como valor<-valor+5 passe pelos casos,
+            // a segunda expressao no else if verifica se atribuicao e feita com um inteiro numerico
+            //ou com uma variavel ja inicializada
+            else if(pilhaDeTabelas.topo().gettipoVar(ctx.atribuicao.getText()).equals("int") &&
+                    pilhaDeTabelas.topo().getTipo(ctx.atribuicao.getText()).equals("false") &&
+                    (ctx.expressao().exp_aritmetica().termo().fator().parcela().INTEIRO() != null ||
+                            ctx.expressao().exp_aritmetica().termo().fator().parcela().expressao() != null||
+                            pilhaDeTabelas.topo().getTipo(ctx.expressao().exp_aritmetica().termo().fator().parcela().IDENT().getText()).equals("true"))){
                 //inteiro setado como incializado
                 pilhaDeTabelas.topo().setTipo(ctx.atribuicao.getText(), "true");
             }
 
-
             visitExpressao(ctx.expressao());
+
+            //tipo1 e igual ao tipo do IDENT atribuicao da g4
+            String tipo1 = pilhaDeTabelas.topo().gettipoVar(ctx.atribuicao.getText());
+            //tipo 2
+            String tipo2 = MergeTipos.mergeTipos(ctx.expressao());
+
+            //se o tipo1 for vetor e nao foi vazio
+            if(tipo1.equals("vetor") && !pilhaDeTabelas.topo().getTipo(ctx.atribuicao.getText()).equals("")){
+                //tipo1 e igual ao tipo dos elementos do vetor
+                tipo1 = pilhaDeTabelas.topo().getTipo(ctx.atribuicao.getText());
+            }
+            //senao, ou seja, se e um vetor vazio sem insercoes
+            else if(tipo1.equals("vetor") && pilhaDeTabelas.topo().getTipo(ctx.atribuicao.getText()).equals("")){
+                //o tipo do vetor que era vazio torna-se o tipo do vetor de atribuicao
+                pilhaDeTabelas.topo().setTipo(ctx.atribuicao.getText(), tipo2);
+                //tipo 1 e o valor do tipo2 e a atribuicao sera aceita
+                tipo1 = pilhaDeTabelas.topo().getTipo(ctx.atribuicao.getText());
+            }
+
+            //compara tipos e se for erro mostra mensagem
+            String incompat = MergeTipos.regraTipos(tipo1, tipo2);
+            if(incompat.equals("erro"))
+                errosSemanticos.incompatibilidadeDeTipos(ctx.start.getLine(), ctx.atribuicao.getText());
+
         }
         else if (ctx.getText().startsWith("dijkstra")){
 
@@ -612,13 +658,14 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
         return null;
     }
 
-    // outros_termos : op_adicao termo outros_termos | ;
+    // outros_termos : (op_adicao termo)* ;
     @Override
     public String visitOutros_termos(GrafosParser.Outros_termosContext ctx) {
         if(ctx.children != null){
-            visitOp_adicao(ctx.op_adicao());
-            visitTermo(ctx.termo());
-            visitOutros_termos(ctx.outros_termos());
+            for (int i = 0; i < ctx.termo().size(); i++) {
+                visitOp_adicao(ctx.op_adicao().get(i));
+                visitTermo(ctx.termo().get(i));
+            }
         }
 
         return null;
@@ -635,13 +682,14 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
         return null;
     }
 
-    // outros_fatores: op_multiplicacao fator outros_fatores | ;
+    // outros_fatores: (op_multiplicacao fator);
     @Override
     public String visitOutros_fatores(GrafosParser.Outros_fatoresContext ctx) {
         if(ctx.children != null){
-            visitOp_multiplicacao(ctx.op_multiplicacao());
-            visitFator(ctx.fator());
-            visitOutros_fatores(ctx.outros_fatores());
+            for (int i = 0; i < ctx.fator().size(); i++) {
+                visitOp_multiplicacao(ctx.op_multiplicacao().get(i));
+                visitFator(ctx.fator().get(i));
+            }
         }
 
         return null;
@@ -658,14 +706,16 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
         return null;
     }
 
-    // outras_parcelas : '%' parcela outras_parcelas | ;
+    // outras_parcelas : ('%' parcela)* ;
     @Override
     public String visitOutras_parcelas(GrafosParser.Outras_parcelasContext ctx) {
         if(ctx.children != null){
-            visitParcela(ctx.parcela());
-            visitOutras_parcelas(ctx.outras_parcelas());
+            for (int i = 0; i < ctx.parcela().size(); i++) {
+                GrafosParser.ParcelaContext parcelaContext = ctx.parcela().get(i);
+                visitParcela(parcelaContext);
+            }
         }
-        return super.visitOutras_parcelas(ctx);
+        return null;
     }
 
     // parcela : IDENT | INTEIRO | instrucoes_com_retorno | '(' expressao ')';

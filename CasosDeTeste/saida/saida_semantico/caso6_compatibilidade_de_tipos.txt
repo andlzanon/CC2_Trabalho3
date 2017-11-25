@@ -1,0 +1,7 @@
+Linha 5: identificador v1 ja declarado anteriormente
+Linha 14: atribuicao nao compativel para valor
+Linha 15: atribuicao nao compativel para valor
+Linha 18: atribuicao nao compativel para vetor1
+Linha 21: atribuicao nao compativel para vetor1
+Linha 24: atribuicao nao compativel para valor
+Fim da compilacao

@@ -6,7 +6,7 @@ declaracoes:
 
 inicio
 
-    valor <- 1
+    valor <- valor + 5
 	aresta(g, v1, v2, valor)
 	aresta(g, v2, v3, 1)
 	aresta(g, v1, v3, 1)

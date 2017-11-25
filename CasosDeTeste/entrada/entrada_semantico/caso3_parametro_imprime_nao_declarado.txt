@@ -8,7 +8,7 @@ inicio
 	aresta(g, v2, v3, 1)
 	aresta(g, v1, v3, 1)
 
-	empilha(vetor1, v1)
+	empilha(vetor1, 2)
 
 	{imprime todas os vertices}
 	para v em vertices(g) faca

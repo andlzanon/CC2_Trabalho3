@@ -81,15 +81,15 @@ expressao : exp_aritmetica op_opcional;
 
 exp_aritmetica : termo outros_termos;
 
-outros_termos : op_adicao termo outros_termos | ;
+outros_termos : (op_adicao termo)*;
 
 termo : fator outros_fatores;
 
-outros_fatores: op_multiplicacao fator outros_fatores | ;
+outros_fatores: (op_multiplicacao fator)* ;
 
 fator : parcela outras_parcelas;
 
-outras_parcelas : '%' parcela outras_parcelas | ;
+outras_parcelas : ('%' parcela)*;
 
 parcela : IDENT | INTEIRO | instrucoes_com_retorno | instrucoes_de_vetores |'(' expressao ')';
 

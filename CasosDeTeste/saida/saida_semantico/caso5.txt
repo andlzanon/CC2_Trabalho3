@@ -1,5 +1,0 @@
-Linha 17: variavel 1 nao compativel com tipo do vetor
-Linha 18: variavel valor nao compativel com tipo do vetor
-Linha 23: variavel 1 nao compativel com tipo do vetor
-Linha 24: variavel valor nao compativel com tipo do vetor
-Fim da compilacao
