@@ -4,6 +4,9 @@ declaracoes:
 	    g
 
 inicio
+
+    valor <- valor + 1
+    empilha(v4, 1)
 	aresta(g, v1, v2, -1)
 	aresta(g, v2, v3, 1)
 	aresta(g, v1, v3, 1)

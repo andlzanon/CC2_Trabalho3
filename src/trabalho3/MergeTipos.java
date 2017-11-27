@@ -92,9 +92,15 @@ public class MergeTipos {
             tipo = pilhaDeTabelas.topo().gettipoVar(ctx.IDENT().getText());
             //se identificador e do tipo vetor, entao na vdd seu tipo e o tipo dos seus elementos
             //entretanto, se nao foi setado, seu tipo e vetor
-            if(tipo.equals("vetor") && !pilhaDeTabelas.topo().getTipo(ctx.IDENT().getText()).equals("")){
-                tipo = pilhaDeTabelas.topo().getTipo(ctx.IDENT().getText());
+            //try para caso de variavel nao delcarada e que consequentemente nao tera tipo na pilhaDeTabelas
+            try{
+                if(tipo.equals("vetor") && !pilhaDeTabelas.topo().getTipo(ctx.IDENT().getText()).equals("")){
+                    tipo = pilhaDeTabelas.topo().getTipo(ctx.IDENT().getText());
+                }
+            }catch (Exception e){
+
             }
+
         }
 
         //caso existir instrucao com retorno
@@ -120,12 +126,20 @@ public class MergeTipos {
     }
 
     public static String regraTipos(String tipo1, String tipo2) {
-        if(tipo1.equals(tipo2)){
-            return tipo1;
+        //try para caso de atribuicao em variavel nao declarada que da NullPointerException
+        try{
+            if(tipo1.equals(tipo2)){
+                return tipo1;
+            }
+            else {
+                return "erro";
+            }
+        }catch (Exception e){
+
         }
-        else {
-            return "erro";
-        }
+
+        return "erro";
+
     }
 
 }

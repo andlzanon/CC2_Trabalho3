@@ -1,2 +1,2 @@
-Linha 2: erro sintatico proximo a graf
+Linha 8: erro sintatico proximo a valor
 Fim da compilacao
