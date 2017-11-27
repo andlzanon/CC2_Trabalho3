@@ -1,5 +1,5 @@
 Linha 4: identificador g ja declarado anteriormente
-Linha 8: identificador valo nao declarado
+Linha 8: identificador valor nao declarado
 Linha 8: identificador valor nao declarado
 Linha 9: identificador v4 nao declarado
 Linha 10: peso nao pode ser negativo do identificador -1

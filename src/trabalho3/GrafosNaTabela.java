@@ -42,7 +42,7 @@ public class GrafosNaTabela {
         //se o valor da chave ou o valor do valor for o vertice
         //remove o par inteiro
         for(int i = 0; i < listaDeArestas.size(); i++){
-            if(listaDeArestas.get(i).getValue() == v1 || listaDeArestas.get(i).getKey() == v1)
+            if(listaDeArestas.get(i).getValue().equals(v1) || listaDeArestas.get(i).getKey().equals(v1))
                 listaDeArestas.remove(listaDeArestas.get(i));
         }
     }
@@ -56,20 +56,21 @@ public class GrafosNaTabela {
         int arestas = listaDeArestas.size();
         int fator = vertices - 1;
         int numerador = fatorial(fator);
-        int denominador = 2 * fatorial(fator - 2);
+        int teste = fator -2;
+        int denominador = 2 * fatorial(teste);
         int valor = numerador/denominador;
 
-        if(arestas >= valor){
+        if(arestas > valor){
             /*para debug: System.out.println("valor " +valor);
             System.out.println("aresta " +arestas);
-            System.out.println("vertice " +vertices);*/
+            System.out.println("vertice " +vertices); */
             return true;
         }
 
         else{
              /*para debug: System.out.println("valor " +valor);
             System.out.println("aresta " +arestas);
-            System.out.println("vertice " +vertices);*/
+            System.out.println("vertice " +vertices); */
             return false;
         }
 

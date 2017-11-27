@@ -1,2 +1,3 @@
+Grafo g e desconexo
 Grafo g2 e desconexo
 Fim da compilacao
