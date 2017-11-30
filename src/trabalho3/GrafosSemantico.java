@@ -375,7 +375,7 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
         }
         else if (ctx.atribuicao != null) {
 
-            //verifica se os parametros foram declarados
+            //verifica se variavel de atribuicao foi declarada
             if(!pilhaDeTabelas.existeSimbolo(ctx.atribuicao.getText()))
                 errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.atribuicao.getText());
             //pesquisa o tipo da varivavel da atribuicao e se for inteiro, troca a variavel para inicializada
@@ -386,7 +386,9 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                     pilhaDeTabelas.topo().getTipo(ctx.atribuicao.getText()).equals("false") &&
                     (ctx.expressao().exp_aritmetica().termo().fator().parcela().INTEIRO() != null ||
                             ctx.expressao().exp_aritmetica().termo().fator().parcela().expressao() != null||
-                            pilhaDeTabelas.topo().getTipo(ctx.expressao().exp_aritmetica().termo().fator().parcela().IDENT().getText()).equals("true"))){
+                            (ctx.expressao().exp_aritmetica().termo().fator().parcela().IDENT() != null &&
+                            pilhaDeTabelas.topo().getTipo(ctx.expressao().exp_aritmetica().termo().fator().parcela().IDENT().getText()).equals("true"))||
+                            ctx.expressao().exp_aritmetica().termo().fator().parcela().instrucoes_com_retorno() != null)){
                 //inteiro setado como incializado
                 pilhaDeTabelas.topo().setTipo(ctx.atribuicao.getText(), "true");
             }
@@ -514,6 +516,8 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                     | 'desempilha''(' IDENT ')' //vetor
                     //retorna o vertice desenfileirado
                     | 'desenfila' '(' IDENT ')' //vetor
+                    //funcao que retorna o tamanhao de um vetor
+                    | 'tamanho_vetor' '('p_tam=IDENT')' //vetor
                     ;
     */
     @Override
@@ -576,6 +580,17 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             //IDENT sempre sera terceiro parametro, entao e necessario saber se o mesmo e inteiro
             if(pilhaDeTabelas.existeSimbolo(ctx.pden_vetor.getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.pden_vetor.getText()).equals("vetor"))
                 errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.pden_vetor.getText(), "vetor");
+        }
+        else if(ctx.getText().startsWith("tamanho_vetor")){
+
+            //verifica se os parametros foram declarados
+            if(!pilhaDeTabelas.existeSimbolo(ctx.ptam_vetor.getText()))
+                errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.ptam_vetor.getText());
+
+            //verifica se param de desempilha e vetor
+            if(pilhaDeTabelas.existeSimbolo(ctx.ptam_vetor.getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.ptam_vetor.getText()).equals("vetor"))
+                errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.ptam_vetor.getText(), "vetor");
+
         }
 
         return null;

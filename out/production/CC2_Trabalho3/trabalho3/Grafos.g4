@@ -62,6 +62,8 @@ instrucoes_com_retorno :
                 | 'desempilha''(' pdem_vetor=IDENT ')' //vetor
                 //retorna o vertice desenfileirado
                 | 'desenfila' '(' pden_vetor=IDENT ')' //vetor
+                //funcao que retorna o tamanhao de um vetor
+                | 'tamanho_vetor' '('ptam_vetor=IDENT')' //vetor
                 ;
 
 instrucoes_de_vetores :

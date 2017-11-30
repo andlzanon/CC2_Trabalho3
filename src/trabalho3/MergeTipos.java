@@ -114,6 +114,8 @@ public class MergeTipos {
                 tipo = pilhaDeTabelas.topo().getTipo(ctx.instrucoes_com_retorno().pdem_vetor.getText());
             else if(ctx.getText().startsWith("desenfila"))
                 tipo = pilhaDeTabelas.topo().getTipo(ctx.instrucoes_com_retorno().pden_vetor.getText());
+            else if(ctx.getText().startsWith("tamanho_vetor"))
+                tipo = "int";
         }
         // instrcao de vetores retorna um vetor
         else if(ctx.instrucoes_de_vetores() != null)
