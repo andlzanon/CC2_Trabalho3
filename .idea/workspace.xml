@@ -2,44 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="522f7edb-0556-433c-bae4-54c6a315d46f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosLexer.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosLexer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Exp_aritmeticaContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Exp_aritmeticaContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ExpressaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ExpressaoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$FatorContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$FatorContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$InstrucoesContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$InstrucoesContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_com_retornoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_com_retornoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_de_vetoresContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Instrucoes_de_vetoresContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Int_ou_identContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Int_ou_identContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Mais_variavelContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Mais_variavelContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_adicaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_adicaoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_multiplicacaoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_multiplicacaoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_opcionalContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_opcionalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_relacionalContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Op_relacionalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outras_parcelasContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outras_parcelasContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_fatoresContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_fatoresContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_termosContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Outros_termosContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ParcelaContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$ParcelaContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Senao_opcionalContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Senao_opcionalContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$TermoContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$TermoContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Var_ou_cadeiaContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Var_ou_cadeiaContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$VariavelContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$VariavelContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Vetores_paraContext.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser$Vetores_paraContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosSemantico.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosSemantico.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/MergeTipos.class" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/MergeTipos.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso7_grafo_desconexo.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso7_grafo_desconexo.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso1_repeticao_de_declaracao_de_variavel.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso1_repeticao_de_declaracao_de_variavel.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso2_variavel_nao_declarada_em_comando.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso2_variavel_nao_declarada_em_comando.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso4_incompatibilidade_com_tipo_de_param.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso4_incompatibilidade_com_tipo_de_param.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso5_varios_tipos__no_vetor.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso5_varios_tipos__no_vetor.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso6_compatibilidade_de_tipos.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso6_compatibilidade_de_tipos.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso7_grafo_desconexo.txt" afterPath="$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso7_grafo_desconexo.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Grafos.g4" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Grafos.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Grafos.tokens" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/Grafos.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosLexer.tokens" afterPath="$PROJECT_DIR$/out/production/CC2_Trabalho3/trabalho3/GrafosLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/Grafos.g4" afterPath="$PROJECT_DIR$/src/trabalho3/Grafos.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/Grafos.tokens" afterPath="$PROJECT_DIR$/src/trabalho3/Grafos.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosLexer.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosLexer.tokens" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosParser.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java" afterPath="$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trabalho3/MergeTipos.java" afterPath="$PROJECT_DIR$/src/trabalho3/MergeTipos.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,16 +20,29 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CC2_Trabalho3$Main.coverage" NAME="Main Coverage Results" MODIFIED="1511461431513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Grafos.g4" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trabalho3/Grafos.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="0">
               <caret line="61" column="31" lean-forward="false" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
               <folding>
                 <element signature="e#17#159#1" expanded="true" />
+                <marker date="1512212553804" expanded="true" signature="535:614" ph=":...;" />
+                <marker date="1512212553804" expanded="true" signature="4228:4315" ph=":...;" />
+                <marker date="1512212553804" expanded="true" signature="4328:4363" ph=":...;" />
+                <marker date="1512212553804" expanded="true" signature="4378:4418" ph=":...;" />
+                <marker date="1512212553804" expanded="true" signature="4436:4449" ph=":...;" />
+                <marker date="1512212553804" expanded="true" signature="4460:4473" ph=":...;" />
+                <marker date="1512212553804" expanded="true" signature="4476:4488" ph="..." />
+                <marker date="1512212553804" expanded="true" signature="4494:4570" ph=":...;" />
+                <marker date="1512212553804" expanded="true" signature="4579:4646" ph=":...;" />
+                <marker date="1512212553804" expanded="true" signature="4654:4739" ph=":...;" />
+                <marker date="1512212553804" expanded="true" signature="4751:4785" ph=":...;" />
+                <marker date="1512212553804" expanded="true" signature="4789:4836" ph=":...;" />
+                <marker date="1512212553804" expanded="true" signature="4838:5175" ph="..." />
+                <marker date="1512212553804" expanded="true" signature="5184:5235" ph=":...;" />
               </folding>
             </state>
           </provider>
@@ -70,21 +51,9 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trabalho3/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
+            <state relative-caret-position="1156">
               <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GrafosNaTabela.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosNaTabela.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="65" column="56" lean-forward="false" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -92,7 +61,7 @@
       <file leaf-file-name="MergeTipos.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trabalho3/MergeTipos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="629">
               <caret line="116" column="62" lean-forward="false" selection-start-line="116" selection-start-column="62" selection-end-line="116" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -101,16 +70,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GrafosSemantico.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GrafosGeracao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosGeracao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <folding>
+                <element signature="e#828#829#0" expanded="true" />
+                <element signature="e#876#877#0" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
+                <element signature="e#1012#1013#0" expanded="true" />
+                <element signature="e#1095#1096#0" expanded="true" />
+                <element signature="e#1142#1143#0" expanded="true" />
+                <element signature="e#1235#1236#0" expanded="true" />
+                <element signature="e#1287#1288#0" expanded="true" />
+                <element signature="e#1362#1363#0" expanded="true" />
+                <element signature="e#1405#1406#0" expanded="true" />
+                <element signature="e#1484#1485#0" expanded="true" />
+                <element signature="e#1529#1530#0" expanded="true" />
+                <element signature="e#1616#1617#0" expanded="true" />
+                <element signature="e#1665#1666#0" expanded="true" />
+                <element signature="e#1756#1757#0" expanded="true" />
+                <element signature="e#1807#1808#0" expanded="true" />
+                <element signature="e#2239#2240#0" expanded="true" />
+                <element signature="e#2290#2291#0" expanded="true" />
+                <element signature="e#2383#2384#0" expanded="true" />
+                <element signature="e#2435#2436#0" expanded="true" />
+                <element signature="e#2530#2531#0" expanded="true" />
+                <element signature="e#2583#2584#0" expanded="true" />
+                <element signature="e#2668#2669#0" expanded="true" />
+                <element signature="e#2716#2717#0" expanded="true" />
+                <element signature="e#2811#2812#0" expanded="true" />
+                <element signature="e#2864#2865#0" expanded="true" />
+                <element signature="e#2957#2958#0" expanded="true" />
+                <element signature="e#3009#3010#0" expanded="true" />
+                <element signature="e#3086#3087#0" expanded="true" />
+                <element signature="e#3130#3131#0" expanded="true" />
+                <element signature="e#3225#3226#0" expanded="true" />
+                <element signature="e#3278#3279#0" expanded="true" />
+                <element signature="e#3355#3356#0" expanded="true" />
+                <element signature="e#3399#3400#0" expanded="true" />
+                <element signature="e#3631#3632#0" expanded="true" />
+                <element signature="e#3677#3678#0" expanded="true" />
+                <element signature="e#3766#3767#0" expanded="true" />
+                <element signature="e#3816#3817#0" expanded="true" />
+                <element signature="e#3909#3910#0" expanded="true" />
+                <element signature="e#3961#3962#0" expanded="true" />
+                <element signature="e#4200#4201#0" expanded="true" />
+                <element signature="e#4248#4249#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GrafosSemantico.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="591" column="91" lean-forward="false" selection-start-line="591" selection-start-column="91" selection-end-line="591" selection-end-column="91" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#37209#37210#0" expanded="true" />
-                <element signature="e#37245#37246#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="28" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,8 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/trabalho3/Saida.java" />
-        <option value="$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso10_se_sem_fimse.txt" />
         <option value="$PROJECT_DIR$/src/trabalho3/GrafosBaseVisitor.java" />
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso3_sem_fim_alg.txt" />
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso4_comando_digitado_faltando_param.txt" />
@@ -194,10 +210,12 @@
         <option value="$PROJECT_DIR$/src/trabalho3/Grafos.g4" />
         <option value="$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso7_grafo_desconexo.txt" />
         <option value="$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java" />
+        <option value="$PROJECT_DIR$/src/trabalho3/Geracao.java" />
+        <option value="$PROJECT_DIR$/src/trabalho3/GrafosGeracao.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -219,99 +237,32 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CC2_Trabalho3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CC2_Trabalho3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CC2_Trabalho3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CC2_Trabalho3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trabalho3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CC2_Trabalho3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CC2_Trabalho3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CasosDeTeste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="saida" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CC2_Trabalho3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CC2_Trabalho3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CasosDeTeste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entrada" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CC2_Trabalho3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CC2_Trabalho3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CasosDeTeste" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entrada" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entrada_semantico" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="CC2_Trabalho3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CC2_Trabalho3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CC2_Trabalho3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CC2_Trabalho3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CC2_Trabalho3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CC2_Trabalho3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="trabalho3" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,7 +294,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="trabalho3.Main" />
       <option name="VM_PARAMETERS" value="" />
@@ -358,7 +309,6 @@
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
@@ -541,9 +491,6 @@
       <listeners />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-    </list>
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
@@ -564,36 +511,36 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3633388" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3620178" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32789317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3260212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32576868" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -683,14 +630,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/Saida.java" />
-    <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/RuleContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/src/trabalho3/antlr-4.7-complete.jar!/org/antlr/v4/runtime/tree/TerminalNodeImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -783,13 +722,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso6_compatibilidade_de_tipos.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/saida/saida_semantico/caso6_compatibilidade_de_tipos.txt" />
     <entry file="file://$PROJECT_DIR$/CasosDeTeste/saida/saida_sintatico/caso12_real_nao_suportado.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -797,13 +730,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso6_compatibilidade_de_tipos.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso6_compatibilidade_de_tipos.txt" />
     <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_sintatico/caso12_real_nao_suportado.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -825,13 +752,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso5_varios_tipos__no_vetor.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso5_varios_tipos__no_vetor.txt" />
     <entry file="file://$PROJECT_DIR$/CasosDeTeste/entrada/entrada_semantico/caso4_incompatibilidade_com_tipo_de_param.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -993,33 +914,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosNaTabela.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="65" column="56" lean-forward="false" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/trabalho3/MergeTipos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="116" column="62" lean-forward="false" selection-start-line="116" selection-start-column="62" selection-end-line="116" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosNaTabela.java" />
     <entry file="file://$PROJECT_DIR$/src/trabalho3/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
+        <state relative-caret-position="1156">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
@@ -1027,10 +928,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/trabalho3/Grafos.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="0">
           <caret line="61" column="31" lean-forward="false" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
           <folding>
             <element signature="e#17#159#1" expanded="true" />
+            <marker date="1512212553804" expanded="true" signature="535:614" ph=":...;" />
+            <marker date="1512212553804" expanded="true" signature="4228:4315" ph=":...;" />
+            <marker date="1512212553804" expanded="true" signature="4328:4363" ph=":...;" />
+            <marker date="1512212553804" expanded="true" signature="4378:4418" ph=":...;" />
+            <marker date="1512212553804" expanded="true" signature="4436:4449" ph=":...;" />
+            <marker date="1512212553804" expanded="true" signature="4460:4473" ph=":...;" />
+            <marker date="1512212553804" expanded="true" signature="4476:4488" ph="..." />
+            <marker date="1512212553804" expanded="true" signature="4494:4570" ph=":...;" />
+            <marker date="1512212553804" expanded="true" signature="4579:4646" ph=":...;" />
+            <marker date="1512212553804" expanded="true" signature="4654:4739" ph=":...;" />
+            <marker date="1512212553804" expanded="true" signature="4751:4785" ph=":...;" />
+            <marker date="1512212553804" expanded="true" signature="4789:4836" ph=":...;" />
+            <marker date="1512212553804" expanded="true" signature="4838:5175" ph="..." />
+            <marker date="1512212553804" expanded="true" signature="5184:5235" ph=":...;" />
           </folding>
         </state>
       </provider>
@@ -1039,18 +954,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosSemantico.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="591" column="91" lean-forward="false" selection-start-line="591" selection-start-column="91" selection-end-line="591" selection-end-column="91" />
+        <state relative-caret-position="153">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/Geracao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/MergeTipos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="116" column="62" lean-forward="false" selection-start-line="116" selection-start-column="62" selection-end-line="116" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#37209#37210#0" expanded="true" />
-            <element signature="e#37245#37246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trabalho3/GrafosGeracao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1142#1143#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+            <element signature="e#1287#1288#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+            <element signature="e#1405#1406#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1529#1530#0" expanded="true" />
+            <element signature="e#1616#1617#0" expanded="true" />
+            <element signature="e#1665#1666#0" expanded="true" />
+            <element signature="e#1756#1757#0" expanded="true" />
+            <element signature="e#1807#1808#0" expanded="true" />
+            <element signature="e#2239#2240#0" expanded="true" />
+            <element signature="e#2290#2291#0" expanded="true" />
+            <element signature="e#2383#2384#0" expanded="true" />
+            <element signature="e#2435#2436#0" expanded="true" />
+            <element signature="e#2530#2531#0" expanded="true" />
+            <element signature="e#2583#2584#0" expanded="true" />
+            <element signature="e#2668#2669#0" expanded="true" />
+            <element signature="e#2716#2717#0" expanded="true" />
+            <element signature="e#2811#2812#0" expanded="true" />
+            <element signature="e#2864#2865#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3086#3087#0" expanded="true" />
+            <element signature="e#3130#3131#0" expanded="true" />
+            <element signature="e#3225#3226#0" expanded="true" />
+            <element signature="e#3278#3279#0" expanded="true" />
+            <element signature="e#3355#3356#0" expanded="true" />
+            <element signature="e#3399#3400#0" expanded="true" />
+            <element signature="e#3631#3632#0" expanded="true" />
+            <element signature="e#3677#3678#0" expanded="true" />
+            <element signature="e#3766#3767#0" expanded="true" />
+            <element signature="e#3816#3817#0" expanded="true" />
+            <element signature="e#3909#3910#0" expanded="true" />
+            <element signature="e#3961#3962#0" expanded="true" />
+            <element signature="e#4200#4201#0" expanded="true" />
+            <element signature="e#4248#4249#0" expanded="true" />
           </folding>
         </state>
       </provider>
