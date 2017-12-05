@@ -1,0 +1,62 @@
+
+import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
+g1 = nx.Graph()
+g1.add_edge('v0', 'v1', weight = 1)
+g1.add_edge('v0', 'v2', weight = 1)
+g1.add_edge('v0', 'v5', weight = 6)
+g1.add_edge('v1', 'v2', weight = 1)
+g1.add_edge('v2', 'v3', weight = 4)
+g1.add_edge('v2', 'v4', weight = 1)
+g1.add_edge('v3', 'v4', weight = 2)
+g1.add_edge('v3', 'v5', weight = 1)
+
+CopiaGrcopy0 = nx.Graph()
+CopiaGrcopy0 = g1
+
+def Dijkstra(G, CopiaG, R1):
+	for i in G.nodes():
+		G.node[i]['peso'] = np.inf
+	G.node[R1]['peso'] = 0
+	Predecessor = {}
+
+	for i in G.nodes():
+		Predecessor[i] = None
+
+	while G.number_of_nodes() > 0:
+		pesoMinimo = np.inf
+
+		for i in G.nodes():
+			if G.node[i]['peso'] <= pesoMinimo:
+				verticePesoMinimo = i
+				pesoMinimo = G.node[i]['peso']
+
+		for i in G.neighbors(verticePesoMinimo):
+			if G.node[i]['peso']>G.get_edge_data(verticePesoMinimo, i)['weight']+G.node[verticePesoMinimo]['peso']:
+				G.node[i]['peso'] =G.get_edge_data(verticePesoMinimo, i)['weight']+G.node[verticePesoMinimo]['peso']
+				Predecessor[i] = verticePesoMinimo
+		G.remove_node(verticePesoMinimo)
+
+	for key in Predecessor:
+		print("predecessor de ", key, "e = ", Predecessor[key])
+
+	vertice = []
+	arestas = []
+
+	for key in Predecessor:
+		vertice.append(key)
+
+	for key in Predecessor:
+		arestas.append((key, Predecessor[key]))
+
+	newGdij = nx.Graph()
+	newGdij.add_nodes_from(vertice)
+	newGdij.add_edges_from(arestas)
+	pos = nx.spring_layout(newGdij, k = 1, iterations=30)
+	nx.draw_networkx(newGdij, pos)
+	plt.show()
+
+Dijkstra(g1, CopiaGrcopy0, 'v5')
+
+#Fim da compilacao

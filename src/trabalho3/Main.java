@@ -13,6 +13,7 @@ import java.io.IOException;
 public class Main{
 
     public static void main(String[] args) throws IOException, RecognitionException {
+
         /*caminho do arquivo*/
         final String CAMINHO_CASOS_TESTE = "C:\\CC2_Trabalho3\\CasosDeTeste";
         //diretorio de entrada dos casos de teste sintaticos
@@ -86,5 +87,42 @@ public class Main{
             System.out.println(saida);
             System.out.println("Fim da compilacao\n");
         }
+
+
+        System.out.println("------------ Casos de Teste Geracao de Codigo ------------\n");
+        //diretorio de entrada dos casos de teste sintaticos
+        File diretorioCasosTesteGeracao = new File(CAMINHO_CASOS_TESTE + "\\entrada\\entrada_sem_erros");
+        //vetor com a lista de arquivos sintaticos
+        File[] casosTesteGeracao = diretorioCasosTesteGeracao.listFiles();
+
+        for(File file : casosTesteGeracao){
+
+            SaidaParser saida = new SaidaParser();
+            ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(file));
+
+            GrafosLexer lexer = new GrafosLexer(input);
+            lexer.removeErrorListeners();
+            CommonTokenStream tokens = new CommonTokenStream(lexer);
+            GrafosParser parser = new GrafosParser(tokens);
+            parser.removeErrorListeners();
+            parser.addErrorListener(new T3SyntaxErrorListener(saida));
+            GrafosParser.AlgoritmoContext arvore = parser.algoritmo();
+
+             //analisador geracao
+            GrafosGeracao grafosGeracao = new GrafosGeracao(saida);
+            grafosGeracao.visitAlgoritmo(arvore);
+            PrintWriter pws = new PrintWriter(CAMINHO_CASOS_TESTE + "\\saida\\saida_sem_erros\\" + file.getName());
+            pws.println(saida);
+            pws.println(grafosGeracao.codigo);
+            pws.println("#Fim da compilacao");
+            pws.close();
+            pws.flush();
+
+            //mostra tambem no console para verificacao
+            System.out.println(file.getName());
+            System.out.println(saida);
+            System.out.println("Fim da compilacao\n");
+        }
+
     }
 }

@@ -24,11 +24,11 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
         errosSemanticos = new Mensagens(sp);
         pilhaDeTabelas = new PilhaDeTabelas();
         pilhaDeTabelas.empilhar(new TabelaDeSimbolos("global"));
+
         //lista de grafos na tabela de simbolos. Ira guardar o numero de vertices e arestas
         grafosNaTabela  = new ArrayList<GrafosNaTabela>();
     }
 
-    // algoritmo :	'declaracoes' declaracao 'inicio' codigo 'fim' ;
     @Override
     public String visitAlgoritmo(GrafosParser.AlgoritmoContext ctx) {
         if(ctx.children != null){
@@ -87,7 +87,6 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
                 }
 
             }
-
 
             visitMais_variavel(ctx.mais_variavel());
         }
@@ -149,24 +148,24 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
     }
 
     /*
-    instrucoes :
-                'aresta' '(' IDENT ',' IDENT ',' IDENT ',' INTEIRO ')'	        //grafo,vertice,vertice,peso
-				| 'remove_vert' '(' IDENT ',' IDENT ')'					        //grafo,vertice
-				| 'set_peso' '(' IDENT ',' IDENT ',' IDENT ')'			        //grafo,vertice,vertice
-				| 'set_custo_para_vertice' '(' IDENT ',' IDENT ',' INTEIRO ')'  //grafo, vertice, valor
-				| 'imprime' '(' var_ou_cadeia ')'						        //grafo, vertice, lista, etc
-				| 'se' expressao 'entao' codigo senao_opcional 'fim_se'
-				| 'para' IDENT 'em' vetores_para 'faca' codigo 'fim_para'
-				| 'enquanto' expressao 'faca' codigo 'fim_enquanto'
-				| IDENT '<-' expressao
-				| 'dijkstra' '(' IDENT ',' IDENT ')'                            //grafo, verice inicia
-				| 'prim' '(' IDENT ',' IDENT ')'                                //grafo, verice inicial
-				| 'dfs' '(' IDENT ',' IDENT ')'							        //grafo, verice inicial
-				| 'bfs' '(' IDENT ',' IDENT ')'						            //grafo, verice inicial
-                | instrucoes_com_retorno
-                | instrucoes_de_vetores
-                ;
-     */
+        instrucoes :
+                    'aresta' '(' IDENT ',' IDENT ',' IDENT ',' INTEIRO ')'	        //grafo,vertice,vertice,peso
+                    | 'remove_vert' '(' IDENT ',' IDENT ')'					        //grafo,vertice
+                    | 'set_peso' '(' IDENT ',' IDENT ',' IDENT ')'			        //grafo,vertice,vertice
+                    | 'set_custo_para_vertice' '(' IDENT ',' IDENT ',' INTEIRO ')'  //grafo, vertice, valor
+                    | 'imprime' '(' var_ou_cadeia ')'						        //grafo, vertice, lista, etc
+                    | 'se' expressao 'entao' codigo senao_opcional 'fim_se'
+                    | 'para' IDENT 'em' vetores_para 'faca' codigo 'fim_para'
+                    | 'enquanto' expressao 'faca' codigo 'fim_enquanto'
+                    | IDENT '<-' expressao
+                    | 'dijkstra' '(' IDENT ',' IDENT ')'                            //grafo, verice inicia
+                    | 'prim' '(' IDENT ',' IDENT ')'                                //grafo, verice inicial
+                    | 'dfs' '(' IDENT ',' IDENT ')'							        //grafo, verice inicial
+                    | 'bfs' '(' IDENT ',' IDENT ')'						            //grafo, verice inicial
+                    | instrucoes_com_retorno
+                    | instrucoes_de_vetores
+                    ;
+         */
     @Override
     public String visitInstrucoes(GrafosParser.InstrucoesContext ctx) {
         if(ctx.getText().startsWith("aresta")){
@@ -312,6 +311,9 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             }
 
             visitInt_ou_ident(ctx.int_ou_ident());
+        }
+        else if(ctx.getText().startsWith("listar")){
+            visitVar_ou_cadeia(ctx.var_ou_cadeia());
         }
         else if(ctx.getText().startsWith("enfileira")){
 

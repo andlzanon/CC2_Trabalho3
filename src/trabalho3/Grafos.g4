@@ -28,7 +28,8 @@ instrucoes :	'aresta' '(' pa_grafo=IDENT ',' pa_vertice1=IDENT ',' pa_vertice2=I
                 //define-se em um grafo, o custo para chegar no vertice
 				| 'set_custo_para_vertice' '(' ps_grafo=IDENT ',' ps_vertice=IDENT ',' int_ou_ident ')'             //grafo, vertice, int
 	            //imprime uma variavel ou cadeia
-				| 'imprime' '(' var_ou_cadeia ')'						                                            //grafo, vertice, lista, etc
+				| 'imprime' '(' var_ou_cadeia ')'						                                            //grafo
+				| 'listar' '(' var_ou_cadeia ')'	                                                           //imprime elementos de um vetor
 				| 'empilha' '(' pem_vetor=IDENT ',' int_ou_ident ')'                                                          //vetor, vertice grafo ou inteiro
 				| 'enfileira' '(' pen_vetor=IDENT ',' int_ou_ident ')'                                                        //vetor, vertice grafo ou inteiro
 				//lacos e comandos condicionais
@@ -38,13 +39,13 @@ instrucoes :	'aresta' '(' pa_grafo=IDENT ',' pa_vertice1=IDENT ',' pa_vertice2=I
 				//chamada de atribuicao
 				| atribuicao=IDENT '<-' expressao
 				//funcao dijktra pre-implementada, retorna um grafo
-				| 'dijkstra' '(' pd_grafo=IDENT ',' pd_vertice=IDENT ')'                                            //grafo, verice inicial
+				| 'dijkstra' '(' pd_grafo=IDENT ',' pd_vertice=IDENT ')'                                            //grafo, vertice inicial
 				//funcao prim pre-implementada, retorna um grafo
-				| 'prim' '(' pp_grafo=IDENT ',' pp_vertice=IDENT ')'                                                //grafo, verice inicial
+				| 'prim' '(' pp_grafo=IDENT ',' pp_vertice=IDENT ')'                                                //grafo, vertice inicial
 				//funcao dfs pre-implementada, retorna um grafo
-				| 'dfs' '(' pdfs_grafo=IDENT ',' pdfs_vertice=IDENT ')'							                    //grafo, verice inicial
+				| 'dfs' '(' pdfs_grafo=IDENT ',' pdfs_vertice=IDENT ')'							                    //grafo, vertice inicial
 				//funcao bfs pre-implementada, retorna um grafo
-				| 'bfs' '(' pbfs_grafo=IDENT ',' pbfs_vertice=IDENT ')'						                        //grafo, verice inicial
+				| 'bfs' '(' pbfs_grafo=IDENT ',' pbfs_vertice=IDENT ')'						                        //grafo, vertice inicial
                 | instrucoes_com_retorno
                 | instrucoes_de_vetores
                 ;

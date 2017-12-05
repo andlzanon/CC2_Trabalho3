@@ -1,0 +1,43 @@
+
+import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
+g1 = nx.Graph()
+g1.add_edge('v0', 'v1', weight = 1)
+g1.add_edge('v0', 'v2', weight = 1)
+g1.add_edge('v0', 'v5', weight = 1)
+g1.add_edge('v1', 'v2', weight = 5)
+g1.add_edge('v2', 'v3', weight = 1)
+g1.add_edge('v2', 'v4', weight = 1)
+g1.add_edge('v3', 'v4', weight = 1)
+g1.add_edge('v3', 'v5', weight = 1)
+
+def bfs(grafo,raiz):
+	T = nx.Graph()
+	T.add_node(raiz)
+	T.add_edges_from(nx.bfs_edges(grafo,raiz))
+
+	pos = nx.spring_layout(T, k = 1, iterations=30)
+	nx.draw_networkx(T, pos)
+	plt.show()
+	return T
+
+bfs(g1, 'v0')
+
+bfs(g1, 'v3')
+
+def dfs(grafo, raiz):
+	T = nx.Graph()
+	T.add_node(raiz)
+	T.add_edges_from(nx.dfs_edges(grafo, raiz))
+
+	pos = nx.spring_layout(T, k = 1, iterations=30)
+	nx.draw_networkx(T, pos)
+	plt.show()
+	return T
+
+dfs(g1, 'v5')
+
+dfs(g1, 'v3')
+
+#Fim da compilacao

@@ -1,0 +1,72 @@
+declaracoes:
+grafo g1
+
+vertice v0
+vertice v1
+vertice v2
+vertice v3
+vertice v4
+vertice v5
+vetor pilha
+vetor fila
+inicio
+	aresta(g1, v0, v1, 1)
+	aresta(g1, v0, v2, 1)
+	aresta(g1, v0, v5, 6)
+	aresta(g1, v1, v2, 1)
+	aresta(g1, v2, v3, 4)
+	aresta(g1, v2, v4, 1)
+	aresta(g1, v3, v4, 2)
+    aresta(g1, v3, v5, 1)
+
+    get_peso(g1,v2,v3)
+
+    set_custo_para_vertice(g1,v3,10)
+
+    get_custo_para_vertice(g1,v3)
+
+    qtde_vert(g1)
+
+    vertices(g1)
+
+    vizinhos(g1,v2)
+    vizinhos(g1,v5)
+    vizinhos(g1,v3)
+
+    empilha(pilha,4)
+    empilha(pilha,1)
+    empilha(pilha,3)
+    empilha(pilha,2)
+    empilha(pilha,7)
+
+    tamanho_vetor(pilha)
+    listar (pilha)
+
+    desempilha(pilha)
+    listar (pilha)
+
+    desempilha(pilha)
+    listar (pilha)
+
+    enfileira(fila, 9)
+    enfileira(fila, 2)
+    enfileira(fila, 7)
+    enfileira(fila, 1)
+    enfileira(fila, 8)
+
+    listar(fila)
+
+    desenfila(fila)
+    desenfila(fila)
+    listar(fila)
+
+    desenfila(fila)
+    listar (fila)
+
+    imprime (g1)
+
+    remove_vert(g1, v5)
+    imprime (g1)
+
+
+fim

@@ -1,0 +1,62 @@
+
+import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
+g1 = nx.Graph()
+pilha = []
+fila = []
+g1.add_edge('v0', 'v1', weight = 1)
+g1.add_edge('v0', 'v2', weight = 1)
+g1.add_edge('v0', 'v5', weight = 6)
+g1.add_edge('v1', 'v2', weight = 1)
+g1.add_edge('v2', 'v3', weight = 4)
+g1.add_edge('v2', 'v4', weight = 1)
+g1.add_edge('v3', 'v4', weight = 2)
+g1.add_edge('v3', 'v5', weight = 1)
+print(g1.get_edge_data('v2', 'v3'))
+g1.node['v3']['weight'] = 10
+print(g1.node['v3']['weight'])
+print(g1.number_of_nodes())
+print(g1.nodes())
+print([n for n in g1.neighbors('v2')])
+print([n for n in g1.neighbors('v5')])
+print([n for n in g1.neighbors('v3')])
+pilha.append(4)
+pilha.append(1)
+pilha.append(3)
+pilha.append(2)
+pilha.append(7)
+len(pilha)
+
+print (pilha)
+pilha.pop()
+
+print (pilha)
+pilha.pop()
+
+print (pilha)
+fila.append(9)
+fila.append(2)
+fila.append(7)
+fila.append(1)
+fila.append(8)
+
+print (fila)
+fila.pop(0)
+fila.pop(0)
+
+print (fila)
+fila.pop(0)
+
+print (fila)
+
+pos = nx.spring_layout(g1, k = 1, iterations=30)
+nx.draw_networkx(g1, pos)
+plt.show()
+g1.remove_node('v5')
+
+pos = nx.spring_layout(g1, k = 1, iterations=30)
+nx.draw_networkx(g1, pos)
+plt.show()
+
+#Fim da compilacao
