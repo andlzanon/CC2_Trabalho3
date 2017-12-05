@@ -28,7 +28,7 @@ instrucoes :	'aresta' '(' pa_grafo=IDENT ',' pa_vertice1=IDENT ',' pa_vertice2=I
                 //define-se em um grafo, o custo para chegar no vertice
 				| 'set_custo_para_vertice' '(' ps_grafo=IDENT ',' ps_vertice=IDENT ',' int_ou_ident ')'             //grafo, vertice, int
 	            //imprime uma variavel ou cadeia
-				| 'imprime' '(' var_ou_cadeia ')'						                                            //grafo
+				| 'imprime' '(' print_grafo=IDENT ')'						                                            //grafo
 				| 'listar' '(' var_ou_cadeia ')'	                                                           //imprime elementos de um vetor
 				| 'empilha' '(' pem_vetor=IDENT ',' int_ou_ident ')'                                                          //vetor, vertice grafo ou inteiro
 				| 'enfileira' '(' pen_vetor=IDENT ',' int_ou_ident ')'                                                        //vetor, vertice grafo ou inteiro

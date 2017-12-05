@@ -1,7 +1,7 @@
 declaracoes:
 grafo g1
 
-int a, b
+int a, b, c
 
 vetor fila, pilha
 

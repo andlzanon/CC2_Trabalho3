@@ -261,7 +261,14 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
             visitInt_ou_ident(ctx.int_ou_ident());
         }
         else if(ctx.getText().startsWith("imprime")){
-            visitVar_ou_cadeia(ctx.var_ou_cadeia());
+            //verifica se os parametros foram declarados
+            if(!pilhaDeTabelas.existeSimbolo(ctx.print_grafo.getText()))
+                errosSemanticos.erroVariavelNaoExiste(ctx.start.getLine(), ctx.print_grafo.getText());
+
+            if(pilhaDeTabelas.existeSimbolo(ctx.print_grafo.getText()) && !pilhaDeTabelas.topo().gettipoVar(ctx.print_grafo.getText()).equals("grafo"))
+                errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.print_grafo.getText(), "grafo");
+
+
         }
         else if(ctx.getText().startsWith("empilha")){
 
@@ -314,6 +321,10 @@ public class GrafosSemantico extends GrafosBaseVisitor<String> {
         }
         else if(ctx.getText().startsWith("listar")){
             visitVar_ou_cadeia(ctx.var_ou_cadeia());
+            //verifica se param de desenfila e vetor
+            //IDENT sempre sera terceiro parametro, entao e necessario saber se o mesmo e inteiro
+            if(pilhaDeTabelas.existeSimbolo(ctx.var_ou_cadeia().getText()) && pilhaDeTabelas.topo().gettipoVar(ctx.var_ou_cadeia().getText()).equals("grafo"))
+                errosSemanticos.incompatibilidadeDeParametros(ctx.start.getLine(), ctx.var_ou_cadeia().getText(), "vetor");
         }
         else if(ctx.getText().startsWith("enfileira")){
 

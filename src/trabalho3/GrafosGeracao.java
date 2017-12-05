@@ -4,6 +4,8 @@ import org.antlr.v4.runtime.Token;
 
 import java.util.ArrayList;
 
+import static trabalho3.GrafosParser.IDENT;
+
 public class GrafosGeracao extends GrafosBaseVisitor<String>{
 
     String grupo;
@@ -159,11 +161,10 @@ public class GrafosGeracao extends GrafosBaseVisitor<String>{
             geraCodigo.append(tab + ctx.int_ou_ident().getText() + "\r\n");
         }
         else if(ctx.getText().startsWith("imprime")){
-            visitVar_ou_cadeia(ctx.var_ou_cadeia());
             geraCodigo.append("\r\n");
             geraCodigo.append(tab + "pos = nx.spring_layout(");
-            geraCodigo.append(tab + ctx.var_ou_cadeia().getText() + ", k = 1, iterations=30)\r\n");
-            geraCodigo.append(tab + "nx.draw_networkx(" + ctx.var_ou_cadeia().getText() + ", pos)\r\n");
+            geraCodigo.append(tab + ctx.print_grafo.getText() + ", k = 1, iterations=30)\r\n");
+            geraCodigo.append(tab + "nx.draw_networkx(" + ctx.print_grafo.getText() + ", pos)\r\n");
             geraCodigo.append(tab + "plt.show()\r\n");
         }
         else if(ctx.getText().startsWith("listar")){

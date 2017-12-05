@@ -17,7 +17,7 @@ public class Main{
         /*caminho do arquivo*/
         final String CAMINHO_CASOS_TESTE = "C:\\CC2_Trabalho3\\CasosDeTeste";
         //diretorio de entrada dos casos de teste sintaticos
-        File diretorioCasosTesteSintatico = new File(CAMINHO_CASOS_TESTE + "\\entrada\\entrada_sintatico");
+        File diretorioCasosTesteSintatico = new File(CAMINHO_CASOS_TESTE + "\\entrada\\entrada_sem_erros");
         //vetor com a lista de arquivos sintaticos
         File[] casosTesteSintatico = diretorioCasosTesteSintatico.listFiles();
 
@@ -56,7 +56,7 @@ public class Main{
 
         System.out.println("------------ Casos de Teste Semanticos ------------\n");
         //diretorio de entrada dos casos de teste sintaticos
-        File diretorioCasosTesteSemantico = new File(CAMINHO_CASOS_TESTE + "\\entrada\\entrada_semantico");
+        File diretorioCasosTesteSemantico = new File(CAMINHO_CASOS_TESTE + "\\entrada\\entrada_sem_erros");
         //vetor com a lista de arquivos sintaticos
         File[] casosTesteSemantico = diretorioCasosTesteSemantico.listFiles();
 
