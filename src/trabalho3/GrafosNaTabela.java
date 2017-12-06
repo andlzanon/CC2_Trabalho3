@@ -60,7 +60,7 @@ public class GrafosNaTabela {
         int denominador = 2 * fatorial(teste);
         int valor = numerador/denominador;
 
-        if(arestas > valor){
+        if(arestas >= fator){
             /*para debug: System.out.println("valor " +valor);
             System.out.println("aresta " +arestas);
             System.out.println("vertice " +vertices); */

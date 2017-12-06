@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: trabalho3/antlr-4.7-complete.jar
+Main-Class: trabalho3.Main
+

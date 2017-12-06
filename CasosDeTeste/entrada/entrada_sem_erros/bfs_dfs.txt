@@ -1,5 +1,6 @@
 declaracoes:
 grafo g1
+grafo g2
 
 vertice v0
 vertice v1

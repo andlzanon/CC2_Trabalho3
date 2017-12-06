@@ -1,0 +1,31 @@
+declaracoes:
+grafo g1
+
+int a, b, c
+
+vetor fila, pilha
+
+inicio
+a <- 10
+b <- 5
+c <- 0
+    se (a>b) entao
+        enfileira(fila,a)
+        enfileira(fila,5)
+        enfileira(fila,11)
+    fim_se
+
+    para n em fila faca
+        c <- c + 1
+    fim_para
+
+    enquanto b>0 faca
+        empilha(pilha,5)
+        b <- b - 1
+    fim_enquanto
+
+
+listar(fila)
+listar(pilha)
+listar(c)
+fim

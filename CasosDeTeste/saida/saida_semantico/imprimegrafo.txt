@@ -1,2 +1,2 @@
-
+Aviso: Grafo g1 e desconexo
 Fim da compilacao

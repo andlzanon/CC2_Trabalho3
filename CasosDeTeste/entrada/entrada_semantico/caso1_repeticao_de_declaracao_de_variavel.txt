@@ -1,6 +1,6 @@
 declaracoes:
 	grafo g
-	vertice v1, v2, v3,
+	vertice v1, v2, v3
 	    g
 
 inicio

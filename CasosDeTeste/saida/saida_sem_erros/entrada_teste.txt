@@ -1,0 +1,27 @@
+
+import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
+g1 = nx.Graph()
+fila = []
+pilha = []
+a = 10
+b = 5
+c = 0
+if((a>b)): 
+	fila.append(a)
+	fila.append(5)
+	fila.append(11)
+for n in fila :
+	c = c+1
+while (b>0):
+	pilha.append(5)
+	b = b-1
+
+print (fila)
+
+print (pilha)
+
+print (c)
+
+#Fim da compilacao

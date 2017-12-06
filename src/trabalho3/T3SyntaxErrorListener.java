@@ -10,6 +10,8 @@ public class T3SyntaxErrorListener implements ANTLRErrorListener {
 
     SaidaParser sp;
 
+    static int erros = 0;
+
     public T3SyntaxErrorListener(SaidaParser sp) {
         this.sp = sp;
     }
@@ -30,16 +32,19 @@ public class T3SyntaxErrorListener implements ANTLRErrorListener {
                 if (tokenText.contentEquals("<EOF>")) {
                     tokenText = "EOF";
                 }
+                erros++;
                 erro = "Linha " + i + ": erro sintatico proximo a " + tokenText;
                 sp.println(erro);
             }
             //se o tipo for 10 entao o token e nao declarado e precisa de uma saida diferente
             else if(token.getType() == 10){
+                erros++;
                 erro = "Linha " + i + ": simbolo ou comando proximo a " +tokenText+ " nao identificado";
                 sp.println(erro);
             }
             //se o tipo for 11 entao o token e comentario nao fechado e precisa de uma saida diferente
             else if(token.getType() == 11){
+                erros++;
                 erro = "Linha " + (i+1) + ": comentario nao fechado ou comando incompleto";
                 sp.println(erro);
             }

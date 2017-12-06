@@ -56,6 +56,9 @@ Para compilar, somente é necessário clicar em Run no IntelliJ.
 Caso o contribuidor tenha feito modificacoes no Grafos.g4 usar o seguinte comando dentro da pasta src do projeto:
 java -jar antlr-4.7-complete.jar -package trabalho3 -visitor Grafos.g4
 
+Para rodar o compilador de grafos basta acessar a pasta principal do projeto e executar o seguinte comando:
+java -jar compilador.jar <Caminho do arquivo em linguagem de manipulação de grafos> <Caminho destino da linguagem gerada no formato .py>
+
 ## Alunos e Professores
 Autores: 
 André Levi Zanon, 619922; 

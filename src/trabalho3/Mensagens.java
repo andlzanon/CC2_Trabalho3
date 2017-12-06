@@ -5,6 +5,7 @@ public class Mensagens {
     public static boolean primeiro;
     SaidaParser sp;
 
+
     public Mensagens(SaidaParser sp){
         this.sp = sp;
         primeiro = true;
@@ -93,14 +94,14 @@ public class Mensagens {
     }
 
     public void grafoDesconexo(String variavel) {
-        String erro = "Grafo " +variavel +" e desconexo";
+        String aviso = "Aviso: Grafo " +variavel +" e desconexo";
 
         if (!primeiro){
-            erro = "\n" + erro;
+            aviso = "\n" + aviso;
         }
         primeiro = false;
 
-        sp.println(erro);
+        sp.printlnSemModifica(aviso);
     }
 
 }

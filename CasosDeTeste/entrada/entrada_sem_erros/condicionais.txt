@@ -28,4 +28,5 @@ c <- 0
 listar(fila)
 listar(pilha)
 listar(c)
+
 fim

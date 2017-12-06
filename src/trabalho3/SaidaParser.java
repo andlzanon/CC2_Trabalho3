@@ -14,6 +14,10 @@ public class SaidaParser {
         if(!modificado) modificado = true;
         conteudo.append(texto);
     }
+
+    public void printlnSemModifica(String texto) {
+        conteudo.append(texto);
+    }
     
     public boolean isModificado() {
         return modificado;

@@ -3,6 +3,7 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 g1 = nx.Graph()
+g2 = nx.Graph()
 g1.add_edge('v0', 'v1', weight = 1)
 g1.add_edge('v0', 'v2', weight = 1)
 g1.add_edge('v0', 'v5', weight = 6)

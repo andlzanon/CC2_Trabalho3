@@ -1,3 +1,2 @@
 Linha 6: identificador v4 nao declarado
-Grafo g e desconexo
 Fim da compilacao
